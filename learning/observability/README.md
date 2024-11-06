@@ -7,5 +7,5 @@ There will be some high level questions you'll need to make sure you understand 
 
 ## Schedule
 
-This chapter will last 5 days MAX.
+This chapter will last around 5 days.
 Make sure to handle your time accordingly.
