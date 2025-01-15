@@ -18,7 +18,7 @@ You should start getting familiar with Observability Concepts, Observability Glo
 
 The outcome of this part should be a detailed markdown containing everything you have learned about Observability.
 
-In your markdown make sure there is an answer the following questions:
+In your markdown make sure there is an answer to the following questions:
 
 1. Give an explanation about what Observability is. In your explanation, give quotes from sources.
 2. Where does monitoring and visibility differ from observability? how do they relate?
