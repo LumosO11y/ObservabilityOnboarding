@@ -13,6 +13,7 @@ You'll also learn about how they complete each other and grant us the bigger pic
 - Understand the difference between traces, logs and metrics.
 - Understand the usage for each type of signal, especially the difference between traces and logs.
 - Understand what is baggage and how you can use it.
+- Understand how you can utilize context to your advantage
 
 ## Outcome
 
