@@ -21,7 +21,7 @@ The outcome of this part should be a detailed markdown containing everything you
 In your markdown make sure there is an answer to the following questions:
 
 1. Give an explanation about what Observability is. In your explanation, give quotes from sources.
-2. Where does monitoring and visibility differ from observability? how do they relate?
+2. How does monitoring and visibility differ from observability? how do they relate?
 3. What are the different types of Observability? Explain what each means and give some real-world examples of how they are used.
 4. What is Data Observability?
      - Elaborate more on this concept.
