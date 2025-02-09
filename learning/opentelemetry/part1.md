@@ -6,6 +6,28 @@ In this part you'll learn about OpenTelemetry as a concept and its role in the O
 At the end of this part you should feel that you understand the necessity of OpenTelemetry
 and how it helps us to collect telemetry data on our system.
 
+## Goals
+  - understand the neeed in openTelemetry in the worlds of observabilty
+  - get a grasp of the openTelemetry abilities
+  - undersatnd the diffrence between OTEL and other solution 
+
+## Outcome
+
+The outcome of this part should be a detailed markdown containing everything you have learned about Observability.
+
+In your markdown make sure there is an answer to the following questions:
+
+1. Elaborate on the history before OpenTelemetry, how it was created and why ?
+2. What is OpenTelemetry (aka OTEL)?
+3. How does OpenTelemetry relate to Observability?
+4. How did OpenTelemetry revolutionize the monitoring/observability world?
+5. Jaeger vs OpenTelemetry? How do they relate?
+6. Pick 3 OpenTelemetry concepts and explain them.
+7. write 3 pro's and 3 con's of openTelemetry
+8. are there any other projects that are simliar to OTEL? 
+ 
+
+
 ### Links
 
 Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suited:
@@ -16,19 +38,4 @@ Here are some useful links to start from. We highly encourage you to search more
 * <https://signoz.io/blog/opentelemetry-vs-jaeger/>
 * <https://medium.com/jaegertracing/jaeger-and-opentelemetry-1846f701d9f2>
 
-### Action Items
 
-You should have the understanding of what is exactly OpenTelemetry and why OpenTelemetry is important.
-Also, you should be able to answer the following questions:
-
-1. Elaborate on the history before OpenTelemetry
-2. What is OpenTelemetry (aka OTEL)?
-3. How does OpenTelemetry relate to Observability?
-4. How did OpenTelemetry revolutionize the monitoring/observability world?
-5. What are signals?
-6. Jaeger vs OpenTelemetry? How do they relate?
-7. Pick 3 OpenTelemetry concepts and explain them.
-
-## Outcome
-
-Write an article answering the above questions, adding your take about OpenTelemetry, pros & cons.
