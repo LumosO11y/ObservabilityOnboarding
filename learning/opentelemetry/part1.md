@@ -23,7 +23,7 @@ In your markdown make sure there is an answer to the following questions:
 4. How did OpenTelemetry revolutionize the monitoring/observability world?
 5. Jaeger vs OpenTelemetry? How do they relate?
 6. Pick 3 OpenTelemetry concepts and explain them.
-7. write 3 pro's and 3 con's of openTelemetry
+7. Write 3 pros and 3 cons of OpenTelemetry.
 8. are there any other projects that are simliar to OTEL? 
  
 
