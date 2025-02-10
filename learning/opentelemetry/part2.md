@@ -8,7 +8,7 @@ Especially, you'll know the OTLP protocol and other semantic conventions set by 
 
 ## Goals 
   - Learn about OTLP protocol and why it is needed
-  
+
   - Undersatnd the inner workings of the OTLP 
   - Learn about and understand the important protocols that you will use daily.
 

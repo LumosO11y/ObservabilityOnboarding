@@ -19,7 +19,7 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 
 4. How OpenTelemetry collector relates to OTLP?
 
-5. GRPC vs HTTP & what is protobuf?
+5. gRPC vs HTTP in the collector.
 
 6. List the architecture paradigms of the collector. What are the pros and cons of each? Make a table that compares between them.
 
