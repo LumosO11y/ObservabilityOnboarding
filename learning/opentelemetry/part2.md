@@ -14,7 +14,7 @@ Especially, you'll know the OTLP protocol and other semantic conventions set by 
 
 
 ## Outcome
-The outcome of this part should be a detailed markdown containing everything you have learned about OTLP and an **article explaining about the OpenTelemetry specifications in deepth**.
+The outcome of this part should be a detailed markdown containing everything you have learned about OTLP and an **article explaining about the OpenTelemetry specifications in depth**.
 
 
 1. explain what is grpc and the need for it
