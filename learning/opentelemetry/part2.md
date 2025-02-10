@@ -25,7 +25,7 @@ The outcome of this part should be a detailed markdown containing everything you
 6. What is exactly OTLP specification - explain.
 7. Write a short paragraph explaining about OpenTelemetry specification includeding all of 
 8. What are the semantic conventions specifications in OpenTelemetry and why are they needed?
-9.  List some of the semantic conventions.
+9. List some of the semantic conventions.
 10. What is Open Agent Management protocol? What is its use case?
 
 ### Links
