@@ -9,7 +9,7 @@ and how it helps us to collect telemetry data on our system.
 ## Goals
   - Understand the need of OpenTelemetry in the worlds of Observabilty.
   - Get a grasp of OpenTelemetry's abilities.
-  - undersatnd the diffrence between OTEL and other solution 
+  - undestand the diffrence between OTel and other solutions.
 
 ## Outcome
 
