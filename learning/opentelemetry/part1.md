@@ -38,7 +38,7 @@ In your markdown make sure there is an answer to the following questions:
 
 ### Links
 
-Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suited:
+ Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suited:
 
 * <https://opentelemetry.io/docs/concepts/observability-primer/>
 * <https://opentelemetry.io/docs/what-is-opentelemetry/>
