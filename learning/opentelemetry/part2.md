@@ -18,7 +18,7 @@ The outcome of this part should be a detailed markdown containing everything you
 
 
 1. explain what is grpc and the need for it
-2. explain what is protobuf and what problem dode it solve
+2. Explain what is Protobuf and what problem does it solve.
 3. What is OTLP?
 4. Why is OTLP needed?
 5. Give 2 alternatives to OTLP and explain them in detail con's and pro's of each one.
