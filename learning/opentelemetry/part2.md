@@ -17,7 +17,7 @@ Especially, you'll know the OTLP protocol and other semantic conventions set by 
 The outcome of this part should be a detailed markdown containing everything you have learned about OTLP and an **article explaining about the OpenTelemetry specifications in depth**.
 
 
-1. explain what is grpc and the need for it
+1. Explain what is gRPC and the need for it.
 2. Explain what is Protobuf and what problem does it solve.
 3. What is OTLP?
 4. Why is OTLP needed?
