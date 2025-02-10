@@ -3,7 +3,7 @@
 ## Overview
 
 In this part you'll learn about more concepts in OpenTelemetry.
-You might already know some of them. If you are, you can move on to the next concept.
+You might already know some of them. If you do, you can move on to the next concept.
 In the end of this part you should feel comfortable with those concepts.
 
 ## Goals 
