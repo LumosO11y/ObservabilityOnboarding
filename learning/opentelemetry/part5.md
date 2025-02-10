@@ -17,6 +17,9 @@ Read about the following concepts:
 5. Context Propagation
 6. Semantic Conventions
 7. Instrumentation Scope
+8. OTTL
+   1. give 2 examples when we will need to use it.
+   2. write a short OTTL code that matches all the http codes from string to int.
 
 ## Outcome
 
