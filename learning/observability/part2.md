@@ -22,7 +22,9 @@ The outcome of this part should be a PowerPoint presentation explaining in-depth
 #### In your presentation you should answer the following questions:
 
 1. What are signals?
-2. What is a span? What does it consist of?
+2. What is a span? What does it consist of. 
+    * Read about the context field. Why does it consist of ? Why does it contain those specific fields ?
+    * Read about span events ? Why are they needed ? How do they differ from regular logs ? 
 3. How are traces stored in most Observability backends?
 4. What is a log? What does it consist of?
 5. How are logs usually stored? (especially in our unit) 
