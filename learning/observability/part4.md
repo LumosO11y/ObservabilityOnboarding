@@ -26,7 +26,7 @@ In your markdown make sure there is an answer the following questions:
 5. Choose 4 features that RUM has and explain their usage and how they take place in the real-world.
 6. What is MTTD and MTTR?
 7. What are alerts, why are they important? What is an alert manager?
-8. List 2 more insights Observability gives your system and explain them (Regarding SLA, SLO, SLI, KPIßß)
+8. List 2 more insights Observability gives your system and explain them.
 9. Provide a list of at least 3 on-prem observability solutions and 3 cloud-native observability solutions today with comparison. (Read about the grafana stack backend)
 
 ### Links
