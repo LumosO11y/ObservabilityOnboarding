@@ -19,7 +19,7 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 7. List and elaborate in detail on every 
  component that make up the collector. give 2 examples of each. (including Extenstions and Connectors)
 8. Pick 2 trivial processors that almost every collector should have and elaborate more on them. Explain also why you picked these in particular. If you picked the same as in the last question go back and replace the 2 in your last answer ;
-9. Explain about tranformation scopes.
+9. Explain the different transformation scopes.
 10. How many pipelines can we have in one collector and how can this be? If multiple are possible, when and why shouldn't you put them together? 
 11. How can you scale the collector? When should you scale the collector? When shouldn't you scale it?
 12. Running collectors as production ready is an important task. One key ingredient for that is monitoring. How can we monitor the collector? Insert the configuration needed to enable this ability.
