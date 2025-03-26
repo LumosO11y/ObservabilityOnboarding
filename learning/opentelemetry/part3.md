@@ -29,7 +29,7 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 16. List 3 custom distributions of the otel collector. What do they add? Why are there many different distributions? What are the pros and cons of that?
 17. What are the 2 main distributions of the collector? What are the differences between them and when should I use each of them? Explain in detail.
 18. Deploy a collector on docker. You should be able to configure it.
-19. There are many useful tools that you should get familiar with. One of them is telemetrygen. Explain shortly what it is and generate telemetry (preferably traces) that outputs to the collector you deployed in the last question. The output in your collector should be to the console (verbose). The images are in our artifactory. Write an example of custom log, metric, trace with open telemetry
+19. There are many useful tools that you should get familiar with. One of them is telemetrygen. Explain shortly what it is and generate telemetry (preferably traces) that outputs to the collector you deployed in the last question. The output in your collector should be to the console (verbose). The images are in our artifactory.
 
 ### Links
 
