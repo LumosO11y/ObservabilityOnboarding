@@ -15,19 +15,18 @@ Especially, you'll know the OTLP protocol and other semantic conventions set by 
 The outcome of this part should be a detailed markdown containing everything you have learned about OTLP and an **article explaining about the OpenTelemetry specifications in depth**.
 
 1. Explain what is gRPC and the need for it.
-2. Read gRPC load balancing on K8S. Why is it required specifically in gRPC ? 
-3. How can you connect an external environment to a pod in a k8s cluster using gRPC. What would be the entire flow ?
-4. What are the disadvantages of gRPC in internal cluster communication ?
-3. Explain what is Protobuf and what problem does it solve.
-4. What is OTLP?
-5. Why is OTLP needed?
-6. What are the disadvantages of gRPC in internal cluster communication ?
-7. Give 2 alternatives to OTLP and explain them in detail. Provide pro's and con's of each of them.
-8. What is the OTLP specification - explain.
-9. Write a short paragraph explaining about OpenTelemetry specification.
-10. What are the semantic conventions specifications in OpenTelemetry and why are they needed?
-11. List some of the semantic conventions.
-12. What is Open Agent Management Protocol? What is its use case?
+2. How can you connect an external environment to a pod in a k8s cluster using gRPC. What would be the entire flow ?
+3. What are the disadvantages of gRPC in internal cluster communication ?
+4. Explain what is Protobuf and what problem does it solve.
+5. What is OTLP?
+6. Why is OTLP needed?
+7. What are the disadvantages of gRPC in internal cluster communication ?
+8. Give 2 alternatives to OTLP and explain them in detail. Provide pro's and con's of each of them.
+9. What is the OTLP specification - explain.
+10. Write a short paragraph explaining about OpenTelemetry specification.
+11. What are the semantic conventions specifications in OpenTelemetry and why are they needed?
+12. List some of the semantic conventions.
+13. What is Open Agent Management Protocol? What is its use case?
 
 ### Links
 
