@@ -21,12 +21,13 @@ In your markdown make sure there is an answer the following questions:
 	- explain in depth the importance of each
 2. What are KPIs? How do they relate to SLI, SLO and SLA?
 3. What are golden signals? Explain each one of them.
-4. Explain the differences between Synthetic monitoring & RUM, where they differ and not
-5. Choose 2 features that RUM has and explain their usage and how they take place in the real-world.
+4. Explain the differences between Synthetic monitoring & RUM, where they differ and not.
+5. Explain what is Session Replay. How it does it help up achieve monitoring?
+5. Choose 4 features that RUM has and explain their usage and how they take place in the real-world.
 6. What is MTTD and MTTR?
 7. What are alerts, why are they important? What is an alert manager?
-8. List 2 more insights Observability gives your system and explain them
-9. Provide a list of at least 3-4 Observability solutions today with comparison.
+8. List 2 more insights Observability gives your system and explain them.
+9. Provide a list of at least 3 on-prem observability solutions and 3 cloud observability solutions that exist today with comparison. (Read about the grafana stack)
 
 ### Links
 

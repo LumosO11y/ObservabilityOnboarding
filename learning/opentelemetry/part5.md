@@ -25,5 +25,5 @@ Read about the following concepts:
 8. OpAMP
 9. OTTL
    1. give 2 examples when we will need to use it.
-   2. write a short OTTL code that matches all the http codes from string to int.
+   2. write a short OTTL code that matches all the http codes from string to int. (Add it to your collector from Part 3)
 
