@@ -20,8 +20,7 @@ In your markdown make sure there is an answer the following questions:
 Explain how each of them work specifically in OpenTelemetry and in general.
 3. What doesn't Zero-Code instrumentation allow that Code-Based does?
 4. Explain the different use-cases where you should do Zero-Code instrumentation and those where you should use Code-based instrumentation.
-5. What are some instrumentation solutions that exist out there? Compare between at least 5 solutions.
-6. Write a simple flask application in node-js and instrument it in both ways (Zero-code and Code-based). Output all signals to terminal.
+5. Write a simple flask application in node-js and instrument it in both ways (Zero-code and Code-based). Output all signals to terminal.
 
 ### Links
 
