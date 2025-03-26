@@ -17,7 +17,7 @@ In your markdown make sure there is an answer the following questions:
 
 1. What is Instrumentation? Explain the concept and why is it important in making your application "observable".
 2. What are the different ways of "instrumenting" your application. Can you use these methods at all times? Explain.
-Explain how each of them work specifically in OpenTelemetry and in general.
+Explain how each of them work in general and specifically in OpenTelemetry.
 3. What doesn't Zero-Code instrumentation allow that Code-Based does?
 4. Explain the different use-cases where you should do Zero-Code instrumentation and those where you should use Code-based instrumentation.
    

@@ -15,7 +15,7 @@ Especially, you'll know the OTLP protocol and other semantic conventions set by 
 The outcome of this part should be a detailed markdown containing everything you have learned about OTLP and an **article explaining about the OpenTelemetry specifications in depth**.
 
 1. Explain what is gRPC and the need for it.
-2. How can you connect an external environment to a pod in a k8s cluster using gRPC. What would be the entire flow ?
+2. How would a gRPC connection made between code that is running outside of a k8s cluster with a pod in a k8s cluster? What would be the entire flow?
 3. What are the disadvantages of gRPC in internal cluster communication ?
 4. Explain what is Protobuf and what problem does it solve.
 5. What is OTLP?
