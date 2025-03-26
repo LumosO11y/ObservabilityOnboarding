@@ -19,7 +19,7 @@ In your markdown make sure there is an answer the following questions:
 
 1. Explain the difference between SLI, SLO, SLA, their relation and how observability helps with either of them
 	- explain in depth the importance of each
-2. What are KPIs? How do they relate to SLI, SLO and SLA? How does it differ from SLI, SLO, and SLA ?
+2. What are KPIs? How do they relate to SLI, SLO and SLA?
 3. What are golden signals? Explain each one of them.
 4. Explain the differences between Synthetic monitoring & RUM, where they differ and not.
 5. Explain what is Session Replay. How it does it help up achieve monitoring?
