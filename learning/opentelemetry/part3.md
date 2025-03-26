@@ -14,7 +14,7 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 2. Why is the collector needed? Why should I use the otel collector instead of other products like Logstash or Nifi?
 3. Explain in detail the flow of a pipeline in a collector. How does it relate to ETL? Explain what ETL is.
 4. How OpenTelemetry collector relates to OTLP?
-5. gRPC vs HTTP in the collector. Give an example for a receiver that receives both on gRPC and http. How does it work ?
+5. gRPC vs HTTP in the collector.
 6. List the architecture paradigms of the collector. What are the pros and cons of each? Make a table that compares between them.
 7. List and elaborate in detail on every 
  component that make up the collector. give 2 examples of each. (including Extenstions and Connectors)
