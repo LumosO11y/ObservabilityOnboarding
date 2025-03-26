@@ -23,7 +23,7 @@ The outcome of this part should be a detailed markdown containing everything you
 5. Why is OTLP needed?
 6. What are the disadvantages of gRPC in internal cluster communication ?
 7. Give 2 alternatives to OTLP and explain them in detail. Provide pro's and con's of each of them.
-8. What is exactly OTLP specification - explain.
+8. What is the OTLP specification - explain.
 9. Write a short paragraph explaining about OpenTelemetry specification.
 10. What are the semantic conventions specifications in OpenTelemetry and why are they needed?
 11. List some of the semantic conventions.
