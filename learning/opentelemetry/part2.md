@@ -16,7 +16,7 @@ The outcome of this part should be a detailed markdown containing everything you
 
 1. Explain what is gRPC and the need for it.
 2. Read gRPC load balancing on K8S. Why is it required specifically in gRPC ? 
-3. If I would like to connect from an external environment to a pod in a k8s cluster what would be the entire flow ?
+3. How can you connect an external environment to a pod in a k8s cluster using gRPC. What would be the entire flow ?
 4. What are the disadvantages of gRPC in internal cluster communication ?
 3. Explain what is Protobuf and what problem does it solve.
 4. What is OTLP?
