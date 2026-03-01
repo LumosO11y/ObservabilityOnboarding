@@ -28,7 +28,7 @@ In your markdown make sure there is an answer to the following questions:
      - What are the 5 pillars of Data Observability?
      - What are the components that help us achieve this concept?
      - Where does Data Observability focus in our data pipeline journey?
-     - What are 3 goals we can achieve with a good Data Observability?
+     - What are 3 goals we can achieve with good Data Observability?
      - Why is it especially important for our Unit?
 5. Provide your take on what Observability is in your opinion and the difficulties when developing Observability at scale.
 
@@ -46,3 +46,4 @@ Here are some useful links to start from. We highly encourage you to search more
 - <https://www.simform.com/blog/three-types-of-observability/>
 - <https://www.splunk.com/en_us/blog/learn/data-observability.html>
 - <https://www.strongdm.com/observability>
+- [Chapter 1](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
