@@ -25,7 +25,7 @@ In the end of this part you should answer the following questions:
 4. Some would say that manual instrumentation is sort of an art. In what cases should we avoid instrumenting our library/code? What would be considered over-instrumenting?
 5. Add instrumentation to an existing code (you can use our docs to see how).
     1. See it in the console (use a console exporter)
-    2. Write a helm chart for an opentelemetry collector and send the instrumentation through it to our traces box. You need to be able to see your traces in the apm in the kibana. Talk with your mentor for more info.
+    2. Write a helm chart for an opentelemetry collector and send the instrumentation through to a platform the mentor will tell you. Talk with your mentor for more info.
 
 
 ### Links
