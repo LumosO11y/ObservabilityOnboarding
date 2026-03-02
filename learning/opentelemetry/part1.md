@@ -35,5 +35,4 @@ In your markdown make sure there is an answer to the following questions:
 * <https://opentelemetry.io/docs/concepts/signals/>
 * <https://signoz.io/blog/opentelemetry-vs-jaeger/>
 * <https://medium.com/jaegertracing/jaeger-and-opentelemetry-1846f701d9f2>
-
-
+* [Chapter 1](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)

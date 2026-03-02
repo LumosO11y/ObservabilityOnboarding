@@ -34,5 +34,7 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 
 Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suited:
 * <https://opentelemetry.io/docs/collector/>
+* [Chapter 8](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
+* [Chapter 18](../../assets/observability-engineering-achieving-production.pdf)
 
 **Read the documentation of OpenTelemetry about the collector, if you find more interesting links please add them here with a PR.**

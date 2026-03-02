@@ -41,4 +41,6 @@ In your markdown make sure there is an answer the following questions:
 * <https://logz.io/learn/observability-tools-platforms-guide>
 * <https://signoz.io/comparisons/dynatrace-vs-appdynamics/>
 * <https://www.dynatrace.com/knowledge-base/golden-signals/>
-
+* [Chapter 16](../../assets/observability-engineering-achieving-production.pdf)
+* [Chapter 17](../../assets/observability-engineering-achieving-production.pdf)
+* [Chapter 19](../../assets/observability-engineering-achieving-production.pdf)

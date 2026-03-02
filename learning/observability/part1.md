@@ -47,3 +47,6 @@ Here are some useful links to start from. We highly encourage you to search more
 - <https://www.splunk.com/en_us/blog/learn/data-observability.html>
 - <https://www.strongdm.com/observability>
 - [Chapter 1](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
+- [Chapter 1](../../assets/observability-engineering-achieving-production.pdf)
+- [Chapter 2](../../assets/observability-engineering-achieving-production.pdf)
+- [Chapter 9](../../assets/observability-engineering-achieving-production.pdf)

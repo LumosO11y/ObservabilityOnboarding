@@ -29,3 +29,5 @@ Explain how each of them work in general and specifically in OpenTelemetry.
 * <https://clairettran.medium.com/observability-and-instrumentation-99258f61f7a7>
 * <https://logz.io/learn/opentracing-jaeger-guide-to-instrumentation/>
 * <https://opencensus.io/introduction/>
+* [Chapter 5](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
+* [Chapter 7](../../assets/observability-engineering-achieving-production.pdf)

@@ -23,7 +23,9 @@ In the end of this part you should answer the following questions:
     1. Why won't we always have access to this "integrated instrumentation"?
     2. Give an example of a team from our branch that uses "custom instrumentation". Why did they choose this method?
 4. Some would say that manual instrumentation is sort of an art. In what cases should we avoid instrumenting our library/code? What would be considered over-instrumenting?
-5. Add instrumentation to an existing code. Talk with your mentor for more info.
+5. Add instrumentation to an existing code (you can use our docs to see how).
+    1. See it in the console (use a console exporter)
+    2. Write a helm chart for an opentelemetry collector and send the instrumentation through it to our traces box. You need to be able to see your traces in the apm in the kibana. Talk with your mentor for more info.
 
 
 ### Links
@@ -37,3 +39,5 @@ In the end of this part you should answer the following questions:
 * <https://opentelemetry.io/docs/concepts/instrumentation/zero-code/>
 * <https://www.cncf.io/blog/2022/04/22/opentelemetry-and-python-a-complete-instrumentation-guide/>
 * <https://logz.io/blog/python-opentelemetry-auto-instrumentation/#export>
+* [Chapter 5](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
+* [Chapter 7](../../assets/observability-engineering-achieving-production.pdf)

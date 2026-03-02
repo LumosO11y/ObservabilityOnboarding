@@ -35,4 +35,4 @@ Here are some useful links to start from. We highly encourage you to search more
 * <https://opentelemetry.io/docs/specs/otlp/>
 * <https://opentelemetry.io/docs/specs/opamp/>
 * <https://opentelemetry.io/docs/specs/semconv/>
-
+* [Chapter 3](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)

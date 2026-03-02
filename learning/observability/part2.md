@@ -28,7 +28,7 @@ The outcome of this part should be a PowerPoint presentation explaining in-depth
 3. How are traces stored in most Observability backends?
 4. What is a log? What does it consist of?
 5. How are logs usually stored? (especially in our unit) 
-6. Many say logs and traces are very similar, how do they differ and what do they have in common? when will we use each of them
+6. Many say logs and traces are very similar, how do they differ and what do they have in common? When will we use each of them
 7. What is log correlation?
 8. What is a metric? What does it consist of?
 9. How are metrics usually stored (especially in our unit)
@@ -56,3 +56,6 @@ Here are some useful links to start from, Yet again, you are encouraged to searc
 * <https://codersociety.com/blog/articles/metrics-tracing-logging>
 * <https://logz.io/blog/logs-or-metrics/>
 * <https://opentelemetry.io/blog/2024/profiling/>
+* [Chapter 3](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf).
+* [Chapter 5](../../assets/observability-engineering-achieving-production.pdf)
+* [Chapter 6](../../assets/observability-engineering-achieving-production.pdf)
