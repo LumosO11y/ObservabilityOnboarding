@@ -1,7 +1,3 @@
-Here are **two updated README sections** with **clear overviews and working links** for **ClickHouse** and **eBPF**:
-
----
-
 ## ClickHouse
 
 ### Overview
