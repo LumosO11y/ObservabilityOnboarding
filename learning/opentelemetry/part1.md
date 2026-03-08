@@ -7,7 +7,7 @@ At the end of this part you should feel that you understand the necessity of Ope
 and how it helps us to collect telemetry data on our system.
 
 ## Goals
-  - Understand the need of OpenTelemetry in the worlds of Observabilty.
+  - Understand the need for OpenTelemetry in the worlds of Observabilty.
   - Get a grasp of OpenTelemetry's abilities.
   - Undestand the diffrence between OTel and other solutions.
 
@@ -17,7 +17,7 @@ The outcome of this part should be a detailed markdown containing everything you
 
 In your markdown make sure there is an answer to the following questions:
 
-1. Elaborate on the history before OpenTelemetry, how it was created and why?
+1. Elaborate on the history before OpenTelemetry. How was OTel created, and why?
 2. What is OpenTelemetry (aka OTel)?
 3. How does OpenTelemetry relate to Observability?
 4. How did OpenTelemetry revolutionize the monitoring/observability world?
