@@ -1,4 +1,4 @@
-# Congratulations of finishing your onboarding!
+# Congratulations on finishing your onboarding!
 Your experience matters, and can make a difference for future onboarders.
 Please take some time to give us your feedback on the process so we can improve it in the future.
 Feel free to voice your opinions about the suggested reference material, the questions, stuff you liked, and stuff you think is missing and should be added to the learning process.
