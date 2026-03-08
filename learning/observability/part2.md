@@ -12,7 +12,7 @@ You'll also learn about how they complete each other and grant us the bigger pic
 
 - Understand the difference between traces, logs and metrics.
 - Understand the usage for each type of signal, especially the difference between traces and logs.
-- Understand what is baggage and how you can use it.
+- Understand what baggage is and how you can use it.
 - Understand how you can utilize context to your advantage
 
 ## Outcome
@@ -22,13 +22,13 @@ The outcome of this part should be a PowerPoint presentation explaining in-depth
 #### In your presentation you should answer the following questions:
 
 1. What are signals?
-2. What is a span? What does it consist of. 
+2. What is a span? What does it consist of?
     * Read about the context field. What does it consist of? Why does it contain those specific fields?
-    * Read about span events? Why are they needed? How do they differ from regular logs ? 
+    * Read about span events. Why are they needed? How do they differ from regular logs? 
 3. How are traces stored in most Observability backends?
 4. What is a log? What does it consist of?
 5. How are logs usually stored? (especially in our unit) 
-6. Many say logs and traces are very similar, how do they differ and what do they have in common? When will we use each of them
+6. Many say logs and traces are very similar. How do they differ and what do they have in common? When will we use each of them
 7. What is log correlation?
 8. What is a metric? What does it consist of?
 9. How are metrics usually stored (especially in our unit)
