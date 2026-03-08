@@ -3,8 +3,8 @@
 ## Overview
 
 In this part you'll learn about another concept of OpenTelemetry called instrumentation.
-At the end of this part you will understand in-depth what instrumentation means and what are the different kinds of it.
-You should also be familiar with instrumentation best practices and you should know how to instrument code.
+At the end of this part you will have an in-depth understanding of what instrumentation means and the different kinds of it.
+You should also be familiar with instrumentation best practices and know how to instrument code.
 
 ## Goals
 - Learn about the diffrent types of instrumentation.
@@ -15,7 +15,7 @@ You should finish this part after you added instrumentation to an existing compo
 
 In the end of this part you should answer the following questions:
 
-1. Whats the difference between each of the instrumentation solutions?
+1. What's the difference between each of the instrumentation solutions?
    1. Why do we need each of them?
    2. When we should use them?
 2. Name 2 different of instrumentation SDKs and explain the differences between them.
