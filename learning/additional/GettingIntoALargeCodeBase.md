@@ -16,7 +16,7 @@ Try to run the project locally and see what you can gather.
 ## Going Deeper: 
 - Try to recognize the main flow of the application. Which method calls what? In what order?  
 Why? What variables do these functions use? How do the objects interact and relate to each other?
-- Go through the pom.xml and take a look at the dependencies used in the project.  
+- Go through the ``pom.xml`` and take a look at the dependencies used in the project.  
 Which do you recognize? How are they used? What are they used for?  
 What can they tell you about the build of the project?
 What can they tell you about the way it handles data or processing?
@@ -27,3 +27,6 @@ Do they use a specific format, or have special requirements that
 could explain some of the transformations data goes through in the program?
 - Look at the project's configuration files. Can you glean more information about the components in use and their relationship?
   
+## Don't Sweat the Small Stuff:
+- Use break points strategically while running code to get a more in-depth look at things that look complicated.
+- Use scratch files to run methods in isolation in order to understand them better.
