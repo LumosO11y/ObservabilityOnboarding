@@ -29,4 +29,5 @@ could explain some of the transformations data goes through in the program?
   
 ## Don't Sweat the Small Stuff:
 - Use break points strategically while running code to get a more in-depth look at things that look complicated.
-- Use scratch files to run methods in isolation in order to understand them better.
+- Use scratch files to run methods in isolation in order to understand them better.  
+  You can also use them to test out and manipulate code logic.
