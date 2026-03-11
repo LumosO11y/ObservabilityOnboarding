@@ -9,7 +9,7 @@
 - **The Content Hunt**: Find the file named ``syslog`` or ``messages``. Use a command to read only the last 20 lines of that file to see what the system is doing right now.
 - **Create a Secret**: Create a new folder in your home directory called ``SecretProject``.
 - **Lock the Door**: Change the permissions so that only you (the owner) can read and write to it, and no one else in the "world" can even see it's there.  
-Then **Verify**; Run ls -ld to prove the permissions changed.
+Then **Verify**; Run ``ls -ld`` to prove the permissions changed.
 - **The Birth of a File**: Create an empty file named notes.txt without opening an editor.
 - **The Clone**: Create an exact copy of ``notes.txt`` and call it ``backup_notes.txt``.
 - **The Relocation**: Create a directory called ``Archive`` and move the backup file into it.
