@@ -28,4 +28,10 @@ Questions that you should know the answer to at the end of the study block:
 - What is the difference between 'Block Storage' and a 'File System'?
 - At what exact point in the boot process does the computer stop being 'generic hardware' and start being 'Linux'?
 - Compare and contrast Windows vs Linux. Give use cases for each
+- What are Distributions/Distros? what are the most common distros for Linux? What are they used for? How do they differ from each other?
+- What is the "root" in Linux? why is it important?
+- If I run rm -rf /, why is that the most famous 'horror story' in Linux history, and how does the Kernel permissions system (User vs. Root) try to prevent a beginner from doing it by accident?
+- What is the danger in giving files or programs root permissions?
+- What are command flags? what are the most common flags? what do they do?
+  
   
