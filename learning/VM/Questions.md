@@ -14,6 +14,9 @@ Questions that you should know the answer to at the end of the study block:
 - In Linux, "everything is a file." Explain what this means in the context of hardware devices (like a mouse or a hard drive) located in the ``/dev`` directory.
 - How would you find every line containing the word "ERROR" in a log file named ``server.log``?
 - Explain the difference between ``chmod`` and ``chown``.
+- What is the difference between ``cp`` and ``mv``?
+- How is a directory different from a regular file?
+- What is the difference between using ``\`` and ``/`` when specifying file paths?
 - How do you check which processes are consuming the most CPU in real-time?
 - If a file has permissions 755, what can the owner do that the "world" (others) cannot?
 - Explain the different levels of permissions and how they come into play
