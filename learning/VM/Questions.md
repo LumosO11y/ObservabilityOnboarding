@@ -33,6 +33,8 @@ Questions that you should know the answer to at the end of the study block:
 - How does the Kernel prevent a standard user from accidentally deleting critical system files?
 - What is the difference between a Monolithic Kernel and a Microkernel?
 - What is the difference between 'Block Storage' and a 'File System'?
+- What is a cache? What is caching?
+- What is ephemeral storage?
 - At what exact point in the boot process does the computer stop being 'generic hardware' and start being 'Linux'?
 - Compare and contrast Windows vs Linux. Give use cases for each
 - What are Distributions/Distros? what are the most common distros for Linux? What are they used for? How do they differ from each other?
