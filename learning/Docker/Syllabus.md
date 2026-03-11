@@ -2,8 +2,8 @@
 Here you will find a list of concepts that you will have to learn about and research that fall under the banner of Docker.
 It is important to understand these, as they will become your foundation to learning more subjects that will build and expand upon this.
 
-- CNCF
 - What came before containerization
+- Containerization
 - Docker
 - Container
 - Image
