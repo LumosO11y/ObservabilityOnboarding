@@ -11,8 +11,16 @@ Here you will find useful links that can help you base yourself onto the subject
 - https://www.redhat.com/en/topics/virtualization/what-is-a-virtual-machine#vms-vs-containers
 - https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-virtual-machine
 
-## Basic Storage
+## File Systems
 - https://www.digitalocean.com/community/tutorials/an-introduction-to-storage-terminology-and-concepts-in-linux
+- https://www.geeksforgeeks.org/operating-systems/file-systems-in-operating-system/
+
+## Operating Systems and Virtual Machines' Components
+- https://www.geeksforgeeks.org/operating-systems/introduction-of-operating-system-set-1/
+- https://www.geeksforgeeks.org/operating-systems/types-of-operating-systems/
+- https://www.geeksforgeeks.org/operating-systems/kernel-in-operating-system/
+- https://www.geeksforgeeks.org/operating-systems/introduction-of-system-call/
+- https://www.geeksforgeeks.org/operating-systems/what-happens-when-we-turn-on-computer/
 
 ## CNCF
 - https://blog.abhimanyu-saharan.com/posts/a-decade-of-cloud-native-the-cncf-s-10-year-journey
