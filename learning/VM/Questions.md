@@ -4,6 +4,7 @@ Questions that you should know the answer to at the end of the study block:
 - What is an Operating system?
 - What is a kernel?
 - What is a hypervisor?
+- What is the shell?
 - What are the components of an operating system? Of a virtual machine? How do they interact with each other?
 - Explain the role of the Kernel as the "intermediary." If an application wants to write data to a hard drive, why can’t it just talk to the hardware directly?
 - Describe the step-by-step process that occurs when a user-space application executes a System Call. What is "Context Switching," and why is it necessary for system security?
