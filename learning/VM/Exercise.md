@@ -1,6 +1,6 @@
 # The Linux "Internal Detective" Exercise
 **Goal**: Find "hidden" information about the computer using *only* the terminal.  
-**Scenario**: "You have been given a mystery server. You need to identify its 'DNA' (hardware), its 'Health' (processes), and its 'Security' (permissions)."
+**Scenario**: "You have been given a mystery server. You need to identify its 'DNA' (hardware), its 'Health' (processes), and its 'Security' (permissions)."  
 **Additional Instructions**: Note down the commands you used 
 ## Be on Your Way!
 - **The Version Check**: Find out exactly which version of the Linux Kernel is running.
