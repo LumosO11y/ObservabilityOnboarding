@@ -16,3 +16,5 @@ It is important to understand these, as they will become your foundation to lear
 - Network
 - Common Docker commands
 - Debugging a container
+- Docker best practices
+- Noisy Neighbors and multi-tenant environments
