@@ -10,6 +10,7 @@ Here you will find useful links that can help you base yourself onto the subject
 - https://www.geeksforgeeks.org/operating-systems/virtual-machines-in-operating-system/
 - https://www.redhat.com/en/topics/virtualization/what-is-a-virtual-machine#vms-vs-containers
 - https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-virtual-machine
+- https://www.geeksforgeeks.org/linux-unix/difference-between-linux-and-windows/
 
 ## File Systems
 - https://www.digitalocean.com/community/tutorials/an-introduction-to-storage-terminology-and-concepts-in-linux
