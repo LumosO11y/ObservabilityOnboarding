@@ -11,6 +11,7 @@
 - **Lock the Door**: Change the permissions so that only you (the owner) can read and write to it, and no one else in the "world" can even see it's there.  
 Then **Verify**; Run ``ls -ld`` to prove the permissions changed.
 - **The Birth of a File**: Create an empty file named notes.txt without opening an editor.
+- **The Poet**: Write "Hello World!(:" into the file.
 - **The Clone**: Create an exact copy of ``notes.txt`` and call it ``backup_notes.txt``.
 - **The Relocation**: Create a directory called ``Archive`` and move the backup file into it.
 - **The Search Party**: Find every file in the current directory that ends in ``.txt``.
