@@ -22,7 +22,11 @@ Questions that you should know the answer to at the end of the study block:
 - Explain the different levels of permissions and how they come into play
 - What are CGroups?
 - Before virtualization, what was "Server Sprawl," and how did it affect the physical design and cost of data centers?
+- What is CNCF?
 - What is the mission of the CNCF (Cloud Native Computing Foundation)?
+- What are famous projects of CNCF?
+- What is the Linux Foundations?
+- How is the Linux Foundation related to CNCF?
 - What is Open Source? Why is it important?
 - A developer tells you their VM is running slow. Using Linux commands, walk us through how you would diagnose whether the bottleneck is CPU, Memory, or Disk I/O.
 - We need to move a legacy application from an old physical server to a virtualized environment. What are the biggest risks, and how does the 'Hypervisor' layer help make this possible?
