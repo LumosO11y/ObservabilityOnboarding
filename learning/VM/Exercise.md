@@ -1,4 +1,4 @@
-# The Linux "Internal Detective" Exercise
+# The Linux Manipulation Exercise
 **Goal**: Find "hidden" information about the computer using *only* the terminal.  
 **Scenario**: "You have been given a mystery server. You need to identify its 'DNA' (hardware), its 'Health' (processes), and its 'Security' (permissions)."  
 **Additional Instructions**: Note down the commands you used 
