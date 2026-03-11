@@ -15,5 +15,5 @@ Then **Verify**; Run ls -ld to prove the permissions changed.
 - **The Search Party**: Find every file in the current directory that ends in ``.txt``.
 - **The Cleanup**: Remove the original ``notes.txt`` file.
 - **The "Nuke" (Use with Caution)**: Delete the ``Archive`` directory and everything inside it at once.
-- 
+  
 
