@@ -5,4 +5,27 @@ Questions that you should know the answer to at the end of the study block:
 - What is a kernel?
 - What is a hypervisor?
 - What are the components of an operating system? Of a virtual machine? How do they interact with each other?
-- 
+- Explain the role of the Kernel as the "intermediary." If an application wants to write data to a hard drive, why can’t it just talk to the hardware directly?
+- Describe the step-by-step process that occurs when a user-space application executes a System Call. What is "Context Switching," and why is it necessary for system security?
+- Walk us through what happens the moment you press the power button on a computer. What is the hand-off process between the BIOS/UEFI and the OS Kernel?
+- Compare and contrast Bare Metal and Hosted hypervisors. In what scenario would each be preferred over the other?
+- How does a Virtual Machine "believe" it has its own CPU and RAM when, in reality, it is sharing physical resources with 20 other machines?
+- List the essential components of a VM. Which of these is responsible for making a VM "portable" across different physical servers?
+- In Linux, "everything is a file." Explain what this means in the context of hardware devices (like a mouse or a hard drive) located in the ``/dev`` directory.
+- How would you find every line containing the word "ERROR" in a log file named ``server.log``?
+- Explain the difference between ``chmod`` and ``chown``.
+- How do you check which processes are consuming the most CPU in real-time?
+- If a file has permissions 755, what can the owner do that the "world" (others) cannot?
+- Explain the different levels of permissions and how they come into play
+- What are CGroups?
+- Before virtualization, what was "Server Sprawl," and how did it affect the physical design and cost of data centers?
+- What is the mission of the CNCF (Cloud Native Computing Foundation)?
+- What is Open Source? Why is it important?
+- A developer tells you their VM is running slow. Using Linux commands, walk us through how you would diagnose whether the bottleneck is CPU, Memory, or Disk I/O.
+- We need to move a legacy application from an old physical server to a virtualized environment. What are the biggest risks, and how does the 'Hypervisor' layer help make this possible?
+- How does the Kernel prevent a standard user from accidentally deleting critical system files?
+- What is the difference between a Monolithic Kernel and a Microkernel?
+- What is the difference between 'Block Storage' and a 'File System'?
+- At what exact point in the boot process does the computer stop being 'generic hardware' and start being 'Linux'?
+- Compare and contrast Windows vs Linux. Give use cases for each
+  
