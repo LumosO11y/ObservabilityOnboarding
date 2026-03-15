@@ -21,4 +21,3 @@ Questions that you should know the answer to at the end of the study block:
 19. How do you debug a container?
 20. Look up the "Principle of Least Privilege." Why should you never run your application inside a container as the root user?
 21. In a cloud environment where many users share one physical server, how does Docker use Control Groups (cgroups) and Namespaces to ensure one user's container doesn't steal all the CPU from another?
-22. 
