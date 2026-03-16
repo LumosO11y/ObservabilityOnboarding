@@ -9,4 +9,10 @@ A list of questions you should be able to answer at the end of this study block:
 5. What are the pros and cons of developing for cloud environments?
 6. 
 
-
+## Cluster Architecture & Nodes
+1. If the Control Plane (Master Nodes) is the "brain" of the cluster, what happens to the currently running applications if that brain temporarily loses power?
+2. Compare and contrast the responsibilities of a Master Node versus a Worker Node. Who does the "thinking" and who does the "doing"?
+3. What is the role of the Kubelet, and why is it considered the "foreman" of the individual worker node?
+4. In a large-scale environment, why might an organization choose to have dedicated Infra Nodes for logging and monitoring instead of putting everything on Worker Nodes?
+5. Explain the relationship between a Cluster and a Node. How does Kubernetes make multiple physical servers look like one giant pool of resources?
+6. 
