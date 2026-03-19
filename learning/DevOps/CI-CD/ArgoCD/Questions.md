@@ -36,3 +36,5 @@ Questions to test your comprehension of ArgoCD
 
 5. **The App-of-Apps Pattern**: Explain the logic of a "Root" application. How do you prevent a deletion of the Root app from accidentally deleting every child application in the cluster?
 
+## Scaling & Multi-Tenancy
+1. **ApplicationSets**: What are "Generators"? Explain how a ``Git Generator`` differs from a ``Cluster Generator``.
