@@ -46,3 +46,10 @@ Questions to test your comprehension of ArgoCD
 4. **RBAC**: How do you map an OIDC group (like a GitHub Team) to a specific "Admin" or "ReadOnly" role within an ArgoCD Project?
 
 ## Troubleshooting and Observability
+1. **Log Analysis**: If an application is stuck in a ``Progressing`` state indefinitely, which ArgoCD component's logs should you check first?
+
+2. **Custom Health** Checks: By default, ArgoCD might not know if a custom CRD is "Healthy." How do you write a Lua script to define health for a custom resource?
+
+3. **The "Regex" Paradox**: If you are using Prometheus to monitor ArgoCD, which metric would you alert on to find applications that have been ``OutOfSync`` for more than 2 hours?
+
+4. **Diffing Logic**: How does ArgoCD handle "IgnoreDifferences"? Give a real-world example where you would want ArgoCD to ignore a specific field in a Live object (e.g., HPA replica counts).
