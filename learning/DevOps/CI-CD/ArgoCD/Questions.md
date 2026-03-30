@@ -36,5 +36,13 @@ Questions to test your comprehension of ArgoCD
 
 5. **The App-of-Apps Pattern**: Explain the logic of a "Root" application. How do you prevent a deletion of the Root app from accidentally deleting every child application in the cluster?
 
-## Scaling & Multi-Tenancy
+## Scaling and Multi-Tenancy
 1. **ApplicationSets**: What are "Generators"? Explain how a ``Git Generator`` differs from a ``Cluster Generator``.
+
+2. **AppProjects**: How do you restrict a specific team so they can only deploy ``Service`` and ``Deployment`` resources, but not ``Namespaces`` or ``ClusterRoles``?
+
+3. **Multi-Cluster**: How does ArgoCD manage applications on a "Destination" cluster that is different from the one ArgoCD is installed on? What credentials are used?
+
+4. **RBAC**: How do you map an OIDC group (like a GitHub Team) to a specific "Admin" or "ReadOnly" role within an ArgoCD Project?
+
+## Troubleshooting and Observability
