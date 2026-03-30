@@ -3,8 +3,8 @@
 ## Overview
 
 In this part you'll learn about another concept of OpenTelemetry called instrumentation.
-At the end of this part you will understand in-depth what instrumentation means and what are the different kinds of it.
-You should also be familiar with instrumentation best practices and you should know how to instrument code.
+At the end of this part you will have an in-depth understanding of what instrumentation means and the different kinds of it.
+You should also be familiar with instrumentation best practices and know how to instrument code.
 
 ## Goals
 - Learn about the diffrent types of instrumentation.
@@ -15,7 +15,7 @@ You should finish this part after you added instrumentation to an existing compo
 
 In the end of this part you should answer the following questions:
 
-1. Whats the difference between each of the instrumentation solutions?
+1. What's the difference between each of the instrumentation solutions?
    1. Why do we need each of them?
    2. When we should use them?
 2. Name 2 different of instrumentation SDKs and explain the differences between them.
@@ -23,7 +23,9 @@ In the end of this part you should answer the following questions:
     1. Why won't we always have access to this "integrated instrumentation"?
     2. Give an example of a team from our branch that uses "custom instrumentation". Why did they choose this method?
 4. Some would say that manual instrumentation is sort of an art. In what cases should we avoid instrumenting our library/code? What would be considered over-instrumenting?
-5. Add instrumentation to an existing code. Talk with your mentor for more info.
+5. Add instrumentation to an existing code (you can use our docs to see how).
+    1. See it in the console (use a console exporter)
+    2. Write a helm chart for an opentelemetry collector and send the instrumentation through to a platform the mentor will tell you. Talk with your mentor for more info.
 
 
 ### Links
@@ -37,3 +39,5 @@ In the end of this part you should answer the following questions:
 * <https://opentelemetry.io/docs/concepts/instrumentation/zero-code/>
 * <https://www.cncf.io/blog/2022/04/22/opentelemetry-and-python-a-complete-instrumentation-guide/>
 * <https://logz.io/blog/python-opentelemetry-auto-instrumentation/#export>
+* [Chapter 5](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
+* [Chapter 7](../../assets/observability-engineering-achieving-production.pdf)

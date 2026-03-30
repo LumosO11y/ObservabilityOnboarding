@@ -20,29 +20,31 @@ The outcome of this part should be a detailed markdown containing everything you
 
 In your markdown make sure there is an answer to the following questions:
 
-1. Give an explanation about what Observability is. In your explanation, give quotes from sources.
-2. How does monitoring and visibility differ from observability? how do they relate?
+1. Give an explanation about what Observability is. In your explanation,  add relevant qoutes from sources you have researched.
+2. How does monitoring and visibility differ from observability? how do they relate to it?
 3. What are the different types of Observability? Explain what each means and give some real-world examples of how they are used.
 4. What is Data Observability?
      - Elaborate more on this concept.
      - What are the 5 pillars of Data Observability?
-     - What are the components that help us achieve this concept?
+     - What are the components that help us achieve this data observability?
      - Where does Data Observability focus in our data pipeline journey?
-     - What are 3 goals we can achieve with a good Data Observability?
+     - What are 3 goals we can achieve with good Data Observability?
      - Why is it especially important for our Unit?
-5. Provide your take on what Observability is in your opinion and the difficulties when developing Observability at scale.
+5. Provide your take on what Observability is in your opinion, and the difficulties you may encounter when developing Observability at scale.
 
 ### Links
 
-Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suited:
+Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suitable:
 
 - <https://newrelic.com/blog/best-practices/what-is-observability>
 - <https://www.splunk.com/en_us/blog/learn/observability.html>
 - <https://opentelemetry.io/docs/concepts/observability-primer>
-- <https://www.o11y.wiki/#/>
 - <https://www.dynatrace.com/news/blog/what-is-observability-2/>
 - <https://www.youtube.com/watch?v=j8X0xiHTW54>
-- <https://towardsdatascience.com/the-three-types-of-observability-your-system-needs-a3e7f6ae4803>
 - <https://www.simform.com/blog/three-types-of-observability/>
 - <https://www.splunk.com/en_us/blog/learn/data-observability.html>
 - <https://www.strongdm.com/observability>
+- [Chapter 1](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
+- [Chapter 1](../../assets/observability-engineering-achieving-production.pdf)
+- [Chapter 2](../../assets/observability-engineering-achieving-production.pdf)
+- [Chapter 9](../../assets/observability-engineering-achieving-production.pdf)
