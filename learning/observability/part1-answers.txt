@@ -1,0 +1,62 @@
+1. Give an explanation about what Observability is. In your explanation, give quotes from sources.
+A: Observability is the ability to measure the internal states of a system by examining its outputs. 
+   It enables you to understand what's happening inside your systems by analyzing the data they produce like metrics, logs, and traces.
+
+2. How does monitoring and visibility differ from observability? how do they relate?
+A: Monitoring is about watching for known problem in an individual piece. 
+   In monitoring you will find a so called: "problem", describe the problem using metrics and logs, watch for certain value and alert when that value hit a certain threshold. 
+   Visibility is about going deeper than the surface level of monitoring and get insights about unknown problem.
+   Observability is about understanding a system internal state by its external outputs (like logs, events, traces, metrics.
+
+3. What are the different types of Observability? Explain what each means and give some real-world examples of how they are used.
+A: Infrastructure Observability - The ability to measure the current state of the IT ecosystem based on data points it generates in the form of logs, metrics, and traces. 
+				An example of a infrastructure observability is an openshift cluster:
+	* each node/service can be monitored using metrics and logs.
+	* "applicative" workflows (like creating a pvc or a pod) can be observed using traces.
+Data Observability - The ability to understand, diagnose, and manage data health throughout the data lifecycle. 
+		    Data and analytics engineers are responsible for building and operating data pipelines at this level. 
+		    They ensure the data's timeliness, completeness, and other quality characteristics. 
+		    For example: a data pipeline that of kafka -> spark -> s3, you can ensure that the data that is inserted to the kafaka or the data that is inserted/read from the s3 are up to standarts.
+ML Observability -  The ability to analyze model performance, measuring how well they can predict system failures. 
+		   Machine learning engineers and data scientists use ML observability to understand the model across its development phases better. 
+		   For example, check if a model that convert image to text iin a high utilization.
+
+4. What is Data Observability?
+A:
+
+4.a: Elaborate more on this concept.
+A:
+
+4.b: What are the 5 pillars of Data Observability?
+A: The five pillars of data observability are:
+    Freshness - Freshness refers to the timeliness of data, i.e. how up-to-date and recent given data is at any point in time. This pillar enables businesses to monitor the latency of their data flow, ensuring that the information being used for decision-making is as current as possible.
+    Distribution - Distribution focuses on understanding how data is being transmitted and moved across various data sources. It involves:
+    	* Tracking the flow of data through its entire journey, from source to destination.
+    	* Identifying any potential bottlenecks or failures.
+    Volume - Volume refers to the size of data being processed and stored by an organization. This pillar enables you to monitor your storage capacity and cost — and identify any issues with data scaling.
+    Schema - Schema refers to the structure and organization of data, including its format, type, and relationships. This pillar helps you ensure data consistency across different systems and identify any discrepancies or errors.
+    Lineage - Lineage refers to the history and origin of data, tracking where it came from and how it has been transformed throughout its journey. Data lineage allows you to best understand the reliability and accuracy of your data, as well as identify any potential data quality issues.
+
+4.c: What are the components that help us achieve this concept?
+A: the componnents that help us to achieve this concecpts are:
+	* Monitoring data quality
+	* Tracing data lineage
+	* Providing real-time visibility
+	* Maintaining data consistency
+
+4.d: Where does Data Observability focus in our data pipeline journey?
+A: <place holder for elad>
+
+4.e: What are 3 goals we can achieve with a good Data Observability?
+A: the 3 goals the we achive using good data observability:
+	* Business Success
+	* Security and Compliance
+	* Marketing
+
+4.f: Why is it especially important for our Unit?
+A: Data observability is important to us becuase all of the systems are basiclly data pipelines.
+   Having Observability on them will reduce incidenct time, speed up problem searching.
+   If this is not enough i will elaborate in person.
+
+5.Provide your take on what Observability is in your opinion and the difficulties when developing Observability at scale.
+A: I will elaborate in preson.
