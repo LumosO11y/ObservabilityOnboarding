@@ -22,10 +22,10 @@ ML Observability -  The ability to analyze model performance, measuring how well
 		   For example, check if a model that convert image to text iin a high utilization.
 
 4. What is Data Observability?
-A:
+A: The ability to fully understand, monitor, and manage the quality, reliability, and performance of data across various data pipelines. Observability provides a transparent view of data flows to ensure their accuracy and validity.
 
 4.a: Elaborate more on this concept.
-A:
+A: I will elaborate in preson.
 
 4.b: What are the 5 pillars of Data Observability?
 A: The five pillars of data observability are:
