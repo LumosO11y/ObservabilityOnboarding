@@ -45,7 +45,7 @@ A: the componnents that help us to achieve this concecpts are:
 	* Maintaining data consistency
 
 4.d: Where does Data Observability focus in our data pipeline journey?
-A: <place holder for elad>
+A: I will elborate in persion.
 
 4.e: What are 3 goals we can achieve with a good Data Observability?
 A: the 3 goals the we achive using good data observability:
