@@ -1,0 +1,118 @@
+1. What are signals?
+A: Signals are system outputs that describe the underlying activity of the operating system and applications running on a platform. 
+   A signal can be something you want to measure at a specific point in time, like temperature or memory usage, or an event that goes through the components of your distributed system that you’d like to trace. 
+  You can group different signals together to observe the inner workings of the same piece of technology under different angles.
+
+2. What is a span? What does it consist of. 
+A: A Span represents a single operation within a trace. 
+   Spans can be nested to form a trace tree. 
+   Each trace contains a root span, which typically describes the entire operation and, optionally, one or more sub-spans for its sub-operations.
+   It consist of:
+	* The span name
+    	* An immutable SpanContext that uniquely identifies the Span
+    	* A parent span in the form of a Span, SpanContext, or null
+    	* A SpanKind
+    	* A start timestamp
+	* An end timestamp
+    	* Attributes
+    	* A list of Links to other Spans
+    	* A list of timestamped Events
+    	* A Status.
+    * Read about the context field. What does it consist of? Why does it contain those specific fields?
+      A: Span context is an immutable object on every span that contains the following:
+ 	 * The Trace ID representing the trace that the span is a part of
+ 	 * The span’s Span ID
+	 * Trace Flags, a binary encoding containing information about the trace
+	 * Trace State, a list of key-value pairs that can carry vendor-specific trace information
+
+	 Span context is the part of a span that is serialized and propagated alongside Distributed Context and Baggage.
+
+    * Read about span events? Why are they needed? How do they differ from regular logs ?
+      A: structured log message (or annotation) on a Span, 
+	 typically used to denote a meaningful, singular point in time during the Span’s duration.
+	 * Name of the event.
+	 * A timestamp for the event. Either the time at which the event was added or a custom timestamp provided by the user.
+	 * Zero or more Attributes further describing the event
+
+
+3. How are traces stored in most Observability backends?
+A: Grafana Tempo
+
+4. What is a log? What does it consist of?
+A: Timestamped text record, either structured (recommended) or unstructured, with optional metadata. 
+   Of all telemetry signals, logs have the biggest legacy. 
+   Most programming languages have built-in logging capabilities or well-known, widely used logging libraries.
+
+5. How are logs usually stored? (especially in our unit) 
+A: Elastic
+
+6. Many say logs and traces are very similar, how do they differ and what do they have in common? when will we use each of them
+A: There isnt really much similarity between logs and traces except the fact that they both represent detailed event that happend,
+   When using logs to obserev a request to a microservice we will see a group of logs from a single/couple of microservices and we will
+   have to put together the insight in our minds, And By using traces we will see the same path the request did but with a lot less effort.
+   That is also the main diffrnce, log represent a single point in time while trace reperest a wide view.
+ 
+   we will use logs to track detailed information about an event, particularly errors, warnings or other exceptional situations.
+   we will use traces to provides visibility into how a request is processed across multiple services in a microservices environment. Every trace needs to have a unique identifier associated with it
+
+7. What is log correlation?
+A: The ability to correlation logs with the rest of observability data in a few dimensions:
+	* By the time of execution. Logs, traces and metrics can record the moment of time or the range of time the execution took place. This is the most basic form of correlation.
+	* By the execution context, also known as the trace context. It is a standard practice to record the execution context (trace and span IDs as well as user-defined context) in the spans. OpenTelemetry extends this practice to logs where possible by including TraceId and SpanId in the LogRecords. This allows to directly correlate logs and traces that correspond to the same execution context. It also allows to correlate logs from different components of a distributed system that participated in the particular request execution.
+    	* By the origin of the telemetry, also known as the Resource context. OpenTelemetry traces and metrics contain information about the Resource they come from. We extend this practice to logs by including the Resource in LogRecords.
+
+
+8. What is a metric? What does it consist of?
+A: Metrics are numeric values that represent and describe the overall behavior of a service or component measured over time. 
+   They include features like timestamp, name, and value. 
+   Metrics, unlike logs, are structured by default, making them easy to query and optimize for storage, so you can keep them for extended periods of time.
+
+
+9. How are metrics usually stored (especially in our unit)
+A: Thanos
+
+10. What is cardinality?
+A:  Cardinality is the overall count of values for a label.
+
+11. What are the different types of metrics? explain each type and give examples of usages for each type.
+A: counter - Cumulative metric that represents a single monotonically increasing counter  whose value can only increase or be reset to zero on restart. 
+	     For example, you can use a counter to represent the number successfull spark jobs of a spark application.
+   gauge - A metric that represents a single numerical value that can arbitrarily go up and down.
+	  For example, memory overallocation of openshift cluster.
+   histogram - essentially a bucketed counter, it records observations by counting them in configurable buckets, 
+	       a histogram can also represent the current state of a distribution, in which case it is called a gauge histogram.
+   summary - like histogramm it records observations While also providing a total count of observations and a sum of all observed values, 
+   	     it calculates configurable quantiles over a sliding time window.
+
+12. What are RED metrics?
+A: red metrics is a method of monitoring metrics of Rate, Errors and Duration:
+	* Rate tracks the number and, in certain contexts, 
+	  the size of requests, such as photo uploads in a photo hosting service. 
+          Monitoring rate is crucial, especially in environments susceptible to peak traffic failures, 
+	  noting that both spikes and drops in requests are significant.
+	* Errors counts the number of failed requests per second. 
+	  Error rates provide insights into the reliability and quality of the service. 
+ 	  Errors represent any issues leading to incomplete or incorrect results, 
+	  necessitating immediate resolution.
+	* Duration records the time taken for each request. 
+	  This aspect is crucial for assessing the service's responsiveness and efficiency.
+
+13. What is profiling? explain the concept behind it.
+A: Profiling is a technique used in software development to measure and analyze the runtime behavior of a program. 
+   By profiling a program, developers can identify which parts of the program consume the most resources, 
+   such as CPU time, memory, or I/O operations. 
+   You can use this information to optimize the program, making it run faster or use fewer resources. 
+   
+
+14. What issue does profiling come to solve that the other signals don't?
+A: profiling come to solve the "who is responsible" when facing a problem when signals solves the "what",
+   when facing the system becomes unreactive after user sent a request(for example):
+	* metrics will tell me what happned.
+	* traces will tell me where the problem is.
+	* log will tell why the problem happend.
+   and all we have to solve the problem is to figure out who make the problem?
+
+15. What is continuous profiling? Explain the concept behind it.
+A: Non ad-hoc profiling, Method where the profiling data is continuously collected in the background with minimal overhead. 
+   By doing so, developers gain a more comprehensive view of a program’s behavior over time, 
+   helping to identify sporadic or long-term performance issues.
