@@ -116,3 +116,30 @@ A: profiling come to solve the "who is responsible" when facing a problem when s
 A: Non ad-hoc profiling, Method where the profiling data is continuously collected in the background with minimal overhead. 
    By doing so, developers gain a more comprehensive view of a program’s behavior over time, 
    helping to identify sporadic or long-term performance issues.
+   
+ Skila:
+ * span kinds: 
+ 	* server - Handles an incoming synchronous request (e.g., receiving an HTTP request).
+ 	* client - Represents an outgoing synchronous call to another service (e.g., calling an external API)
+ 	* producer - Creates a message that will be processed asynchronously (e.g., publishing to Kafka).
+ 	* consumer - Processes a message received from an asynchronous source.
+ 	* internal - Represents an operation within a single service, not crossing any service boundaries (default).
+ * span attributes - A key value pair which must have the following properties:
+ 	* The attribute key MUST be a non-null and non-empty string.
+ 		* Case sensitivity of keys is preserved. Keys that differ in casing are treated as distinct keys.
+ 	* The attribute value MUST be one of types defined in AnyValue.
+ * span links - The ability to set relationships between spanContexts, it include:
+ 	* SpanContext of the Span to link to.
+	* Zero or more Attributes further describing the link.
+ * span status - 
+ 	* unset -  It means no explicit status has been recorded yet. If a span finishes without an error, it is generally considered successful, making this the default for most successful operations.
+ 	* ok -  It means no explicit status has been recorded yet. If a span finishes without an error, it is generally considered successful, making this the default for most successful operations.
+ 	* error - It means no explicit status has been recorded yet. If a span finishes without an error, it is generally considered successful, making this the default for most successful operations.
+ * metrics fields - i was right, it's with a field.
+ * types of histograms and summaries
+	* uniform
+	* bimodal
+	* symmetric
+	* right/left skewed
+	* frequency
+ * exemplers - Exemplars are example data points for aggregated data. They provide specific context to otherwise general aggregations. Exemplars allow correlation between aggregated metric data and the original API calls where measurements are recorded. Exemplars work for trace-metric correlation across any metric, not just those that can also be derived from Spans.
