@@ -1,0 +1,13 @@
+1. What is Instrumentation? Explain the concept and why is it important in making your application "observable".
+A: Instumentation refers to the specific code that generates or collects data about your application's runtime behavior.
+   It it important to make your application "observable" because runtime behavior at production scale is a mistery to many
+   developers, therefore Instrumentation gives developers the ability to observe the system behavior throught all egde cases,
+ 
+2. What are the different ways of "instrumenting" your application. Can you use these methods at all times? Explain. Explain how each of them work in general and specifically in OpenTelemetry.
+A: 
+
+3. What doesn't Zero-Code instrumentation allow that Code-Based does?
+A:
+
+4. Explain the different use-cases where you should do Zero-Code instrumentation and those where you should use Code-based instrumentation.
+A:
