@@ -143,3 +143,6 @@ A: Non ad-hoc profiling, Method where the profiling data is continuously collect
 	* right/left skewed
 	* frequency
  * exemplers - Exemplars are example data points for aggregated data. They provide specific context to otherwise general aggregations. Exemplars allow correlation between aggregated metric data and the original API calls where measurements are recorded. Exemplars work for trace-metric correlation across any metric, not just those that can also be derived from Spans.
+Skila #2:
+* span resource - The Resource describes the service or system that produced the telemetry. It’s not technically part of the Span but always accompanies it.
+* span scope - object that allows you to define the parent-child relationship between spans, ensuring child spans are correctly linked under a parent.
