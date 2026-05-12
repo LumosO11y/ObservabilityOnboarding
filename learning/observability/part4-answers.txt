@@ -56,7 +56,7 @@ A: Alerting is notifiation of critical events, and configuring the right alerts 
    theehandles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as email, PagerDuty, or OpsGenie. It also takes care of silencing and inhibition of alerts.
 
 9. List 2 more insights Observability gives your system and explain them?
-A: 
+A: fincial insights and business insights
 
 10. Provide a list of at least 3 on-prem observability solutions and 3 cloud observability solutions that exist today with comparison. (Read about the grafana stack)?
 A: On prem:
@@ -68,6 +68,22 @@ A: On prem:
 	* Dynatrace
 	* logz.io
    comparison:
-	* Scalability - Could Wins
+	* Scalability - Cloud Wins
 	* Finnacial - On prem Wins
-	* Setup - Could Wins
+	* Setup - Cloud Wins
+
+Skila:
+Mimir: An open-source, "horizontally scalable" backend for Prometheus metrics that allows organizations to store and query years of data across multiple isolated teams or "tenants."
+       Massive Scalability: Built by Grafana Labs, it can handle billions of active series. It is horizontally scalable and designed specifically to be "Prometheus that never ends."
+Thanos: A set of components that transforms standard Prometheus deployments into a highly available, long-term storage solution by offloading data to cheap cloud object storage (like S3).
+        Global Querying: Acts as an "overlay" for existing Prometheus servers. Its unique advantage is the ability to query across multiple clusters and store data in cheap object storage (S3/GCS) indefinitely.
+Victoria Metrics: A "high-performance" alternative to Prometheus that is famous for its extreme resource efficiency, using significantly less CPU and RAM while providing massive ingestion speeds.
+		  Performance & Efficiency: Known for being extremely lightweight and resource-efficient. It often requires significantly less RAM and CPU than Mimir or Thanos for the same workload.
+Zipkin: One of the industry’s original distributed tracing systems, specifically designed to help developers visualize the journey of a single request through a complex web of microservices to find latency bottlenecks.
+	Simplicity & Legacy: One of the original tracing tools. Its benefit is its widespread adoption and simplicity; if you have a legacy Java environment, Zipkin integrations are often the most stable and "plug-and-play."
+SigNoz: A modern, open-source alternative to Datadog that provides a single UI for metrics, traces, and logs, built from the ground up to be native to the OpenTelemetry standard.
+	OpenTelemetry-Native: Unlike older tools that added OTel support later, SigNoz was built for it. It uses ClickHouse for storage, making high-cardinality searches (like finding one specific user ID in millions of traces) incredibly fast.
+New Relic: A comprehensive, SaaS-based "Intelligence Platform" that offers full-stack visibility, ranging from browser-side user monitoring to deep backend infrastructure and security analysis.
+	   All-in-One SaaS: The biggest benefit is "Observability as Code" and the sheer breadth of its ecosystem. It offers "Golden Signal" dashboards automatically and integrates business KPIs directly with system health. 
+Coralogix: A unique observability platform that uses "in-stream" analysis to process and alert on telemetry data in real-time before it is even stored, helping companies manage massive data volumes without spiraling costs.
+	   Streama© Architecture: Their unique "in-stream" analysis allows you to analyze data and trigger alerts before it's even indexed or stored. This can significantly reduce costs because you don't have to pay to store "noisy" logs that you only need for real-time alerting.
