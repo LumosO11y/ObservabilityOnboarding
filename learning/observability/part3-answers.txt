@@ -36,3 +36,7 @@ Monkey Patching: Frequently used in dynamic languages like Python and Node.js, t
 Language Runtime APIs: Utilizing built-in capabilities of the runtime environment (e.g., JVM Tool Interface, Python sys.settrace) to intercept method calls and execution.
 Compile-Time/Link-Time Instrumentation: Modifying code during the build process, such as parsing source code into an Abstract Syntax Tree (AST) to inject instrumentation before final binary generation, often used in Go.
 eBPF (extended Berkeley Packet Filter): A modern, high-performance technique that attaches probes to the operating system kernel or user applications, enabling observation without modifying the application binary or using library-specific agents.
+
+Skila #2:
+eBPF - Linux kernel technology enabling engineers to build programs that run securely in kernel space. By providing safe access to the innermost workings of the operating system, eBPF lets developers tackle a wide range of challenges related to networking, observability, and security.
+	https://ebpf.io/what-is-ebpf/
