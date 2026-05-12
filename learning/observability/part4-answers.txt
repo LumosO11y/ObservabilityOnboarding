@@ -1,0 +1,73 @@
+1. Explain the difference between SLI, SLO, SLA, their relation and how observability helps with either of them?
+	1.a. explain in depth the importance of each?
+A: SLA - service level agreement is an agreement between the provider and client that outlines measurable metrics,
+         such as uptime, response time, and specific responsibilities.
+   SLO - service level objective defines a target value for a particular metric(the sli) over a set period of time.
+   SLI - service level indicator measures the actual compliance with an SLO. 
+         
+2. What are KPIs? How do they relate to SLI, SLO and SLA?
+A: Key performence indecators are metrics that help businesses determine whether they’re meeting specific goals. 
+   For incident management, these metrics could be number of incidents, average time to resolve, or average time between incidents.
+   kpi related to sli because they are both performance indecators that represent metrics, but the main diffrence is that kpi insight
+   have a wider range of domain then the service level.
+   kpi is related to slo and sla because kpi have okr(objective and key results) which both represet the desried value that the indicator is trying to achive. 
+   
+3. What are golden signals? Explain each one of them?
+A: Golden signals are four key metrics — latency, traffic, errors, and saturation — for monitoring IT systems' health and performance. They offer a vital framework for efficient ITOps monitoring and management.
+   Latency - Latency measures the time taken for a system to process a request. This includes the time from when a request is received until the response is sent back.
+   Traffic - Traffic measures the volume of requests or transactions that the system is handling. It can be quantified in terms of requests per second, transactions per second, or throughput.
+   Errors - Errors track the number or rate of failed requests in a system, such as HTTP 500 errors, timeouts, and other application-specific failures.
+   Saturation - Saturation assesses how much of the system's resources (such as CPU, memory, disk, or network) are in use. It indicates how close the system is to reaching its capacity limits.
+
+4. Explain the differences between Synthetic monitoring & RUM, where they differ and not?
+A: Synthetic monitoring is a method to test and monitor applications and systems by simulating user interactions. 
+   It uses scripts designed to mimic a real user’s behavior, then uses the data to evaluate response times, error rates, and other performance metrics.
+   RUM is a performance monitoring process that collects detailed data about a user’s interaction with an application. 
+   Real user monitoring collects data on a variety of metrics.
+   The symalarties between the two are:
+	* third party tag monitoring
+	* web performnce monitoring
+   The diffrence between the two are:
+	* Costumner Journy Tracking - RUM
+	* Correlating web Performnce to Buniess Metrics - RUM
+	* Compettive benchmarking - SYN
+	* Avalability Monitoring - SYN
+	* Transaction Monitoring - SYN
+   
+
+5. Explain what is Session Replay. How it does it help up achieve monitoring?
+A: session replay is the ability to reconstructs how real users interact with your website or mobile app. 
+   It captures clicks, scrolls, taps, and navigation events to create anonymized, video-like sessions that show exactly what users experience.
+   By combing session replay with signals, we can achive clarity about the system and the users interaction.
+ 
+6. Choose 4 features that RUM has and explain their usage and how they take place in the real-world.
+A: Correlating Web Performance to Business Metrics - Since RUM is collecting both web performance and business metrics (e.g., revenue, conversions), tools such a Blue Triangle's RUM correlate the two so you can better understand the patience, or "tenacity," of your users. 
+   Customer Journey Tracking - Once you've had enough traffic for your data to become statistically significant, one of RUM's glowing benefits is its ability to track the customer journey. 
+				You'll be able to identify the most popular paths to conversion (the "happy paths"), along with the paths that frequently lead to cart abandonment. This data, paired with session replay tools like Clicktale, give you the best insight into to where your site is failing to convert visitors. From the collected data, it is often evident whether the problem is performance one or content-related. Improving high trafficked paths is an easy and effective way to improve your conversion rate.
+   Real-Time Monitoring - You could run Synthetics every minute of every day, but the data collected would never be able to replace the real-time insights that RUM can provide. The direct paths and actions of thousands of your users, all at once, is irreplaceable. These actions are authentic. Real User Monitoring gives you the ability to psychologically put yourself in the shoes of your customer and provides you with data to optimize the path to purchase in the most realistic manner possible.
+   Deeper Segmentation - RUM allows you to better segment your data - down to the device type, operating system, specific location, traffic source, and more. Better segmentation means better insights. Better insights means more focused optimizations.
+
+7. What is MTTD and MTTR?
+A: MTTD (mean time to detect) is the average time it takes your team to discover an issue. This term is often used in cybersecurity when teams are focused on detecting attacks and breaches.
+   MTTR (mean time to recovery) measures how quickly a system or service is restored after a failure.
+
+8. What are alerts, why are they important? What is an alert manager?
+A: Alerting is notifiation of critical events, and configuring the right alerts is the foundation of any proactive development, DevOps, and validation practice.
+   theehandles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as email, PagerDuty, or OpsGenie. It also takes care of silencing and inhibition of alerts.
+
+9. List 2 more insights Observability gives your system and explain them?
+A: 
+
+10. Provide a list of at least 3 on-prem observability solutions and 3 cloud observability solutions that exist today with comparison. (Read about the grafana stack)?
+A: On prem:
+	* Elastic Observability
+	* Splunk
+	* LGTM
+   Cloud:
+	* Datadog
+	* Dynatrace
+	* logz.io
+   comparison:
+	* Scalability - Could Wins
+	* Finnacial - On prem Wins
+	* Setup - Could Wins
