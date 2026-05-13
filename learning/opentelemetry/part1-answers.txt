@@ -10,22 +10,46 @@ A: Before we had sophisticated tools like OpenTelemetry, developers and operator
    Many companies and contributors in the open-source community felt that having two competing standards caused fragmentation.
 
 2. What is OpenTelemetry (aka OTel)?
-A:
+A: open-source CNCF observability framework providing a vendor-neutral set of APIs, SDKs, and tools to instrument, generate, collect, and export telemetry data—traces, metrics, and logs—to analyze software performance.
 
 3. How does OpenTelemetry relate to Observability?
-A:
+A: OpenTelemetry the lack of a standard for how to instrument code and send telemetry data to an Observability backend. 
 
 4. How did OpenTelemetry revolutionize the monitoring/observability world?
-A:
+A: OpenTelemetry (OTel) revolutionized the monitoring and observability world by transforming how telemetry data (logs, metrics, and traces) is collected, moving from a fragmented, vendor-locked landscape to a unified, open-standard approach. 
 
 5. Jaeger vs OpenTelemetry? How do they relate?
-A:
+A: jaeger and otel both technologies that ment for application owners to set up monitoring and observability to measure application performance. 
+   they relate because otel is the instrumentation tool that send observability data to jaeger. in a deeper aspect both otel and jaeger implement agent and collector. 
 
 6. Pick 3 OpenTelemetry concepts and explain them.
-A:
+A: Glossary - This glossary defines terms and concepts that are new to the OpenTelemetry project, and clarifies OpenTelemetry-specific uses of terms common in the observability field.
+
+   Collector - The OpenTelemetry Collector is a vendor-agnostic proxy that can receive, process, and export telemetry data. 
+	       It supports receiving telemetry data in multiple formats (for example, OTLP, Jaeger, Prometheus, as well as many commercial/proprietary tools) and sending data to one or more backends.
+	       It also supports processing and filtering telemetry data before it gets exported. It is built from:
+			* Receivers - Receivers collect telemetry data from various sources and formats. For more information on how to configure receivers, see the Collector configuration documentation.	
+			* Processors - Processors transform, filter, and enrich telemetry data as it flows through the pipeline. For more information on how to configure processors, see the Collector configuration documentation.
+			* Exporters - Exporters send telemetry data to observability backends and destinations. For more information on how to configure exporters, see the Collector configuration documentation.
+			* Connectors - Connectors connect two pipelines, acting as both exporter and receiver. For more information on how to configure connectors, see the Collector configuration documentation.
+			* Extensions - Extensions provide additional capabilities like health checks and service discovery. For more information on how to configure extensions, see the Collector configuration documentation.
+		
+   Sampling -  A methods where traces either sampled or not sampled(which means they are either processed or exported). 
+	       With sampling, you can reduce costs of observability without losing visibility, you can sample traces with two methods:
+		* Head Sampling - sampling technique used to make a sampling decision as early as possible. A decision to sample or drop a span or trace is not made by inspecting the trace as a whole.
+		* Tail Sampling - sampling technique where the decision to sample a trace takes place by considering all or most of the spans within the trace. Tail Sampling gives you the option to sample your traces based on specific criteria derived from different parts of a trace, which isn’t an option with Head Sampling.
 
 7. Write 3 pros and 3 cons of OpenTelemetry.
-A:
+A: Vendor Neutrality & No Lock-in: OTel allows you to instrument your code once and send telemetry data to any backend, including Jaeger, Prometheus, or commercial vendors. You can easily switch backend providers without re-instrumenting applications.
+   Unified Data Collection: It provides a single, open standard for collecting traces, metrics, and logs, reducing the need for multiple, fragmented vendor agents.
+   High Flexibility and Customization: Each OpenTelemetry Commponnents is configurable as fuck  
+
+   Complexity and High Effort: Setting up and managing OpenTelemetry—particularly collector pipelines—is complex and requires significant engineering expertise compared to proprietary all-in-one agents.
+   No Built-in Backend or Visualization: OpenTelemetry is only for data collection, not storage or visualization. You still need to pair it with a separate tool for dashboarding and alerting, as it does not provide analytics.
+   While OpenTelemetry captures a wide range of telemetry data, it might lack some advanced features specific to vendor tools.	
 
 8. Are there any other projects that are similar to OTel? Write in Detail about them.
-A:
+A: SigNoz: A modern, open-source alternative to Datadog that provides a single UI for metrics, traces, and logs, built from the ground up to be native to the OpenTelemetry standard.
+	OpenTelemetry-Native: Unlike older tools that added OTel support later, SigNoz was built for it. It uses ClickHouse for storage, making high-cardinality searches (like finding one specific user ID in millions of traces) incredibly fast.
+   Apache SkyWalking - open-source Application Performance Monitor (APM) and Observability Analysis Platform. It was specifically built to help developers and SREs (Site Reliability Engineers) manage complex,
+		       distributed systems like microservices and cloud-native architectures.
