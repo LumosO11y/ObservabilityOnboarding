@@ -1,0 +1,31 @@
+1. Elaborate on the history before OpenTelemetry, how it was created and why?
+A: Before we had sophisticated tools like OpenTelemetry, developers and operators used basic techniques to monitor their systems. 
+   Two key tools were logs and metrics, However, as systems grew in complexity, 
+   especially with the rise of cloud computing and microservices, logs and metrics alone were insufficient.
+   Before OTEL two projects lead the observability world: OpenCensus and OpenTracing:
+	* OpenTracing - set of vendor-neutral APIs and instrumentation for distributed tracing, allowing developers to monitor application performance across microservices.
+	* OpenCensus - a set of open-source libraries, originally started by Google, designed to collect application metrics and distributed traces, enabling developers to monitor microservices and application performance
+   It became clear to the industry that two projects (OpenTracing and OpenCensus) were serving similar purposes but with slightly different approaches and goals. 
+   While OpenTracing offered a standard for tracing, OpenCensus had a broader scope, aiming to unify both tracing and metrics. 
+   Many companies and contributors in the open-source community felt that having two competing standards caused fragmentation.
+
+2. What is OpenTelemetry (aka OTel)?
+A:
+
+3. How does OpenTelemetry relate to Observability?
+A:
+
+4. How did OpenTelemetry revolutionize the monitoring/observability world?
+A:
+
+5. Jaeger vs OpenTelemetry? How do they relate?
+A:
+
+6. Pick 3 OpenTelemetry concepts and explain them.
+A:
+
+7. Write 3 pros and 3 cons of OpenTelemetry.
+A:
+
+8. Are there any other projects that are similar to OTel? Write in Detail about them.
+A:
