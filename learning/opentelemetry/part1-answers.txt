@@ -53,3 +53,11 @@ A: SigNoz: A modern, open-source alternative to Datadog that provides a single U
 	OpenTelemetry-Native: Unlike older tools that added OTel support later, SigNoz was built for it. It uses ClickHouse for storage, making high-cardinality searches (like finding one specific user ID in millions of traces) incredibly fast.
    Apache SkyWalking - open-source Application Performance Monitor (APM) and Observability Analysis Platform. It was specifically built to help developers and SREs (Site Reliability Engineers) manage complex,
 		       distributed systems like microservices and cloud-native architectures.
+
+Skila:
+Otel Semantic Conventions - common names for different kinds of operations and data. The benefit of using Semantic conventions is in following a common naming scheme that can be standardized across a codebase, libraries, and platforms.
+Context propagation - he technique of passing contextual data—such as trace IDs, span IDs, user IDs, or security credentials—across different threads, processes, and service boundaries in an applicationץ 
+Instrumentation scope - logical unit within the application code with which the emitted telemetry can be associated.
+			Developers can decide what denotes a reasonable instrumentation scope. 
+			For example, they can select a module, a package, or a class as the instrumentation scope. In the case of a library or framework, a common approach is to use an identifier as scope that is unique to the library or framework, such as a fully qualified name and version of the library or framework.
+
