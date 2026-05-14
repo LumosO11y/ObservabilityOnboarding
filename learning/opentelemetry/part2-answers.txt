@@ -1,0 +1,54 @@
+1. Explain what is gRPC and the need for it.
+A: grpc is an implementation of grpc by google. rpc is a protocol use between diffrence processes(diffrent address space) to execute remote code
+   as if it were local. it uses a concept called: stubs, which is a method that does not contain actual logic but instead hold a "link" to the 
+   actual function in the remote address. grpc added value is the protocol buffer, which is google data structure for faster and more efficnent
+   communication.
+
+   The need for grpc is the need to communicate between microservice that were developed in diffrent languages that have diffrent communication
+   services(diffrent serde's).
+
+2. How would a gRPC connection made between code that is running outside of a k8s cluster with a pod in a k8s cluster? What would be the entire flow?
+A: In order to allow grpc connection from external(in on prem k8s cluster) you need to configure the next objects:
+	* avi - allow http2 communication in layer 7
+	* ingress - support grpc protocol(diffrent per ingress controler) 
+	* service - expose cluster ip 
+	* pods/deployments - support grpc in app
+   The flow would look like:
+	1. the client would initiate connetion using grpc with some sort of a client 
+	2. a http2 session is initiated agisnt the load balancer
+	3. the load balancer recive the request and passes it to the ingress
+	4. the ingress uses the service to chose a pod to handle the request. 
+
+
+3. What are the disadvantages of gRPC in internal cluster communication ?
+A: besided the extra overhead in the cluster configuration, the disadvantages of grpc in internak cluster communication are:
+	* load balancing - Kubernetes Services (ClusterIP) operate at Layer 4 (TCP). When a client makes a request to a Service, the kube-proxy selects a backend Pod and establishes a TCP connection.
+			   gRPC uses HTTP/2, which multiplexes many requests over a single, persistent TCP connection to reduce overhead.
+
+4. Explain what is Protobuf and what problem does it solve.
+A: Protobuf is google data structure for faster and more efficnent communication. it is language-neutral, platform-neutral, and extensible.
+
+
+5. What is OTLP?
+A:
+
+6. Why is OTLP needed?
+A:
+
+7. Give 2 alternatives to OTLP and explain them in detail. Provide pro's and con's of each of them.
+A:
+
+8. What is the OTLP specification - explain.
+A:
+
+9. Write a short paragraph explaining about OpenTelemetry specification.
+A:
+
+10. What are the semantic conventions specifications in OpenTelemetry and why are they needed?
+A:
+
+11. List some of the semantic conventions.
+A:
+
+12. What is Open Agent Management Protocol? What is its use case?
+A:
