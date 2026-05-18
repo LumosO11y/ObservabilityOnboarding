@@ -27,28 +27,39 @@ A: besided the extra overhead in the cluster configuration, the disadvantages of
 
 4. Explain what is Protobuf and what problem does it solve.
 A: Protobuf is google data structure for faster and more efficnent communication. it is language-neutral, platform-neutral, and extensible.
-
+   it solves the problem of ununified data models serde between microservices.
 
 5. What is OTLP?
-A:
+A: protocol that defines the encoding of telemetry data and the protocol used to exchange data between the client and the server.
+   This specification defines how OTLP is implemented over gRPC and HTTP transports and specifies Protocol Buffers schema that is used for the payloads.
 
 6. Why is OTLP needed?
-A:
+A: OTLP is needed to create a unified cummunication system across the otel commponnets.
 
 7. Give 2 alternatives to OTLP and explain them in detail. Provide pro's and con's of each of them.
-A:
-
+A: remote write protocol - The remote write protocol is designed to make it possible to reliably propagate samples in real-time from a sender to a receiver, without loss.
+   			   The Remote-Write protocol is designed to be stateless; there is strictly no inter-message communication. 
+   		   	   As such the protocol is not considered "streaming". To achieve a streaming effect multiple messages should be sent over the same connection using e.g. HTTP/1.1 or HTTP/2. 
+			   "Fancy" technologies such as gRPC were considered, but at the time were not widely adopted, 
+			   and it was challenging to expose gRPC services to the internet behind load balancers such as an AWS EC2 ELB.
+			   Pros:
+				* Real-time Data Forwarding: Metrics are sent as soon as they are scraped, ensuring low-latency data availability in the remote backend.
+				* Scalability & Reliability: Integrates natively with scalable backends like Thanos or Mimir, aiding in the creation of a globally distributed monitoring network. 
+			   Cons:
+				* One-Way Communication: Unlike pulling metrics, remote write is a push system; the remote server cannot ask the agent to re-scrape a target if data is missed.
 8. What is the OTLP specification - explain.
-A:
+A: The OpenTelemetry Protocol (OTLP) specification describes the encoding, transport, and delivery mechanism of telemetry data between telemetry sources, intermediate nodes such as collectors and telemetry backends.
 
 9. Write a short paragraph explaining about OpenTelemetry specification.
-A:
+A: the OpenTelemetry specification were created to set a unified standart, it does so by enforce typing on the fields.
 
 10. What are the semantic conventions specifications in OpenTelemetry and why are they needed?
-A:
+A: The Semantic Conventions define a common set of (semantic) attributes which provide meaning to data when collecting, producing and consuming it. 
+   The Semantic Conventions specify among other things span names and kind, metric instruments and units as well as attribute names, types, meaning and valid values. 
 
 11. List some of the semantic conventions.
-A:
+A: log.record.original string The complete original Log Record.
+   log.record.uid      string A unique identifier for the Log Record.
 
 12. What is Open Agent Management Protocol? What is its use case?
 A:
