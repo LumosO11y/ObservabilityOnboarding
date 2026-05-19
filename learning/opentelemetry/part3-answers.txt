@@ -1,0 +1,143 @@
+1. What is the OpenTelemetry Collector?
+A: Vendor-agnostic way to receive, process and export telemetry data.
+
+2. Why is the collector needed? Why should I use the otel collector instead of other products like Logstash or Nifi?
+A: When talking about the business of collecting telemetries, processing and exporting them. otel collector would be the best option.
+   you would want to use the collector instead of generic data in motion/spespic observability tools because the collector lets you 
+   benfit from the otel main feature(telemetries standard) and it is an all in one.
+
+3. Explain in detail the flow of a pipeline in a collector. How does it relate to ETL? Explain what ETL is.
+A: An ETL is an abstraction to a data pipeline where data is collected from a data source, then the data is
+   transformed in some way, And then the data is loaded into an output destention.
+   The flow of a pipeline in the otel collector is:
+	1. recivers - responsible for the E part, usually listen on a network port and receive telemetry data. They can also actively obtain data, like scrapers. Usually one receiver is configured to send received data to one pipeline. However, it is also possible to configure the same receiver to send the same recived data to multiple pipelines. 
+	2. processor - responsible for the T part, usually transform the data before forwarding it, such as adding or removing attributes from spans. They can also drop the data by deciding not to forward it (for example, the probabilisticsampler processor). Or they can generate new data.
+	3. exporter - responsible for the L part, usually forward the data they get to a destination on a network, but they can also send the data elsewhere. For example, debug exporter writes the telemetry data to the logging destination. 
+
+4. How OpenTelemetry collector relates to OTLP?
+A: OpenTelemetry collector relates to otlp in the way the the collector has an OTLP reciver/exporter that can 
+   communicate in otlp.
+
+5. gRPC vs HTTP in the collector.
+A: oren said to move on because this question leads to the same answer in OpenTelemetry->Part2->Question #3.
+
+6. List the architecture paradigms of the collector. What are the pros and cons of each? Make a table that compares between them.
+A: The architechture paradigams of the collector are:
+	* agent - A Collector runs locally on every host, VM, or physical node alongside your applications.
+	* gateway - A central, scaled service that acts as a cluster-level or data center-level ingestion point.
+	* Load balancer - a pattern of having centraled gateway collectors, placing the otel load balancing exporter before them. 
+
+7. List and elaborate in detail on every component that make up the collector. give 2 examples of each. (including Extenstions and Connectors)
+A: there are five components:
+	* Receivers - Receivers collect telemetry data from various sources and formats. for example:
+		a. Apache spark reciver - The purpose of this component is to monitor Apache Spark clusters and the applications running on them through the collection of performance metrics like memory utilization, CPU utilization, shuffle operations, garbage collection time, I/O operations, and more.
+		b. Kubernetes Cluster Receiver - The Kubernetes Cluster receiver collects cluster-level metrics and entity events from the Kubernetes API server. It uses the K8s API to listen for updates. A single instance of this receiver should be used to monitor a cluster.
+	* Processor - Processors transform, filter, and enrich telemetry data as it flows through the pipeline. for example:
+		a. filter processor - The Filter Processor allows dropping spans, span events, metrics, datapoints, and logs from the collector.
+		b. drain processor - The Drain Processor applies the Drain log clustering algorithm to log records as they pass through the pipeline, deriving a template string (e.g. "user <> logged in from <>") and attaching it as an attribute on each record.
+		c. batch processor - The batch processor accepts spans, metrics, or logs and places them into batches. Batching helps better compress the data and reduce the number of outgoing connections required to transmit the data. This processor supports both size and time based batching.
+	* Exporters - Exporters send telemetry data to observability backends and destinations. for example:
+		a. Prometheus Remote Write Exporter - Prometheus Remote Write Exporter sends OpenTelemetry metrics to Prometheus remote write compatible backends such as Cortex, Mimir, and Thanos. By default, this exporter requires TLS and offers queued retry capabilities.
+		b. OpenTelemetry Arrow Exporter - Exports telemetry data using OpenTelemetry Protocol with Apache Arrow components with support for both OpenTelemetry Protocol with Apache Arrow and standard OpenTelemetry Protocol (OTLP) protocol via gRPC.
+	* Connectors - Connectors connect two pipelines, acting as both exporter and receiver. for example:
+		a. Sum Connector - The sum connector can be used to sum attribute values from spans, span events, metrics, data points, and log records.
+		b. Failover Connector - Allows for health based routing between trace, metric, and log pipelines depending on the health of target downstream exporters.
+	* Extentions - Extensions provide additional capabilities like health checks and service discovery. for example:
+		a. Performance Profiler Extension - Performance Profiler extension enables the golang net/http/pprof endpoint. This is typically used by developers to collect performance profiles and investigate issues with the service.
+		b. OTLP Encoding Extension - This extension unmarshals and marshals data encoded according to the OTLP specification.
+
+8. Pick 2 trivial processors that almost every collector should have and elaborate more on them. Explain also why you picked these in particular. If you picked the same as in the last question go back and replace the 2 in your last answer ;
+A: The trival processor every collector should have are:
+	* Attributes Processor - The attributes processor modifies attributes of a span, log, or metric.
+	* Resource Processor - The resource processor can be used to apply changes on resource attributes.
+
+9. What are the different scopes of the transformation processor?
+A: The diffrent scopes of the transform processor(assuming that transformation==transform) are:
+	* Resource
+	* Instrumentation Scope
+	* Span
+	* Span Event	
+	* Metric
+	* Datapoint
+	* Log
+	* Profile
+	* Profile Sample
+	* OTelCol
+	* Profile Sample	
+
+10. How many pipelines can we have in one collector and how can this be? If multiple are possible, when and why shouldn't you put them together?
+A: There is no hard limit for number of pipelines per collector, this can be because reciver and exporters are reuseable(because of: "service").
+   You wouldnt want to run multiple pipelines on the same collector because they take resources from the same entity(process/pod/vm) and that can
+   lead to crashout. 
+
+11. How can you scale the collector? When should you scale the collector? When shouldn't you scale it?
+A: when talking about scaling the collector, you devide the collector into three types:
+	* Stateless Collectors - stateless scaling is about addding more replicas and distribute traffic with a load balancer.
+	* Scrapers - when scaling recivers, the problem is about the endpoints, you cant just replicate the revicer, so to solve this you can scale the revicer with two solutions:
+		a. custome configuration file per collector
+		b. for Prometheus receiver another solution is to use: "Targer Allocator"
+	* Stateful Collectors - To overcome collector holding data in memory, deploy a layer of Collectors containing the load-balancing exporter in front of your Collectors doing the tail-sampling or the span-to-metrics processing. 
+   The usecases to scale the collector are:
+	* Data is being blocked by the `memory_limiter` processor, meaning the Collector is under memory pressure(otelcol_processor_refused_spans)	
+	* When queue size reaches **60–70% of capacity**(otelcol_exporter_queue_size` vs. `otelcol_exporter_queue_capacity)
+	* When scrape completion time is critically close to the scrape interval
+	
+   The usecases to not scale the collector are:
+	* The backend cant keep up with the data.
+	* when queue size consistently low. 
+	* Spans are failing to reach the backend permanently(otelcol_exporter_send_failed_spans)
+
+12. Running collectors as production ready is an important task. One key ingredient for that is monitoring. How can we monitor the collector? Insert the configuration needed to enable this ability.
+A: the config is:
+	service:
+  		telemetry:
+    			metrics:
+      				level: detailed
+      				address: 0.0.0.0:8888
+
+13. Say we have an error in our collector, what are the steps that we should follow in order to debug it? Explain in detail.
+A: in order to debug a collector you shoud:
+	1. enable intenal telemetry
+	2. use the debug exporter 
+	3. check logs
+	4. debug metrics
+		a. pprof on 1777
+		b. zpages on 55679
+
+14. When should the collector be stateful? What state will it keep? Why most of the times won't we keep stateful collectors? what is the pros and cons between the two? Explain in detail.
+A: collector should be statefull when:
+	* needing the hold the data in memory(tail sampling)
+	* working with statefull proctocols
+  
+15. Give an example of a custom component that was made in our branch. What was the process of building this component? Why was it done? Explain in detail how it works. ( You need to ask around;)
+A: extention to nifi that in complied into a jar, the extention is an extra functionality to inject code when running known
+   function(they injected code the instument when function at the open source code are running)
+
+16. List 3 custom distributions of the otel collector. What do they add? Why are there many different distributions? What are the pros and cons of that?
+A. the 3 custom distributions of the otel collector i've chosen are:
+	* Sumo Logic Distribution for OpenTelemetry Collector
+	* Splunk Distribution of OpenTelemetry Collector
+	* KM Agent - KloudMate’s Distribution of OpenTelemetry Collector
+   basicly, all the collectors are an extention to otel offial collectors distibution, the either mix the functionallty or
+   add extra muting of existing shit to tune the data for the desegnated backend.
+   To answer why there are so many disribution: because the community can create so the create. otel dosent support these disributions
+   so they dont really care.
+   the pros of having custom distribuion is the ability to extend the functionality of the existing distibutions to match your spesifc needs.
+   the cons of having custom disribution is the downside of using "unoffical" packge.
+
+17. What are the 2 main distributions of the collector? What are the differences between them and when should I use each of them? Explain in detail.
+A: the two main distibution are:
+	* OpenTelemetry Collector Core Distro - This distribution contains all the components from the OpenTelemetry Collector repository and a small selection of components tied to open source projects from the OpenTelemetry Collector Contrib repository.
+	* OpenTelemetry Collector Contrib Distro - This distribution contains all the components from both the OpenTelemetry Collector repository and the OpenTelemetry Collector Contrib repository. This distribution includes open source and vendor supported components.
+   The diffrence between them is tha the core distribution only contains commponnets from the otel collector and the contrib distribution contains the componnent from the contrib collector which include:
+	* Advanced Receivers: Connectors for legacy systems and third-party tools like Prometheus, Jaeger, Zipkin, AWS CloudWatch, and Kafka.
+	* Processors: Tools for filtering, batching, redacting sensitive information, and enriching data with metadata (e.g., attaching Kubernetes pod details to your traces).
+	* Exporters: Direct integrations to ship telemetry data to various observability platforms (e.g., Datadog, Dynatrace, New Relic). 
+
+   For when to use, it goes by the funcionallty, if you need simple shit use the core, else use the contrib.
+
+18. Deploy a collector on docker. You should be able to configure it.
+A:
+
+19. There are many useful tools that you should get familiar with. One of them is telemetrygen. Explain shortly what it is and generate telemetry (preferably traces) that outputs to the collector you deployed in the last question. The output in your collector should be to the console (verbose). The images are in our artifactory.
+A:
