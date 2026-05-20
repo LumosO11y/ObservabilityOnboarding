@@ -141,3 +141,6 @@ A:
 
 19. There are many useful tools that you should get familiar with. One of them is telemetrygen. Explain shortly what it is and generate telemetry (preferably traces) that outputs to the collector you deployed in the last question. The output in your collector should be to the console (verbose). The images are in our artifactory.
 A:
+
+20. What processor and two connectors requier all the span from the same trace to be in the same collector.
+A: The tail sampling processor and the span metrics/service graph connector.
