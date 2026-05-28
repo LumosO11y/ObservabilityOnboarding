@@ -136,11 +136,46 @@ A: the two main distibution are:
 
    For when to use, it goes by the funcionallty, if you need simple shit use the core, else use the contrib.
 
-18. Deploy a collector on docker. You should be able to configure it.
-A:
-
-19. There are many useful tools that you should get familiar with. One of them is telemetrygen. Explain shortly what it is and generate telemetry (preferably traces) that outputs to the collector you deployed in the last question. The output in your collector should be to the console (verbose). The images are in our artifactory.
-A:
-
 20. What processor and two connectors requier all the span from the same trace to be in the same collector.
 A: The tail sampling processor and the span metrics/service graph connector.
+
+Skila:
+Q: logstah vs collector
+A: when talking about lostash and collector, they both are used to accept and transfer signals to a certin backend.
+   the benefit of a collector in this erea is that the collecor is used to transfer all the signals instead of just logs.
+   
+   because logstash was developed in java, the jvm is more resource intensive, the collector was written in go and more light weight.
+   
+   the logstash is very coupled to the elastic stack, the otel is vendor free.
+
+Q: why the grpc endpoint is diffrent than the http endpoint
+A: the http have a diffrent endpoint based on each signal because http routing is based on url's and grpc is based onservice based roiuting.
+
+
+Q: what is the pprof extention, list and explain another two extentions
+A: the pprof extention works by importing a packge(net/http/pprof) which expose route that contain a performence metris.
+   Two other extentions are:
+	* memory limiter extention - the extention that is destened to replace the processor, check the memory utilization
+				       and will refuse data into the reciver.
+	* opamp agent extentions - the extention enables the extra functionally to connect to a opamp server and send heart
+				    beat and metrics from the collector. it does not change the collector(packge update/configuration)s
+
+Q: what are the trivial two processor?
+A: the two trivial processor there are in our processor are:
+	* batch processor
+	* memeory limiter processor
+
+Q: what is the benifit of custome disributions
+A: Existing distributions provided by the OpenTelemetry project may not meet your needs. 
+   For example, you may want a smaller binary or need to implement custom functionality like authenticator extensions, 
+   receivers, processors, exporters or connectors. 
+   The tool used to build distributions ocb (OpenTelemetry Collector Builder) is available to build your own distributions.
+ 
+Q: how a service graph is created.
+A: Service graphs work by inspecting traces and looking for spans with parent-children relationship that represent a request. 
+   The connector uses the OpenTelemetry semantic conventions to detect a myriad of requests. 
+   It currently supports the following requests:
+	* A direct request between two services where the outgoing and the incoming span must have span.kind client and server respectively.
+	* A request across a messaging system where the outgoing and the incoming span must have span.kind producer and consumer respectively.
+	* A database request; in this case the connector looks for spans containing attributes span.kind=client as well as db.name.
+
