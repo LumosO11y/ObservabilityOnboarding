@@ -1,21 +1,39 @@
 1. Whats the difference between each of the instrumentation solutions? 
+	* Why do we need e ach of them?
 	* Why do we need each of them?
-	* Why do we need each of them?
-A:
+A: The diffrent solutions to instumenting code are:
+	* coded baseed -  using sdk and the openTelemetry Api, create signals and export them manualy.
+	* zero coded - using automatic and minimal OpenTelemetry api and sdk capabilities to add minimal observability to your application.
+   
+   The usecase to code-based instrumantation is to enrich you application to your spesific needs.
+   The usecase to zero-code instrumerntation is lack of ability to change you application.
+   
+   we need both of the solutions to enable both capabilities of observability insights with and without effort. 
 
 
 2. Name 2 different of instrumentation SDKs and explain the differences between them.
-A:
+A: Two instumenation sdk's are:
+	* OTEL sdk - The OpenTelemetry SDK provides a working implementation of the API,
+		      Covers the "three pillars" of observability: Metrics, Traces, and Logs. It correlates them under a single, shared context.
+		      Push-based. The application packaging up data inside the SDK aggressively pushes it out (via a protocol called OTLP) to an external collector or backend.  
+		      It contains zero storage mechanisms. It acts purely as a factory and pipeline to ship your data elsewhere.
+	* Prometheus sdk - The Prometheus SDK is part of an all-in-one metrics monitoring ecosystem originally built to track time-series data at scale.
+			    Exclusively Metrics.
+			    Pull-based (Scraping). The SDK spins up a mini HTTP server inside your application (usually at /metrics). It stores the data locally in memory until the central Prometheus Server periodically sweeps by and "scrapes" (pulls) it.
+			    Built specifically to feed into the Prometheus Time-Series Database (TSDB), which handles querying via PromQL and alerting via Alertmanager.  
 
 3. When instrumenting code based applications we usually have the luxury of using a pre-built integration to our base framework (fastapi, flask, etc). 
    There are some cases where we don't have this luxury. What are the 2 ways of instrumentation in this example? explain in detail.
 	* Why won't we always have access to this "integrated instrumentation"?
 	* Give an example of a team from our branch that uses "custom instrumentation". Why did they choose this method?
-A:
+A: when we dont have the luxury of having an integration with a certin framework, the two ways to instrument are:
+	* instument the base language the framework is built on.
+	* wrap the library in our instumentation
 
 4. Some would say that manual instrumentation is sort of an art. 
    In what cases should we avoid instrumenting our library/code? What would be considered over-instrumenting?
-A:
+A: we would avoid instumentation of our code/library when we dosent have control over the code/access to the code base.
+   over instumenting is dependent by usecase(like everything).
 
 5. Add instrumentation to an existing code. Talk with your mentor for more info.
 A:
