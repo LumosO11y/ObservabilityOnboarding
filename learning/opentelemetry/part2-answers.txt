@@ -62,4 +62,38 @@ A: log.record.original string The complete original Log Record.
    log.record.uid      string A unique identifier for the Log Record.
 
 12. What is Open Agent Management Protocol? What is its use case?
-A:
+A: there is a presentation
+
+Skila:
+Q: Explain the full workflow of an object begin transported over grpc.
+A: steps:
+	1. the object is defined in a ".proto" file.
+	2. the protoc compiles the objects as ata access classes in your preferred language(s) from your proto definition.
+	3. client calls a stub method, the server is notified that the RPC has been invoked with the client’s metadata for this call, 
+	   the method name, and the specified deadline if applicable.
+	4. The server either send back its own initial metadata straight away, or
+	   wait for the client’s request message. Which happens first, is application-specific.
+	5. Once the server has the client’s request message, 
+	   it does whatever work is necessary to create and populate a response. 
+	   The response is then returned (if successful) to the client together with status details (status code and optional status message) and optional trailing metadata.
+	6. If the response status is OK, then the client gets the response, which completes the call on the client side.
+
+Q: what is proto c?
+A: protoc is the compiler for the protocol buffer, it is used to compile the ".proto" files and create 
+   seralizeable objects.
+
+Q: what are the pros and cons of remote write and jager prtocol.
+A: remote write:
+	* pros:
+		* Because it functions over simple HTTP POST requests containing serialized Protocol Buffers, it is highly optimized for high-throughput, unidirectional data streaming.
+	* cons:
+		* Zero Management Capabilities: Remote Write cannot tell you if your metric-collecting agent is healthy, what version it is running, or what its configuration looks like.
+		* No Feedback Loop: It is a pure push mechanism. If you want to change what metrics are being collected or alter scraping intervals, Remote Write cannot push that configuration down to the agent; you have to manually redeploy or use a CI/CD pipeline.
+
+   jager protocol:
+	* pros:
+		* Deep Tracing Specialization:(Thrift) It is optimized for the heavy structural payloads of spans, parent-child relationships, and context propagation.
+		* Remote Sampling Capable: Jaeger has a minor control-plane feature called Jaeger Remote Sampling. This allows agents to fetch sampling strategies (e.g., "only save 5% of successful requests") from a central server.  
+	*cons:
+		* Legacy/Niche Focus: The industry has largely shifted away from native Jaeger protocols toward OTLP (OpenTelemetry Protocol) for data delivery.
+		* Extremely Limited Control Plane: While it can handle remote sampling configuration, it cannot update the agent binary, rotate TLS certificates, report host OS metrics, or manage non-tracing configurations.
