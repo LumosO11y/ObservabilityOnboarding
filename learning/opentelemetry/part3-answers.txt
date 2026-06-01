@@ -166,7 +166,7 @@ A: the two trivial processor there are in our processor are:
 	* memeory limiter processor
 
 Q: what is the benifit of custome disributions
-A: Existing distributions provided by the OpenTelemetry project may not meet your needs. 
+A: Existing distributions provided by the OpenTelemetry project may not meet your needs.
    For example, you may want a smaller binary or need to implement custom functionality like authenticator extensions, 
    receivers, processors, exporters or connectors. 
    The tool used to build distributions ocb (OpenTelemetry Collector Builder) is available to build your own distributions.
@@ -179,3 +179,13 @@ A: Service graphs work by inspecting traces and looking for spans with parent-ch
 	* A request across a messaging system where the outgoing and the incoming span must have span.kind producer and consumer respectively.
 	* A database request; in this case the connector looks for spans containing attributes span.kind=client as well as db.name.
 
+Skila #2:
+Q: Why is go better than other languages.
+A: Concurrency
+
+Q: another pro of logstash vs collector.
+A: logstash is more resilient than the collector(external storage for the messages queue and persistent at ingestion).
+   collector is more has more flexbile output. 
+
+Q two trivial extentions?
+A: health check, pprof, zpages.
