@@ -97,3 +97,17 @@ A: remote write:
 	*cons:
 		* Legacy/Niche Focus: The industry has largely shifted away from native Jaeger protocols toward OTLP (OpenTelemetry Protocol) for data delivery.
 		* Extremely Limited Control Plane: While it can handle remote sampling configuration, it cannot update the agent binary, rotate TLS certificates, report host OS metrics, or manage non-tracing configurations.
+
+Skila #2:
+Q: whats the serde format called?
+A: wire binary?
+
+Q: Another pro of remote write?These are results for what is the serialization f
+A: symbol table.
+
+Q: How to deploy remote write?
+A: deploying a remote write in the collector is a matter of deploying exporter in the collectos.
+
+Q: Zipkin and signoz
+A: 
+
