@@ -1,0 +1,136 @@
+Q: stack vs heap
+A: heap is a term related to the jvm, The heap is the run-time data area from which memory for all class instances and arrays is allocated.
+   The heap is created on virtual machine start-up. Heap storage for objects is reclaimed by an automatic storage management system(gc).
+   
+   stack is a term related to the jvm, the stack is per thread memory storage that stores frames. it is used as a part of method invocation.
+   it holds local variables and partial results,
+   
+Q: metaspace
+A: off heap area used for classes metadata such as runtime representations of loaded classes, method definitions, vtables, and constant pools.
+   replaced the permgen that was relevent untill java 7. 
+
+Q: Classloader mechnism
+A: A class loader is an object that is responsible for loading classes. The class ClassLoader is an abstract class. Given the binary name of a class, 
+   a class loader should attempt to locate or generate data that constitutes a definition for the class. 
+   A typical strategy is to transform the name into a file name and then read a "class file" of that name from a file system. 
+
+Q: Byteode
+A:
+
+
+Q: JIT compilation
+A:
+
+Q: stop the world pauses 
+A:
+
+Q: g1 gc
+A:
+
+Q: What is the difference between a class and an object in Java? 
+A:
+
+Q: How do constructors differ from regular methods in Java?  
+A:
+
+Q: Explain the difference between public, protected, private, and default access modifiers.  
+A:
+
+Q: Can a subclass access the private fields of its parent class? Why or why not?  
+A:
+
+Q: What is the difference between checked and unchecked exceptions? Give examples.  
+A:
+
+Q: How would you implement a custom checked exception?  
+A:
+
+Q: When should you use an interface instead of an abstract class?  
+A:
+
+Q: Can an abstract class have implemented methods? Can an interface? Explain.  
+A:
+
+Q: Why are generics useful in Java collections? Give an example.  
+A:
+
+Q: How do enums improve type safety compared to constant variables?  
+A:
+
+Q: What problem does Optional solve? How do you avoid NullPointerException with it?  
+A:
+
+Q: Give an example of a functional interface and a lambda expression that implements it.  
+A:
+
+Q: What is the difference between the Stack and the Heap in Java memory management?  
+A:
+
+Q: Explain the ClassLoader mechanism and why parent delegation is important.  
+A:
+
+Q: How does the G1 Garbage Collector reduce stop-the-world pauses?  
+A:
+
+Q: What are annotations in Java and how are they used?  
+A:
+
+Q: How does Lombok reduce boilerplate code in Java projects?  
+A:
+
+Q: Give an example of a Lombok annotation and explain what it does.  
+A:
+
+Q: What is the difference between `map`, `filter`, and `reduce` in the Streams API?  
+A:
+
+Q: How would you use `flatMap` in a stream of lists?  
+A:
+
+Q: What is the purpose of `collect` and `Collectors.groupingBy` in streams?  
+A:
+
+Q: How can you create and run a parallel stream, and what are its benefits?  
+A:
+
+Q: What is a JAR file and how do you create one in Java?  
+A:
+
+Q: What is Maven and how does it help in Java project management?  
+A:
+
+Q: Explain stop-the-world pauses and why tuning garbage collection is important in JVM.  
+A:
+
+Q: `map`
+A: method that is applied to an element in some sort of data structure way and returns the element with the changes applied.
+
+Q: `filter`
+A: method that is applied to a data structure and returned all the elements that match a conditions.
+
+Q: `reduce`
+A: method that is applied to data structure and reducts elements using an associative accumulation function.
+
+Q: `collect`
+A: method that is applied to data structure and transform it into a given data structure.
+
+Q: `flatMap`
+A: method that is applied to a nested data structure and transform it into a flat data structure.
+
+Q: `groupingBy`
+A: method that Groups elements by a specific property and returns a Map<Key, List<Value>>.
+
+Q: `partitioningBy`
+A: method that spilits elements exaclty two groups based on a true/false condition. It always return a Map<Boolean, List<Value>>.
+
+Q: `parallelStream()`
+A: a method that returns a possibly parallel Stream with this collection as its source. It is allowable for this method to return a sequential stream. 
+
+Q: Method references
+A:
+
+Q: Functional interfaces
+A:
+
+Q: Optional best practices
+A:
