@@ -15,92 +15,164 @@ A: A class loader is an object that is responsible for loading classes. The clas
    A typical strategy is to transform the name into a file name and then read a "class file" of that name from a file system. 
 
 Q: Byteode
-A:
+A: intermediate language that the jvm compailes the java code into that makes java WORA.
 
 
 Q: JIT compilation
-A:
+A: It is a process that dynamically optimizes the performance of a Java application during runtime.
 
 Q: stop the world pauses 
-A:
+A: event that pasue the jvm exectution of the application to execute backgroun tasks that are related to the
+   total health of the application(like gc)
 
 Q: g1 gc
-A:
-
+A: multiprocessor machines scaling to a large amount of memory. 
+   It attempts to meet garbage collection pause-time goals with high probability while achieving high throughput with little need for configuration.
+   
 Q: What is the difference between a class and an object in Java? 
-A:
+A: the diffrence between classes and objects is: class is the blueprint to create an object.
 
 Q: How do constructors differ from regular methods in Java?  
-A:
+A: constructors differ from regular methods in a way that constructos are a function that are called in an automatic way
+   when creating an object. 
 
 Q: Explain the difference between public, protected, private, and default access modifiers.  
-A:
+A: access modifers are an attribute added to each entity in java to detiermin whether other entities can use it methods.
+   public - accessible from anywhere in the program.
+   protected - accessible within the same package and by subclasses
+   private - accessible only within the same class
+   default - accessible only within the same package
 
 Q: Can a subclass access the private fields of its parent class? Why or why not?  
-A:
+A: No, a subclass cannot directly access the private fields of its parent class.
 
 Q: What is the difference between checked and unchecked exceptions? Give examples.  
-A:
+A: checked exceptions are exceptions that are checked at compile time, forcing the programmer to handle them explicitly. IOException, SQLException, FileNotFoundException.
+   unchecked exception are exceptions that are checked at runtime and do not require explicit handling at compile time. NullPointerException, ArrayIndexOutOfBoundsException.
+   the diffrence between them are the ability of the compiler to enforce the handling of the exception.
 
 Q: How would you implement a custom checked exception?  
-A:
+A: the ability to implement a custom check exception gives you more clearens about error occuring in you code.
 
 Q: When should you use an interface instead of an abstract class?  
-A:
+A: An abstract class is a class that cannot be instantiated and is used as a base for other classes.
+   An interface is a blueprint that defines a set of methods a class must implement.
+   you should use an interface instead of an interface over an abstract class when you want to establish a strict contract for behavior, allow a class to inherit from multiple sources
 
 Q: Can an abstract class have implemented methods? Can an interface? Explain.  
-A:
+A: yes they both can have implemeted methods.
 
 Q: Why are generics useful in Java collections? Give an example.  
-A:
+A:  Type Safety: Ensures only the specified type can be added to the collection, preventing accidental insertion of the wrong type.
+    Avoid Casting: Eliminates the need for explicit type casting when retrieving elements from the collection.
+    Code Reusability: The same generic class or method can be reused with different data types without rewriting code.
+    Improved Readability and Maintainability: Clearly specifies the type of elements stored, making the code easier to understand and maintain.
 
 Q: How do enums improve type safety compared to constant variables?  
-A:
+A: Enums improve type safety by creating a distinct, restricted type that constraints a variable or parameter to a predefined set of valid values, 
+   whereas independent constant variables rely on broad primitive types like strings or integers. 
 
 Q: What problem does Optional solve? How do you avoid NullPointerException with it?  
-A:
+A: the `optional` attribute solve the nullPointerException because it provides a wrapper object that explicitly indicates a value might be missing.
 
 Q: Give an example of a functional interface and a lambda expression that implements it.  
-A:
+A: import java.util.function.Predicate;
+
+public class LambdaExample {
+    public static void main(String[] args) {
+        
+        // Lambda expression implementing the 'test' method of Predicate
+        Predicate<String> isEmptyPredicate = (String s) -> s.isEmpty();
+
+        // Testing the lambda implementation
+        System.out.println(isEmptyPredicate.test(""));     // Output: true
+        System.out.println(isEmptyPredicate.test("Java")); // Output: false
+    }
+}
 
 Q: What is the difference between the Stack and the Heap in Java memory management?  
-A:
+A: Stack memory is used for method calls, local variables, and references. 
+   Memory is automatically allocated when a method starts and cleared when it ends. Data exists only during the method’s execution. 
+   Heap memory is used for objects and instance variables created using the new keyword. 
+   The size depends on the class structure. The Garbage Collector manages this area by removing unused objects.
 
 Q: Explain the ClassLoader mechanism and why parent delegation is important.  
-A:
+A: classLoader mechainsem is the abilily of the jvm to compile class from text files(.class) to memory objects.
+   the classloader mechanisem is loaded the distinguish between diffrent classloaders:
+	* Bootstrap ClassLoader - The highest level loader in Java. This responsible for loading core Java classes, such as java.lang.String and java.util.List.
+	* Extension (or Platform) ClassLoader - Loads classes that extend the functionality of the core Java platform. Typically loads classes from the jre/lib/ext folder or other extension directories.
+	* Application (or System) ClassLoader - The loader that handles your own project classes.It Loads classes from the classpath…for example, the folder where your compiled .class files are located
+
+    when a class is loaded into the memory it delegtes the request between the application -> extention -> bootstrap.
 
 Q: How does the G1 Garbage Collector reduce stop-the-world pauses?  
-A:
+A: the g1 garbage collector reduce stop the world pauses collecting memory in an optimized way like:
+	* Region-Based Heap Division: Instead of contiguous memory for generations, G1 divides the heap into thousands of smaller, discrete regions. 
+				     This isolates garbage collection to a subset of regions, copying live objects out and freeing massive blocks at a time.
+	* Concurrent Marking: G1 runs a background thread to calculate object reachability across the entire heap while your application is still executing. 
+			      This significantly reduces the time it needs to stop the application to finalize the object graph.
 
 Q: What are annotations in Java and how are they used?  
-A:
+A: Annotations in Java are a form of metadata that provide additional information about the program. 
+   They do not change the action of a compiled program but can be used by the compiler or runtime for processing.
+   class Animal {
+    void makeSound() {
+     System.out.println("Animal sound");
+  }
+}
+
+class Dog extends Animal {
+   @Override
+   void makeSound() {
+     System.out.println("Woof!");
+  }
+} 
 
 Q: How does Lombok reduce boilerplate code in Java projects?  
-A:
+A: lombon library reduce boilerplate code in java projects by creating annotations for common operations(getters, setters) that makes code Redundant
 
 Q: Give an example of a Lombok annotation and explain what it does.  
-A:
+A: @getter - get the value of the a class varible.
 
 Q: What is the difference between `map`, `filter`, and `reduce` in the Streams API?  
-A:
+A: the diffrence is map transforms elements, filter eliminates elements based on a condition, and reduce combines all elements into a single summary result.
 
 Q: How would you use `flatMap` in a stream of lists?  
-A:
+A: List<List<Integer>> nestedList = Arrays.asList(
+            Arrays.asList(1, 2, 3),
+            Arrays.asList(4, 5),
+            Arrays.asList(6, 7, 8)
+        );
+
+   List<Integer> flattenedList = nestedList.stream()
+            .flatMap(List::stream) // Or use the lambda: list -> list.stream()
+            .toList();             // Collects into a single List<Integer>
+
+   System.out.println(flattenedList); 
 
 Q: What is the purpose of `collect` and `Collectors.groupingBy` in streams?  
-A:
+A: In Java Streams, collect is a terminal operation that gathers stream elements into a final result, such as a List or Map. 
+   Collectors.groupingBy is a specific built-in utility that categorizes data into groups based on a condition—much like an SQL GROUP BY clause.
 
 Q: How can you create and run a parallel stream, and what are its benefits?  
-A:
+A: to create a parallel stream use the method `.parallelStream()` on a collection and execute a method on it like:
+   listOfNumbers.parallelStream().forEach(number ->
+       System.out.println(number + " " + Thread.currentThread().getName())
+   );
 
+   the benefit of using parallel stream is the aceleration of program
 Q: What is a JAR file and how do you create one in Java?  
-A:
+A: a file format used spesificy for java that allows comppression of multiple files into a single archived file.
+   you can create a jar file using the jar cli with the cf flags or use a depdencies manager like maven.
 
 Q: What is Maven and how does it help in Java project management?  
-A:
+A: maven is a java tool used for managin java application dependencies.
+   It uses an XML-based configuration file called pom.xml to define project structure, dependencies, plugins, and build phases.
 
 Q: Explain stop-the-world pauses and why tuning garbage collection is important in JVM.  
-A:
+A: event that pasue the jvm exectution of the application to execute backgroun tasks that are related to the
+   total health of the application(like gc), it is importent to tune the gc because it impact the apllication
+   latency and avalability.
 
 Q: `map`
 A: method that is applied to an element in some sort of data structure way and returns the element with the changes applied.
@@ -125,12 +197,3 @@ A: method that spilits elements exaclty two groups based on a true/false conditi
 
 Q: `parallelStream()`
 A: a method that returns a possibly parallel Stream with this collection as its source. It is allowable for this method to return a sequential stream. 
-
-Q: Method references
-A:
-
-Q: Functional interfaces
-A:
-
-Q: Optional best practices
-A:
