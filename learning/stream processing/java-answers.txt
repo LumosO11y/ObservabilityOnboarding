@@ -122,7 +122,7 @@ A: Annotations in Java are a form of metadata that provide additional informatio
 }
 
 class Dog extends Animal {
-   @Override
+   @z
    void makeSound() {
      System.out.println("Woof!");
   }
@@ -161,6 +161,7 @@ A: to create a parallel stream use the method `.parallelStream()` on a collectio
    );
 
    the benefit of using parallel stream is the aceleration of program
+
 Q: What is a JAR file and how do you create one in Java?  
 A: a file format used spesificy for java that allows comppression of multiple files into a single archived file.
    you can create a jar file using the jar cli with the cf flags or use a depdencies manager like maven.
@@ -197,3 +198,37 @@ A: method that spilits elements exaclty two groups based on a true/false conditi
 
 Q: `parallelStream()`
 A: a method that returns a possibly parallel Stream with this collection as its source. It is allowable for this method to return a sequential stream. 
+
+Skila:
+Q: where each object is save(heap/stack)?
+A:  stack:
+	Method Invocation (Frame Creation): When a thread calls a method, the JVM allocates a temporary block of memory called a Stack Frame and pushes it onto the top of the stack.
+	Data Storage: This frame stores local variables of primitive types (like int, double, boolean) and references (pointers) to objects that live on the Heap.
+	Execution: The CPU executes the method's instructions using the data inside this top frame.
+	Method Return (Frame Destruction): As soon as the method finishes executing, its Stack Frame is popped off the stack. The memory is immediately reclaimed by the OS. No Garbage Collector is needed here.
+
+Q: phisical representation of what is saved in the metaspace?
+A: the phisical representation of the bytecode of the methods.
+
+Q: old vs young generation
+A: When Eden fills up, a Minor GC is triggered. The GC looks only at the New Gen. 
+   It quickly identifies which objects are still in use, moves them to a Survivor space, and instantly wipes Eden clean.
+   Every time an object survives a Minor GC cycle in the Survivor space, its "age" (tenure counter) increments. Once it survives enough rounds (crossing the tenuring threshold), 
+   it gets "promoted" to the Old Gen. Long-lived objects, like database connection pools, Spring beans, or global configurations, live here.
+
+Q: what is the benifit of stream vs parallel stream?
+A: A parallel stream automatically splits your data into chunks and processes them concurrently across multiple CPU cores using the ForkJoinPool.
+
+Q: what is the maven life cycle?
+A: the maven life cycle is:
+	* validate - Verifies the project structure and downloads necessary configuration requirements.
+	* compile - Transforms source code (.java files) into executable bytecode (.class files).
+	* test - Executes unit tests using frameworks like JUnit or TestNG without packaging the code.
+	* package - Compresses the compiled bytecode into its shipping format, such as a JAR or WAR file.
+	* verify - Runs integration tests to ensure the packaged file complies with quality thresholds.
+	* install - Moves the packaged file into your local repository (~/.m2), making it accessible to other local projects.
+	* deploy - Uploads the final build artifact to a remote shared repository (e.g., Nexus or Artifactory)
+
+Q: what is supressed uncheck function?
+A: The @SuppressWarnings("unchecked") annotation tells the Java compiler to ignore "unchecked" warnings. 
+   These warnings occur when performing operations (like casting) involving Java generics where the compiler cannot guarantee type-safety at compile time.
