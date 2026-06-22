@@ -1,0 +1,91 @@
+Q: What is Spring? Why do we need it?
+A: spring is a framework used to standartize java project.
+
+Q: What is POJO?
+A: Plain Old Java Object
+
+Q:: What is IOC?
+A: IOC(Invertion Of Control) is a process in which an object defines its dependencies without creating them. 
+   This object delegates the job of constructing such dependencies to an IoC container.
+
+Q: What is DI?
+A: A design pattern used to implement the Dependency Inversion Principle.
+    
+Q: How does Spring implement the DI and IOC patterns? How does its container work with beans? What actions does it perform?
+A: Spring implements the DI and IOC patterns by using container that manage beans.
+   When defineing a bean, you define each bean with propeties and let the container to resolve the dependency to of the class. 
+   The action the container perform on the beans are:
+	1. Bean Definition Loading - Reads configuration metadata from Java annotations, XML files, or Java code and Registers these blueprints inside the container as BeanDefinition objects.
+	2. Instantiation - Creates the physical instance of the bean in memory(Uses either a constructor or a factory method to initialize the object)
+	3. Dependency Injection (Assembly) - Identifies the collaborators or external resources the bean requires and Automatically populates those dependencies using constructor injection, setter injection, or field injection
+	4. Lifecycle Aware Processing - Injects container-specific infrastructure if requested (e.g., passing the container itself to the bean via BeanNameAware or ApplicationContextAware).
+	5. Initialization - Triggers custom initialization routines to prepare resources or validate properties.
+	6. Scoping and Management - Stores and serves the bean to the application based on its scope (e.g., keeping a single instance for Singleton or generating fresh instances for Prototype).
+	7. Destruction - Cleans up the bean when the application context or container shuts down.
+
+Q: What is Spring ApplicationContext and Spring BeanFactory?
+A: The ApplicationContext and the Spring BeanFactory are both IOC containers that manage beans.  
+    
+Q: In what ways can Spring do DI?
+A: pring can perform Dependency Injection (DI) through three main injection patterns (Constructor, Setter, and Field) and three configuration mechanisms (Annotations, XML, and Java Config). 9=
+    
+Q: What is a Bean? And how do I define them?
+A: A pojo with a strict set of rules around how we implement it:
+    * Access levels – our properties are private and we expose getters and setters
+    * Method names – our getters and setters follow the getX and setX convention (in the case of a boolean, isX can be used for a getter)
+    * Default Constructor – a no-argument constructor must be present so an instance can be created without providing arguments, for example during deserialization
+    * Serializable – implementing the Serializable interface allows us to store the state
+
+    
+Q: What is Autowire? In what ways can I do Autowire for a specific bean? How does Spring know which bean to inject?
+A: Autowire is feature of the Spring Framework that automatically injects dependent objects into a bean, reducing the need for explicit configuration.
+   The ways of autowireing are: byName, byType, autodetect, constructor.
+   When given multiple implementations, spring inject the bean by the Qualifier.
+    
+Q: Can I create two beans of the same type? If so, how does Spring know which one to inject?
+A: Yes, you can create multiple beans of the same type in Spring.
+   Spring resolves this ambiguity using three primary strategies: matching by name, marking a default bean with @Primary, or explicitly choosing one via @Qualifier.
+    
+Q: What is @Component?
+A: @Component is an annotation that allows Spring to detect our custom beans automatically.
+    
+Q: What are the differences between Component and Bean? Why do we need them?
+A: Component and bean are both used to define beans in Spring, The diffrence between them is that Component is used on local/spring class 
+   and  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxxx
+    
+Q: What is @ComponentScan?
+A: Annotation to specify the packages that we want to be scanned.
+    
+Q: What is @Configuration? And what is the purpose of classes with this annotation?
+A:  Annotation in Spring is used to indicate that a class declares one or more @Bean methods. 
+    These @Bean methods are then processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
+
+Q: Where does Spring perform injection in our configuration? What formats are allowed for writing the configuration?
+A: 1. Constructor Injection - Spring injects dependencies via the class constructor.
+   2. Field Injection - Spring injects dependencies directly into private or public fields, completely bypassing constructors and setters.
+   3. Setter / Method Injection - Spring injects dependencies by calling setter methods or arbitrary configuration methods.
+   4. Method Parameter Injection in @Bean Methods - If you are using @Configuration classes, you perform injection directly within method parameters.
+
+    xml-based configuration, when you describe configuration in xml file;
+    java-based configuration, when configuration is Java class, marked with specific annotations;
+    groovy-based configuration, when configuration is file with Groovy code;
+   
+Q: What is Spring Boot?
+A: framework built on top of spring that simplifies the development of Spring applications by providing auto-configuration, embedded servers, and production-ready features. 
+    
+Q: What is @EnableAutoConfiguration?
+A: Annotation that Enable auto-configuration of the Spring Application Context, attempting to guess and configure beans that you are likely to need. Auto-configuration classes are usually applied based on your classpath and what beans you have defined. 
+    
+Q: What is @SpringBootApplication?
+A: annotation provides a concise way to bootstrap and configure a Spring Boot application, combining multiple core annotations into a single, easy-to-use entry point.
+    
+Q: What are Spring Boot Starters? Which one should I use if I want to write a REST application?
+A: Spring Boot Starters are pre-configured dependency packages that simplify project setup in Spring Boot.
+    spring-boot-starter-data-rest, spring-boot-starter-web
+    
+Q: What is RestController?
+A: A REST Controller in Spring Boot is a class annotated with @RestController that processes incoming HTTP requests and returns data objects rather than views.
+    
+Q: How can we process a request with a JSON body to our API? And how can we perform validations automatically?
+A: To process a JSON request body in Spring and perform automatic validations, you must use the @RequestBody annotation alongside the @Valid annotation from the Jakarta Bean Validation API.
+
