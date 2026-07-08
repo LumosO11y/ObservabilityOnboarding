@@ -51,7 +51,7 @@ A: @Component is an annotation that allows Spring to detect our custom beans aut
     
 Q: What are the differences between Component and Bean? Why do we need them?
 A: Component and bean are both used to define beans in Spring, The diffrence between them is that Component is used on local/spring class 
-   and  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxxx
+   and  
     
 Q: What is @ComponentScan?
 A: Annotation to specify the packages that we want to be scanned.
@@ -88,4 +88,3 @@ A: A REST Controller in Spring Boot is a class annotated with @RestController th
     
 Q: How can we process a request with a JSON body to our API? And how can we perform validations automatically?
 A: To process a JSON request body in Spring and perform automatic validations, you must use the @RequestBody annotation alongside the @Valid annotation from the Jakarta Bean Validation API.
-

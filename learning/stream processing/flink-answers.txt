@@ -1,0 +1,151 @@
+* מהם הרכיבים המרכזיים ב-Runtime של Flink (JobManager, TaskManager, ResourceManager), ומה התפקיד של כל אחד?
+הJobManager- רכיב מרכזי שיש לו כמה מטרות: תזמון TASKים, תזמון CHECKPOINTים, RECOVERY לכישלונות.
+הTaskManager- רכיב האחראי על הרצת הTASKים.
+הResourceManager- ממשק REST שמאפשר שליטה באפליקצייץ FLINK.
+
+* מה זה Slot (Task Slot) בתוך TaskManager, ואיך הוא מנהל בידוד זיכרון ומשאבים בין משימות?
+הTASK SLOT הינו THREAD המייצג חילוק של משאבים בתוך הPROCESS הJVM.
+
+* מה ההבדל בין JobGraph ל-ExecutionGraph, ואיזה רכיב אחראי על הטרנספורמציה ביניהם?
+הJobGraph הוא תוכנית לוגית(האבסטרקציה של תוכנית ההרצה) שמכיל אובייקט שקוראים לו JobVertices(אובייקט המייצג שרשור לוגי של OPERATORים).
+הExecutionGraph הוא התוכנית הרצה הפיזית, מכיל ExecutionJobVertex וExecutionVertices.
+
+* מהו ה-Program Optimizer של פלינק וכיצד הוא מייעל שאילתות Batch לעומת Stream?
+הOPTIMIER הוא רכיב שהמטרה שלו הינה לאפטם את הקוד שהלקוח מגיש על בסיס RULEים.
+
+* מה זה Task ו-Subtask בפלינק, ואיך נקבעת מידת המקביליות (Parallelism) שלהם?
+הTASK הוא אבסטרציה של שרשרת OPERTORים שיכולים לרוץ בTHREAD בודד. 
+הSUBTASK הוא חלק מהTASK שמורץ.
+אפשר לקבוע את רמת המקביליות של שלהם עלי בצורה ידנית על הOPERATOR או על הסביבה.
+
+* מהו מנגנון ה-Operator Chaining (שרשור אופרטורים), אילו תנאים חייבים להתקיים כדי שהוא יתרחש, ואיך הוא משפיע על ביצועים?
+מננון שהמטרה שלו היא לקחת פעולות שיכולות לרוץ ביחד ולקמט אותם לTHREAD בודד שירוץ על TASK MANAGR יחיד, הוא משפיע על ביצועים בכך שיש חיסכון בIO.
+התנאים הם:
+א.They are connected via a forward connection (no shuffles, keyBy, or partition changes).
+ב.They share the exact same parallelism.
+ג.They belong to the same Slot Sharing Group.
+
+* מהם שלושת סוגי הזמן בפלינק (Event Time, Processing Time, Ingestion Time) ומתי נכון להשתמש בכל אחד?
+זמן EVENT זה הזמן שבו האירוע קרה ביקום. 
+זמן PROCESSING זה הזמן שבו האירוע עובד במערכת.
+זמן INGESTION זה הזמן שבו האירוע נכנס למערכת.
+	
+* מה זה Watermark (סימן מים), איך הוא מיוצר, ואיך הוא פותר את בעיית הנתונים שמגיעים באיחור (Out-of-order data)?
+אירוע מיוחד שהמטרה שלו היא לייצר סימון דרך על בסיס EVENT TIME.
+הוא פותר את בעיית הOUT OF ORDER בגלל שעל בסיס הWATERMARK אפשר למדוד את האירועים המגיעים ולתת אינדיקיציה אם בין WATERMARK לWATERMARK הכל תקין.
+הם מיוצרים או בצורה MANUAL או בצורה אוטומטית על ידי הWATERMARK STRATEGY.
+
+* מה ההבדל בין Punctuated Watermark ל-Periodic Watermark?
+הPERIODIC WATERMARK מקפיץ על בסיס זמן וPUNCTUATED WATERMARK על בסיס תנאי מסוים.
+
+* איך עובד מנגנון ה-Allowed Lateness בחלונות, ומה קורה לנתונים שמגיעים אחרי שהחלון נסגר סופית (Late Data)?
+בDEFAULT פלינק מדריפ EVENTים שיגיעו לאחר הזמן של החלון, בשביל לאפשר לEVENTים שמגיעים באיחור(אחרי הWATERMARK)
+צריך ביצירת הWINDOWS לאפשר את הFLAG הזה עם TIME שאומר כמה זמן לאחר שהWATERMARK האירועים יכולים להגיע.
+
+* מהם שלושת סוגי החלונות המובנים בפלינק: Tumbling Windows, Sliding Windows, ו-Session Windows? מה מאפיין כל אחד?
+הSLIDEING WINDOW הוא חלון בגודל קבוע ובעל TIME INTERVAL קבועים כאשר יש OVRELAPPING בין החלונות. 
+הTUMBLING WINDOW הוא חלון בגודל קבוע וINTERVAL זמן אבל אין OVERLAPPING.
+הSESSION WINDOW הוא חלון בלי גודל קבוע ובלי התחלה או סוף שבו אירועים מגיעים לחלונות על בסיס הINPUTים והחלונות הפתוחים.
+
+* מה ההבדל בין Keyed Window ל-Non-Keyed Window מבחינת ביצועים ומקביליות?
+ההבדל בין KEY לבין NON KEYED הוא שהWINDOW מפורטש על בסיס מפתח בKEYED ובNON KEYED הוא מעבד את כל הSTREAM.
+מבחינת ביצועים ומקביליות, הביצועים והמקביליות יותר טובים(כתלות בDATA) בKEYED.
+
+* מהם התפקידים של WindowAssigner, Trigger, ו-Evictor בארכיטקטורת החלונות של פלינק?
+הTRIGGERER הוא פונקציה שפועלת כאשר הWINDOW מעובד.
+הWINDOWS ASSINER הוא רכיב המחליט לאן לנתב את הEVENT(איזה WINDOW)
+הEVICTOR הוא The evictor has the ability to remove elements from a window after the trigger fires and before and/or after the window function is applied
+* מה זה State בפלינק, ומה ההבדל המהותי בין Keyed State ל-Operator State (או Non-keyed state)?
+הSTATE בFLINK הוא מידע ששמור בזמן ריצה על מנת לאפשר עיבוד מסוים.
+הKEYED STATE הוא מיפוי של ערך/ערכים. ההבדל המהותי שלו לבין NON KEYED STATE הוא שהוא קשור לכמה OPERATORים ביחד ולא לOPERATOR בודד.
+
+* אילו סוגי סטייט קיימים בתוך Keyed State (למשל: ValueState, ListState, MapState), ומתי נבחר בכל אחד?
+א.ValueState - מייצג STATE שהוא ערך בודד
+ב.ListState - מייצג STATE שהוא רשימה של ערכים
+ג.ReducingState	- מייצג STATE של ערך בודד שזוקק מרשימה על ידי מתודה מוגדרת מראש
+ד.AggregatingState - כמו REDUCING STATE אבל ניתן להוציא את הערך גם מTYPEים שהם לא אותו דבר.
+ה.MapState - מייצג STATE שהוא מפה של מפתחות וערכים.
+
+* מה זה State Backend ומה ההבדלים המרכזיים בין HashMapStateBackend ל-EmbeddedRocksDBStateBackend מבחינת מיקום הזיכרון וביצועים?
+הSTATE BACKEND הוא רכיב שהמטרה שלו היא לנהל גישה אל הSTATE.
+הHASH MAP משתמש בPOJOים על הHEAP, הROCKS DB משתמש בROCKS DB בשביל לשמור את הSTATE.
+מבחינת זיכרון, ROCKS DB משתמש בפחות בגלל שהוא שומר את האובייקט מסורלז.
+
+* מה זה RocksDB, כיצד הוא משמש כ-State Backend מחוץ ל-Heap של ה-JVM (Off-Heap), ובאילו תרחישים נבחר בו על פני ניהול הסטייט בזיכרון המקומי?
+אחסון מבוסס על KEY VALUE שמשומש על ידי FLINK בשביל אחסון הSTATE. נשתמש בו על פני ניהול הSTATE בזיכרון מקומי כאשר הSTATE בעל פוטנציאל גדילה
+ואנחנו צריכים סקיילביליות מעל מהירות.
+
+* איך עובד אלגוריתם הציליום (Asynchronous Barrier Snapshotting - ABS) שפלינק משתמשת בו לצורך Checkpointing ללא עצירת הסטרים
+יש EVEVNT מיוחד בשם BARRIER שהמטרה שלו היא לסמן לכל TASK MANAGERE לקחת SNAPSHOT על הINTERNAL STATE, כל הרשומות שמגיעות אחרי שייכות לCHECKPOINT הבא.
+
+A central coordinator periodically injects
+stage barriers to all the sources. When a source receives
+a barrier it takes a snapshot of its current state, then
+broadcasts the barrier to all its outputs (Fig.2(a)). When
+a non-source task receives a barrier from one of its in-
+puts, it blocks that input until it receives a barrier from
+all inputs (line 9, Fig.2(b)). When barriers have been re-
+ceived from all the inputs, the task takes a snapshot of
+its current state and broadcasts the barrier to its outputs
+(lines 12-13, Fig.2(c)). Then, the task unblocks its input
+channels to continue its computation (line 15, Fig.2(d)).
+The complete global snapshot G∗ = (T ∗, E∗) will con-
+sist solely of all operator states T ∗ where E∗ = /0
+
+
+* מה ההבדל ביןCheckpoint ל-Savepoint בפלינק, ומתי משתמשים בכל אחד (למשל לצורך שדרוגי גרסה או מיגרציות)?
+שתיהם מנגנונים שמטרתם לספק שירדות, ההבדל הוא שCHECKPOINT הוא MANAGED BY FLINK וSAVEPOINT הוא MANAGED BY USERS,
+הSAVEPOINT גם נוצר כאשר הוא יותר כבד(מבחינת המידע ומה הוא שומר(הקבצי בינארים)). 
+
+* מה זה Incremental Checkpoints ב-RocksDB ואיך זה מייעל את זמני הגיבוי?
+מנגון שמחליף שמירה של CHECKPOINT שלם כל פעם בשמירה של הCHECKPOINT ואז שמירה של השינוים שנעשו.
+
+* כיצד פלינק מבטיחה סמנטיקה של Exactly-Once מקצה לקצה (End-to-End), ומה נדרש מה-Source וה-Sink לשם כך (למשל שילוב עם Two-Phase Commit)?
+היכולת של FLINK להבטיח שכאשר EVENT נכנס הוא מעובד פעם אחת מתבטאת בעובדה שהCHECKPOINT של FLINK לא שומר רק את המצב הנוכחי של המערכת אלא
+גם את הPOINTERים בSTREAMים. כאשר מדובר בTWO PHASE COMMIT נדרש מהSINK ומהSOURCE לממש את הTwoPhaseCommitSinkFunction.
+
+* מהי תופעת ה-Backpressure (לחץ חוזר) בפלינק, ואיך מנגנון ה-Credit-based Flow Control ברשת מזהה ומטפל בה?
+תופעת הBACKPRESSURE היא תופעה בה יותר מידע מיוצר מאשר מעובד.
+מנגנון הCREDIT BASED FLOW CONTROL ברשת לא יודע לסדר BACKPRESSURE אבל הוא יודע להבטיח שהכמות מידע שיש בBUFFER היחודי של כל TASK MANAGER
+יעבור בחלקים חלקים לBUFFER היחודי של הTASK MANAGER האחר על ידי חיבור TCP שמעביר CREDIT(מקום בBUFFER).
+ 
+* מה ההבדל בין פעולות Forward, Rebalance, Rescale, ו-Hash בחלוקת הנתונים (Data Partitioning) בין אופרטורים?
+א. FOWARD - המידע נשלח מה-Sub-task הנוכחי ישירות ל-Sub-task הבא שיושב באותו Thread או באותו Process (אותו JVM של ה-TaskManager).
+	    אפס עלות רשת (Network Overhead) ואפס סיראליזציה. המידע נשאר מקומי (Chained Operators).
+ב. HASH - פלינק לוקחת מפתח (Key) מתוך הרשומה שהגדרתם, מריצה עליו פונקציית Hash, ולפי התוצאה קובעת בדיוק לאיזה Sub-task הרשומה תלך.
+	  עלול ליצור Data Skew קשה אם מפתח מסוים פופולרי בהרבה מהשאר (למשל, "משתמש סלבריטי" באפליקציה שמייצר מיליוני אירועים בזמן שמשתמש רגיל מייצר שניים).
+ג. REBALANCE - עלול ליצור Data Skew קשה אם מפתח מסוים פופולרי בהרבה מהשאר (למשל, "משתמש סלבריטי" באפליקציה שמייצר מיליוני אירועים בזמן שמשתמש רגיל מייצר שניים).
+	      מייצר עומס רשת גבוה (Network Shuffle), מכיוון שהמידע צריך להישלח לכל ה-TaskManagers האחרים ברשת.
+ד. RESCALE - המידע מופץ בשיטת Round-Robin, אך רק בין תת-קבוצה (Subset) של ה-Sub-tasks הבאים, בהתבסס על המיקום הפיזי שלהם.
+	     
+* מה זה Rescale בחלוקת נתונים (Data Partitioning), במה הוא שונה מ-Rebalance (או Shuffle) מבחינת תעבורת הרשת, ומתי נרצה להשתמש בו כדי לייעל ביצועים?
+ג. REBALANCE - עלול ליצור Data Skew קשה אם מפתח מסוים פופולרי בהרבה מהשאר (למשל, "משתמש סלבריטי" באפליקציה שמייצר מיליוני אירועים בזמן שמשתמש רגיל מייצר שניים).
+	      מייצר עומס רשת גבוה (Network Shuffle), מכיוון שהמידע צריך להישלח לכל ה-TaskManagers האחרים ברשת.
+ד. RESCALE - המידע מופץ בשיטת Round-Robin, אך רק בין תת-קבוצה (Subset) של ה-Sub-tasks הבאים, בהתבסס על המיקום הפיזי שלהם.
+* מהם המושגים Upstream Operator ו-Downstream Opetor, וכיצד זרימת הנתונים והאירועים (כמו Watermarks או Barriers) מנוהלת ביניהם לאורך ה-Topology?
+הUPSTREAM OPERATOR הוא כל OPERATOR או SOURCE שמעביר מידע לOPERATOR אחר. DOWNSTREAM OPERATOR הוא האחד שמקבל את המידע אחריו.
+
+* מה זה Key Group בפלינק, כיצד הוא מהווה את יחידת הניוד (Assignment) הבסיסית של Keyed State, ואיך המנגנון הזה מאפשר לשנות את רמת המקביליות (Rescaling) של ה-Job מבלי לאבד את הסטייט?
+הKEY GROUP הוא החילוק של הEVENTים על פי ערך מסוים, הASSIGMENT הבסיסי הוא על פי המקבליות של הOPERATOR.
+המנגנון הזה מאפשר RESCALE מכיוון שברגע שמגדילים את המקבליות המידע ימשך מהCHECKPOINT בצורה שונה(יותר מקבילית).
+
+* מה זה Broadcast State (ובפרט השילוב שלו כ-KeyedBroadcastState), ואיך הוא מאפשר לחבר בין זרם נתונים שמחולק לפי מפתחות (Keyed Stream) לבין זרם נתונים גלובלי שמופץ לכל ה-Subtasks (למשל, הזרמת חוקי סינון דינמיים)?
+מנגנון שהמטרה שלו היא לאפשר העתקה של STREAM(בדרך כלל בעל VOLUME קטן) אל OPERATORS שמעבדים STREAM אחר(בדרל כלל עם VOLUME).
+
+* מה זה Side Outputs ומתי נרצה להשתמש בהם במקום לפצל את הסטרים הרגיל?
+היכולת להוציא תוצאות מסוימות על בסיס לוגיקה מסוימת לSTREAMים שונים, נרצה להשתמש בזה במצבים של: DATA שגוי, DATA מאחר.
+
+* איך בנוי מודל הזיכרון של ה-TaskManager (הפרדה בין Framework Heap, Task Heap, Managed Memory, ו-Off-Heap)?
+א. Framework Heap Memory - JVM Heap memory dedicated to Flink framework
+ב. JVM Heap memory dedicated to Flink application to run operators and user code
+ג. Native memory managed by Flink, reserved for sorting, hash tables, caching of intermediate results and RocksDB state backend
+ד. https://nightlies.apache.org/flink/flink-docs-release-2.3//fig/detailed-mem-model.svg
+
+* מה זה Managed Memory בפלינק, ומדוע פלינק מנהלת זיכרון בעצמה מחוץ ל-JVM Garbage Collector עבור פעולות מסוימות?
+הMANAGED MEMORY בFLINK הוא האזור בOFF HEAP שFLINK, שם FLINK JOBS משתמשים בCACHE.
+הסיבה שFLINK מנהלת בעצמה את הMEMORY ולא משתמשת בGC היא שGC גורם לSTOP THE WORLD EVENT.
+
+* איך פלינק מונעת בעיות של OutOfMemoryError (OOM) בזמן ביצוע פעולות Batch גדולות כמו Sort או Join?
+
+* מה זה State raTTL (Time-To-Live) ואיך הוא עוזר במניעת התנפחות הזיכרון (State Bloat) לאורך זמן?
+הגדרה של KEYED STATE שמנקה את הSTATE(על בסיס תנאים מסוימים) ומונעת את הגדילה של הSTATE על הHEAP.
