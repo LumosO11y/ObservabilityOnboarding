@@ -76,10 +76,6 @@ Study:
 
 ---
 
-Here’s a concise Markdown section with just links for reading:
-
----
-
 ### Annotations
 
 * [Java Annotations Tutorial](https://docs.oracle.com/javase/tutorial/java/annotations/)

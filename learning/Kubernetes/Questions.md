@@ -7,7 +7,7 @@ A list of questions you should be able to answer at the end of this study block:
 3. In your own words, describe the exact moment a company grows out of "just using Docker" and begins to actually need an orchestrator like Kubernetes.
 4. How does Kubernetes solve the problem of "Vendor Lock-in" when a company wants to move from AWS to Google Cloud or Azure?
 5. What are the pros and cons of developing for cloud environments?
-6. 
+6. When would a team be better off *not* adopting Kubernetes, and sticking with something simpler like Docker Compose or a managed PaaS instead?
 
 ## Cluster Architecture & Nodes
 1. If the Control Plane (Master Nodes) is the "brain" of the cluster, what happens to the currently running applications if that brain temporarily loses power?
