@@ -1,4 +1,4 @@
-# Part 4
+# Instrumentation
 
 ## Overview
 
@@ -39,5 +39,5 @@ In the end of this part you should answer the following questions:
 * <https://opentelemetry.io/docs/concepts/instrumentation/zero-code/>
 * <https://www.cncf.io/blog/2022/04/22/opentelemetry-and-python-a-complete-instrumentation-guide/>
 * <https://logz.io/blog/python-opentelemetry-auto-instrumentation/#export>
-* [Chapter 5](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
-* [Chapter 7](../../assets/observability-engineering-achieving-production.pdf)
+* [Chapter 5](../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
+* [Chapter 7](../assets/observability-engineering-achieving-production.pdf)

@@ -1,4 +1,4 @@
-# Part 2: Signals
+# Signals
 
 ## Overview
 
@@ -49,13 +49,13 @@ Here are some useful links to start from, Yet again, you are encouraged to searc
 * <https://opentelemetry.io/docs/concepts/signals>
 * <https://sematext.com/glossary/three-pillars-of-observability/>
 * <https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html>
-* [Chapter 4](../../assets/Distributed-Systems-Observability-eBook.pdf)
+* [Chapter 4](../assets/Distributed-Systems-Observability-eBook.pdf)
 * <https://iamondemand.com/blog/the-3-pillars-of-system-observability-logs-metrics-and-tracing/>
 * https://www.splunk.com/en_us/blog/learn/melt-metrics-events-logs-traces.html
 * <https://grafana.com/docs/tempo/latest/operations/best-practices/>
 * <https://codersociety.com/blog/articles/metrics-tracing-logging>
 * <https://logz.io/blog/logs-or-metrics/>
 * <https://opentelemetry.io/blog/2024/profiling/>
-* [Chapter 3](../../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf).
-* [Chapter 5](../../assets/observability-engineering-achieving-production.pdf)
-* [Chapter 6](../../assets/observability-engineering-achieving-production.pdf)
+* [Chapter 3](../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf).
+* [Chapter 5](../assets/observability-engineering-achieving-production.pdf)
+* [Chapter 6](../assets/observability-engineering-achieving-production.pdf)
