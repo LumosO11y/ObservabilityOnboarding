@@ -1,6 +1,6 @@
 # Overview
 In this exercise, you'll get hands-on experience with the Dockerfile.    
-You will create your own first Dockerfile and use it to run the Python app that is in the [`5 - Dockerfile Exercise App`](./5%20-%20Dockerfile%20Exercise%20App) directory. 
+You will create your own first Dockerfile and use it to run the Python app that is in the [`1 - Dockerfile Exercise App`](./1%20-%20Dockerfile%20Exercise%20App) directory. 
 Good luck!
 
 ## Your first own Dockerfile

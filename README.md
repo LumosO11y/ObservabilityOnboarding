@@ -50,33 +50,18 @@ The concrete platforms we (and the wider ecosystem) use to query and visualize t
 The practitioner's toolbox: containerizing and orchestrating workloads, and the CI/CD tools that ship them.
 
 **Docker**
-- **[Syllabus](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/0%20-%20Syllabus.md)**
-- **[Containerization](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/1%20-%20Containerization.md)** - images, containers, and why containers replaced VMs for most workloads.
-- **[General Tutorial](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/2%20-%20General%20Tutorial.md)**
-- **[Reading](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/3%20-%20Reading.md)**
-- **[Questions](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/4%20-%20Questions.md)**
-- **[Dockerfile Exercise](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/5%20-%20Dockerfile%20Exercise.md)** - build and run your first Dockerfile against the sample app in `5 - Dockerfile Exercise App/`.
-- **[Useful Videos](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/6%20-%20Useful%20Videos.md)**
+- **[Containerization](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/0%20-%20Containerization.md)** - images, containers, why containers replaced VMs, and Docker fundamentals.
+- **[Dockerfile Exercise](./Chapter%204%20-%20DevOps%20&%20Development/0%20-%20Docker/1%20-%20Dockerfile%20Exercise.md)** - build and run your first Dockerfile against the sample app in `1 - Dockerfile Exercise App/`.
 
 **Kubernetes**
-- **[Syllabus](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/0%20-%20Syllabus.md)**
-- **[Orchestration](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/1%20-%20Orchestration.md)** - why containers alone aren't enough in the cloud, and how Kubernetes solves it.
-- **[Reading](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/2%20-%20Reading.md)**
-- **[Useful Videos](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/3%20-%20Useful%20Videos.md)**
-- **[Questions](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/4%20-%20Questions.md)**
-- **[Exercise](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/5%20-%20Exercise.md)** - Minikube hands-on lab.
+- **[Orchestration](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/0%20-%20Orchestration.md)** - why containers alone aren't enough in the cloud, and how Kubernetes solves it.
+- **[Exercise](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/1%20-%20Exercise.md)** - Minikube hands-on lab.
 
 **DevOps & CI-CD**
-- **[Syllabus](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/0%20-%20Syllabus.md)**
-- **[Waterfall to DevOps](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/1%20-%20Waterfall%20to%20DevOps.md)** - why the industry moved from Waterfall to DevOps.
-- **[Reading](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/2%20-%20Reading.md)**
-- **[Useful Videos](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/3%20-%20Useful%20Videos.md)**
-- **[CI-CD Syllabus](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/4%20-%20CI-CD/0%20-%20Syllabus.md)**
-- **[CI-CD Video Tutorial](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/4%20-%20CI-CD/1%20-%20Video%20Tutorial.md)**
-- **[ArgoCD Syllabus](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/4%20-%20CI-CD/2%20-%20ArgoCD/0%20-%20Syllabus.md)**
-- **[ArgoCD Reading](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/4%20-%20CI-CD/2%20-%20ArgoCD/1%20-%20Reading.md)**
-- **[ArgoCD Questions](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/4%20-%20CI-CD/2%20-%20ArgoCD/2%20-%20Questions.md)**
-- **[GitlabCI Syllabus](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/4%20-%20CI-CD/3%20-%20GitlabCI/0%20-%20Syllabus.md)**
+- **[DevOps](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/0%20-%20DevOps.md)** - why the industry moved from Waterfall to DevOps.
+- **[CI/CD](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/1%20-%20CI-CD.md)** - CI vs. CD, and push-based vs. pull-based deployment models.
+- **[ArgoCD](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/2%20-%20ArgoCD.md)** - GitOps-style, pull-based continuous deployment.
+- **[GitlabCI](./Chapter%204%20-%20DevOps%20&%20Development/2%20-%20DevOps%20&%20CI-CD/3%20-%20GitlabCI.md)** - push-based pipelines.
 
 ## Chapter 5: Stream Processing
 

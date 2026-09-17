@@ -6,7 +6,7 @@ In this chapter, you'll learn and try Flink, a powerful distributed stream proce
 
 Note that we use Flink with Java, because it's Flink's native programming language.
 
-## Missions
+## Outcome
 
 1. Read Chapters 1 & 2 in the book "Stream Processing with Apache Flink" (the book is located in `assets` folder).
 2. Watch the videos in the following playlist:
