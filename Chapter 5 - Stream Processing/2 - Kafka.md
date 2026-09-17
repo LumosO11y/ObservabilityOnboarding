@@ -4,6 +4,22 @@
 
 In this chapter, you'll learn Apache Kafka fundamentals: producers, consumers, brokers, topics, and partitions.
 
+## Outcome
+
+1. What is Apache Kafka, and what problem does it solve compared to a traditional message queue?
+2. What is a Topic, and how does it relate to a Partition?
+3. How does Kafka use partitions to achieve both ordering guarantees and horizontal scalability? What's the tradeoff?
+4. What is a Broker, and how do multiple brokers form a Kafka cluster?
+5. What is an Offset, and how does a consumer use it to track its position in a partition?
+6. What is a Consumer Group, and how does Kafka divide partitions among the consumers in a group?
+7. What is replication in Kafka? What is the difference between a leader and a follower replica?
+8. What is the difference between "at-least-once," "at-most-once," and "exactly-once" delivery semantics?
+9. How is a message routed to a specific partition? What role does the partition key play?
+10. What is retention, and how does Kafka decide when to delete old messages?
+11. Why is message ordering only guaranteed within a partition, not across an entire topic?
+12. How does a Producer decide which partition to send a message to when no key is provided?
+13. In our pipeline, Kafka carries OTEL spans between services. Why is a message broker like Kafka a good fit for connecting an instrumented app to a stream processor like Flink?
+
 ### Links
 
 **Official Documentation (Architecture, APIs, Concepts)**

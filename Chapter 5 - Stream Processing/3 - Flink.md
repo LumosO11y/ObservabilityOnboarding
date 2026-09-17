@@ -26,3 +26,16 @@ Note that we use Flink with Java, because it's Flink's native programming langua
 5. Do the following exercise inside:
     - Create a Flink-based stream application that reads OTEL spans from a Kafka topic, and every 10 seconds, prints how many spans were in each trace in the last 10 seconds.
     - Ask your HairWasher for the Kafka topic details.
+
+### Study Questions
+
+1. What problem does stream processing solve that batch processing doesn't, and where does Flink fit into that picture?
+2. What is a Flink cluster made of? What roles do the JobManager and TaskManager play?
+3. What are Task Slots, and how do they relate to parallelism in a Flink job?
+4. What is the difference between a DataStream operator like `map`/`filter` and a `ProcessFunction`? When would you reach for a `ProcessFunction` instead?
+5. What is "state" in a stateful stream processing job, and why can't you just keep it in a regular Java variable?
+6. What is the difference between Keyed State and Operator State?
+7. What is RocksDB, and why would you choose the RocksDB state backend over the default in-memory one?
+8. What is a Checkpoint, and how does Flink use it to recover from a failure without losing data?
+9. What is the difference between a Checkpoint and a Savepoint? When would you take a Savepoint instead of relying on automatic checkpoints?
+10. In the hands-on exercise above, you read OTEL spans from Kafka and count spans per trace every 10 seconds. What Flink concept (windowing) does this rely on, and how does it relate to state?
