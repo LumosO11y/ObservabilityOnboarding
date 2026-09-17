@@ -1,5 +1,5 @@
 # Overview
-here is a list of video form sources to help you ground your understanding of Kubernetes
+Here is a list of video form sources to help you ground your understanding of Kubernetes
 
 ## Kubernetes Crash Course
 - https://www.youtube.com/watch?v=X48VuDVv0do&pp=ygUDazhz

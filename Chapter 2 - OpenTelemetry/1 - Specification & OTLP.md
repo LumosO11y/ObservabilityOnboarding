@@ -12,7 +12,7 @@ Especially, you'll know the OTLP protocol and other semantic conventions set by 
   - Learn about and understand the important protocols that you will use daily.
 
 ## Outcome
-The outcome of this part should be a detailed markdown containing everything you have learned about OTLP and an **article explaining about the OpenTelemetry specifications in depth**.
+The outcome of this part should be a detailed markdown containing everything you have learned about OTLP and an **article explaining the OpenTelemetry specifications in depth**.
 
 1. Explain what gRPC is and the need for it.
 2. How would a gRPC connection be made between code that is running outside of a k8s cluster and a pod inside a K8S cluster? What would be the entire flow?

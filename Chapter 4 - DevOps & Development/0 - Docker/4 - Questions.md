@@ -3,7 +3,7 @@ Questions that you should know the answer to at the end of the study block:
  What is the "Matrix of Hell" in software deployment, and how did it lead to the need for containers?
 2. Is a container a mini-OS or just a fancy process? Research the role of the Linux Kernel in making containers possible.
 3. Why did Docker become the industry standard over other container technologies like LXC (Linux Containers)? What was the "magic" Docker added to the existing tech?
-4. Research the "Lifecycle" of a container. What is the difference between a container that is Sumbitted, Running, Stopped, and Paused?
+4. Research the "Lifecycle" of a container. What is the difference between a container that is Submitted, Running, Stopped, and Paused?
 5. If an image is a "blueprint," where is it actually stored when you aren't using it? Research Docker Hub and the concept of a "Registry."
 6. How does Docker use "Copy-on-Write" (CoW) strategy? If you delete a file in a top layer that existed in a bottom layer, does the image actually get smaller?
 7. What happens behind the scenes when you run docker build? Research the role of the "Docker Daemon" (the engine) during this process.

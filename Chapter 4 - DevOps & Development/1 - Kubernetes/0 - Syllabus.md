@@ -24,8 +24,8 @@ Under the subject of Kubernetes, we will touch upon, and you will learn, the fol
 - Secret
 - Probes
 - Deployment
-- Deamonset
+- DaemonSet
 - ReplicaSet
 - StatefulSet
 - RBAC
-- K8S declerative API
+- K8S declarative API

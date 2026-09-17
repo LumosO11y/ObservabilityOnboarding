@@ -60,9 +60,9 @@ To compare today's traffic with the same time last week, use ``offset``:
 
 ## 4. Maximizing Grafana Efficiency
 To make your PromQL queries performant and dynamic in Grafana, use these specific features:
-- **Variables**: Replace hardcoded values with dropdowns. exmaple:
+- **Variables**: Replace hardcoded values with dropdowns. Example:
 ``{instance="$instance"}``
-- **Legend Format**: Use ``{{label_name}}`` to clean up the graph legend. exmaple: ``{{method}} - {{status}}``
+- **Legend Format**: Use ``{{label_name}}`` to clean up the graph legend. Example: ``{{method}} - {{status}}``
 - **Min Step**: Ensures Prometheus doesn't return more data points than your screen has pixels (Set in the Query Options).
 - **Instant Query**: Use for Stat or Gauge panels where only the latest value matters (Toggle "Instant" in the query editor).
 

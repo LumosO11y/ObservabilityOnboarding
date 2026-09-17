@@ -17,7 +17,7 @@ Using everything you've learned so far and researched about the composition of D
 ## Now that you have your Dockerfile
 1. Open the terminal in the same folder where you have the app and the Dockerfile
 2. Create an image from your Dockerfile
-3. Run the container! make sure to map the app to port 8080 on your machine.
+3. Run the container! Make sure to map the app to port 8080 on your machine.
 
 ## Verification
 1. Open a browser and go to http://localhost:8080

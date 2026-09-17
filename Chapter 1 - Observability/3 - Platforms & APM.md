@@ -15,10 +15,10 @@ Observability platforms give us a lot of insight and capabilities about our syst
 
 The outcome of this part is a detailed markdown explaining the concepts you have learned in this part. Your markdown should also contain comparison between different Observability platforms.
 
-In your markdown make sure there is an answer the following questions:
+In your markdown make sure there is an answer to the following questions:
 
 1. Explain the difference between SLI, SLO, SLA, their relation and how observability helps with either of them
-	- explain about the importnance of each in depth.
+	- Explain the importance of each in depth.
 2. What are KPIs? How do they relate to SLI, SLO and SLA? How do they differ?
 3. What are golden signals? Explain each one of them.
 4. Explain the differences between Synthetic monitoring & RUM, where they differ and where they are alike.

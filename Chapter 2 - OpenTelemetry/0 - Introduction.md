@@ -7,9 +7,9 @@ At the end of this part you should feel that you understand the necessity of Ope
 and how it helps us to collect telemetry data on our system.
 
 ## Goals
-  - Understand the need for OpenTelemetry in the worlds of Observabilty.
+  - Understand the need for OpenTelemetry in the worlds of Observability.
   - Get a grasp of OpenTelemetry's abilities.
-  - Undestand the diffrence between OTel and other solutions.
+  - Understand the difference between OTel and other solutions.
 
 ## Outcome
 

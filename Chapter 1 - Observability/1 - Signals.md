@@ -28,14 +28,14 @@ The outcome of this part should be a PowerPoint presentation explaining in-depth
 3. How are traces stored in most Observability backends?
 4. What is a log? What does it consist of?
 5. How are logs usually stored? (especially in our unit) 
-6. Many say logs and traces are very similar. How do they differ and what do they have in common? When will we use each of them
+6. Many say logs and traces are very similar. How do they differ and what do they have in common? When will we use each of them?
 7. What is log correlation?
 8. What is a metric? What does it consist of?
-9. How are metrics usually stored (especially in our unit)
+9. How are metrics usually stored (especially in our unit)?
 10. What is cardinality?
-11. What are the different types of metrics? explain each type and give examples of usages for each type.
+11. What are the different types of metrics? Explain each type and give examples of usages for each type.
 12. What are RED metrics?
-13. What is profiling? explain the concept behind it.
+13. What is profiling? Explain the concept behind it.
 14. What issue does profiling come to solve that the other signals don't?
 15. What is continuous profiling? Explain the concept behind it.
 

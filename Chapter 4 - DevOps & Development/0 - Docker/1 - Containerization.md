@@ -19,7 +19,7 @@ It is an isolated process on your machine that feels like a separate computer bu
 The "Magic": When you stop a container, it disappears, but the image remains ready to spawn a 100% identical container whenever you need it.
 
 ### Why is it "Good"? (The Core Benefits)
-- Beyond solving the problems VM didn't, containers provide three "Superpowers":
+- Beyond solving the problems VMs didn't, containers provide three "Superpowers":
 1. **Density**: Because containers don't have their own OS, you can run 10x to 50x more containers on a single server than you could with VMs.
 2. **Portability**: The phrase "standardized unit of software" is key. A container runs exactly the same on a developer’s laptop, a test server, and a massive cloud cluster.
 3. **Isolation**: If an application running in one container crashes or consumes too much memory, it won't crash the other applications running on the same machine. It is "sandboxed."

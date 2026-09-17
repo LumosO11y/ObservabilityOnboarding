@@ -1,7 +1,7 @@
 # Overview
 Subjects we will cover:
 
-## Core Architectual Components
+## Core Architectural Components
 - API Server
 - Repository Server
 - Application Controller

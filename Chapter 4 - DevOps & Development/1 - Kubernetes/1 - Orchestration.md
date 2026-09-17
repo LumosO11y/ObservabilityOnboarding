@@ -47,7 +47,7 @@ These are the actual Cloud instances (VMs) where your code runs.
 - **Pods**: This is a key K8s concept. You don't run containers directly; you run **Pods**. A Pod is a wrapper for one or more containers. It’s the smallest unit Kubernetes deals with.
 
 ## The Magic of "Declarative" Management
-This is a very important concept to understand the way K8s operates. It is the core foundatioinal concept of its API
+This is a very important concept to understand the way K8s operates. It is the core foundational concept of its API.
 
 - **Imperative (Old way)**: You give a list of commands: "Start a server, install Docker, run this image, open port 80." If any step fails, the whole thing breaks.
 

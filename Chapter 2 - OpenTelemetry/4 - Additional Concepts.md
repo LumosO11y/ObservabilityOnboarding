@@ -7,7 +7,7 @@ You might already know some of them. If you do, you can move on to the next conc
 At the end of this part you should feel comfortable with those concepts.
 
 ## Goals 
-- Make sure that you know all of the concpets here.
+- Make sure that you know all of the concepts here.
 
 ## Outcome
 

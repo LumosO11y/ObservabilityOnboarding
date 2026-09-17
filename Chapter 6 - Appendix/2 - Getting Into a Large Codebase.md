@@ -4,7 +4,7 @@ ocean without a boat.
 It’s overwhelming, but the key is to stop trying to   
 travel across the sea in one go, and start by getting to the nearest island.
 
-Here is a collection of tips, tricks and advice to navigating and getting to know a new large codebase to tide you over  
+Here is a collection of tips, tricks and advice for navigating and getting to know a new large codebase to tide you over  
 (get it? because of the ocean metaphor? Okay I'll stop now haha).
 
 ## Taking your first step:
@@ -22,7 +22,7 @@ What can they tell you about the build of the project?
 What can they tell you about the way it handles data or processing?
 
 ## From Source to Destination:
-- Locate the Source and Destination of information; They might be able to tell you something about the type and structure of data flowing through the project.
+- Locate the Source and Destination of information; they might be able to tell you something about the type and structure of data flowing through the project.
 Do they use a specific format, or have special requirements that  
 could explain some of the transformations data goes through in the program?
 - Look at the project's configuration files. Can you glean more information about the components in use and their relationship?

@@ -3,13 +3,13 @@
 ## Overview
 
 In this part you'll learn the Observability basics and its concepts.
-Observability is a buzz word used a lot the in context of monitoring and knowledge of what is going on in our system.
+Observability is a buzz word used a lot in the context of monitoring and knowledge of what is going on in our system.
 The main goal of today is to unveil the true meaning of Observability.
 You should start getting familiar with Observability Concepts, Observability Glossary and more.
 
 ## Goals
 
-- Understand the true meaning behind Observability (how it's deferred from concepts like monitoring and visibility).
+- Understand the true meaning behind Observability (how it's differed from concepts like monitoring and visibility).
 - Learn about how Observability takes practice in the real world.
 - Learn about the different types of observability.
 
@@ -21,7 +21,7 @@ The outcome of this part should be a detailed markdown containing everything you
 In your markdown make sure there is an answer to the following questions:
 
 1. Give an explanation about what Observability is. In your explanation,  add relevant quotes from sources you have researched.
-2. How does monitoring and visibility differ from observability? how do they relate to it?
+2. How does monitoring and visibility differ from observability? How do they relate to it?
 3. What are the different types of Observability? Explain what each means and give some real-world examples of how they are used.
 4. What is Data Observability?
      - Elaborate more on this concept.
