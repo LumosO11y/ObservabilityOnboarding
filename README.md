@@ -8,14 +8,12 @@ Start here: [Chapter 0 - Foundations/0 - Welcome](./Chapter%200%20-%20Foundation
 
 ## Chapter 0: Foundations
 
-The big-picture fundamentals: core data concepts, systems & Linux, and ZooKeeper. This chapter is deliberately concept-first - no tooling yet.
+The big-picture fundamentals: core data concepts and systems & Linux. This chapter is deliberately concept-first - no tooling yet.
 
 - **[Welcome](./Chapter%200%20-%20Foundations/0%20-%20Welcome.md)** - introduction to the onboarding process and how it's organized.
 - **[Big Data Core Concepts](./Chapter%200%20-%20Foundations/1%20-%20Big%20Data%20Core%20Concepts.md)** - the data landscape: the five V's, ETL vs. ELT, OLAP vs. OLTP, data lakes, CAP theorem, and more.
 
 - **[System & Linux](./Chapter%200%20-%20Foundations/2%20-%20System%20&%20Linux.md)** - virtualization history, why it replaced bare metal, a hands-on Linux terminal exercise, and the questions/reading to go with it.
-
-- **[Zookeeper](./Chapter%200%20-%20Foundations/3%20-%20Zookeeper.md)** - distributed coordination: Znodes, sessions, watches, and leader election.
 
 ## Chapter 1: Observability
 
@@ -69,8 +67,9 @@ The engineering stack behind our pipelines. Estimated duration: ~10 days.
 
 - **[Java](./Chapter%205%20-%20Stream%20Processing/0%20-%20Java.md)**
 - **[Spring](./Chapter%205%20-%20Stream%20Processing/1%20-%20Spring.md)**
-- **[Kafka](./Chapter%205%20-%20Stream%20Processing/2%20-%20Kafka.md)**
-- **[Flink](./Chapter%205%20-%20Stream%20Processing/3%20-%20Flink.md)** - ends with a hands-on Flink + Kafka + OTEL exercise.
+- **[Zookeeper](./Chapter%205%20-%20Stream%20Processing/2%20-%20Zookeeper.md)** - distributed coordination: Znodes, sessions, watches, and leader election.
+- **[Kafka](./Chapter%205%20-%20Stream%20Processing/3%20-%20Kafka.md)**
+- **[Flink](./Chapter%205%20-%20Stream%20Processing/4%20-%20Flink.md)** - ends with a hands-on Flink + Kafka + OTEL exercise.
 
 ## Chapter 6: Appendix
 
