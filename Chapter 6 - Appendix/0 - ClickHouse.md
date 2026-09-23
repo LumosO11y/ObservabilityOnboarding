@@ -1,4 +1,4 @@
-## ClickHouse
+# ClickHouse
 
 ### Overview
 

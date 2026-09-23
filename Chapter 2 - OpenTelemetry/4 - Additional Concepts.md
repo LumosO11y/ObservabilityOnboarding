@@ -27,3 +27,14 @@ Read about the following concepts:
    1. give 2 examples of when we will need to use it.
    2. write a short OTTL code that matches all the http codes from string to int. (Add it to your collector from Part 3)
 
+### Links
+
+- [Sampling - OpenTelemetry Docs](https://opentelemetry.io/docs/concepts/sampling/)
+- [OTLP Specification](https://opentelemetry.io/docs/specs/otlp/)
+- [Protocol Buffers Overview](https://protobuf.dev/overview/)
+- [gRPC Introduction](https://grpc.io/docs/what-is-grpc/introduction/)
+- [Context Propagation - OpenTelemetry Docs](https://opentelemetry.io/docs/concepts/context-propagation/)
+- [Semantic Conventions - OpenTelemetry Docs](https://opentelemetry.io/docs/specs/semconv/)
+- [OpAMP Specification](https://opentelemetry.io/docs/specs/opamp/)
+- [OTTL (OpenTelemetry Transformation Language) - Collector Contrib](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/ottl/README.md)
+

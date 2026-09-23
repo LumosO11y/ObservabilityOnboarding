@@ -1,6 +1,6 @@
-# Lumos Observability Onboarding :satellite:
+# Lumos Team Onboarding :satellite:
 
-Welcome to Lumos! This repository is your gateway to a structured onboarding program designed to bring you up to speed on the Observability and Monitoring ecosystem we work in every day. The program is organized into chapters, each with goals, questions to answer, curated reading, and hands-on exercises.
+Welcome to Lumos! This repository is your gateway to a structured onboarding program designed to bring you up to speed on everything you need to know to work on our team - from core concepts to actual things you might need and use. The program is organized into chapters, each with goals, questions to answer, curated reading, and hands-on exercises.
 
 Start here: [Chapter 0 - Foundations/0 - Welcome](./Chapter%200%20-%20Foundations/0%20-%20Welcome.md)
 
@@ -41,7 +41,7 @@ From the concept of OpenTelemetry to its specification, the Collector, and hands
 The concrete platforms we (and the wider ecosystem) use to query and visualize telemetry - the Grafana stack today, with room to grow into other observability solutions.
 
 - **[Grafana](./Chapter%203%20-%20Observability%20Solutions/0%20-%20Grafana.md)**
-- **[PromQL](./Chapter%203%20-%20Observability%20Solutions/1%20-%20PromQL.md)** - querying metrics in Grafana.
+- **[Prometheus Metrics & PromQL](./Chapter%203%20-%20Observability%20Solutions/1%20-%20PromQL.md)** - metric types (counters, gauges, histograms) and querying them in Grafana.
 - **[Tempo](./Chapter%203%20-%20Observability%20Solutions/2%20-%20Tempo.md)** - distributed tracing backend.
 - **[Pyroscope](./Chapter%203%20-%20Observability%20Solutions/3%20-%20Pyroscope.md)** - continuous profiling.
 
@@ -71,7 +71,6 @@ The engineering stack behind our pipelines. Estimated duration: ~10 days.
 - **[Spring](./Chapter%205%20-%20Stream%20Processing/1%20-%20Spring.md)**
 - **[Kafka](./Chapter%205%20-%20Stream%20Processing/2%20-%20Kafka.md)**
 - **[Flink](./Chapter%205%20-%20Stream%20Processing/3%20-%20Flink.md)** - ends with a hands-on Flink + Kafka + OTEL exercise.
-- **[Metrics](./Chapter%205%20-%20Stream%20Processing/4%20-%20Metrics.md)**
 
 ## Chapter 6: Appendix
 

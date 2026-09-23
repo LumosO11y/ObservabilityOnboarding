@@ -8,7 +8,7 @@ Note that we use Flink with Java, because it's Flink's native programming langua
 
 ## Outcome
 
-1. Read Chapters 1 & 2 in the book "Stream Processing with Apache Flink" (the book is located in `assets` folder).
+1. Read Chapters 1 & 2 in the book [Stream Processing with Apache Flink](../assets/Stream%20Processing%20with%20Apache%20Flink.pdf).
 2. Watch the videos in the following playlist:
     - [Building Apache Flink Applications in Java](https://www.youtube.com/playlist?list=PLa7VYi0yPIH0QEIcyvZE5p4zMR0ln4aAe)
 3. Do the exercise [rides-and-fares](https://github.com/apache/flink-training/tree/master/rides-and-fares) from Apache's flink training repository (don't look at the solution).

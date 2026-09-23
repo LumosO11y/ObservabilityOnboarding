@@ -4,7 +4,7 @@
 
 Welcome to Lumos! We're thrilled to have you as a part of the team.
 
-This repository is your guide through onboarding. You'll start with the big-picture foundations (core data concepts, systems & Linux, ZooKeeper), then move into Observability as a concept, OpenTelemetry, and Observability Solutions (Grafana and beyond). From there you'll pick up DevOps & Development (Docker, Kubernetes, CI/CD) and finish with the Stream Processing tools we use day to day.
+This repository is your guide through onboarding for our team - not just observability, but everything you need to know to work here, from core concepts to actual things you might need and use. You'll start with the big-picture foundations (core data concepts, systems & Linux, ZooKeeper), then move into Observability as a concept, OpenTelemetry, and Observability Solutions (Grafana and beyond). From there you'll pick up DevOps & Development (Docker, Kubernetes, CI/CD) and finish with the Stream Processing tools we use day to day.
 
 To get started, clone this repository to your local machine:
 

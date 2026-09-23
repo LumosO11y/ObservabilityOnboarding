@@ -1,6 +1,19 @@
-# Overview
+# Prometheus Metrics & PromQL
+
+## Overview
 Prometheus Query Language (PromQL) is a functional query language that allows you to select and aggregate time-series data in real-time.
-In Grafana, PromQL is the engine that transforms raw metrics into dashboards.
+In Grafana, PromQL is the engine that transforms raw metrics into dashboards. Before getting into query syntax, get familiar with the metric types Prometheus itself works with, since the functions you reach for depend on which type you're querying.
+
+## Metric Types
+- **Counter** - a value that only ever increases (e.g. total requests served). Use `rate()`/`irate()` on these, never on a metric that can go down.
+- **Gauge** - a value that can go up or down (e.g. memory usage, queue depth).
+- **Histogram** - buckets observations (e.g. request latency) so you can compute quantiles and averages after the fact.
+
+### Links
+- [Understanding Prometheus Metric Types](https://www.youtube.com/watch?v=fhx0ehppMGM)
+- [Understanding Prometheus Histograms](https://www.youtube.com/watch?v=yYbXak-1hew)
+- [Understanding Counter Rates and Increases in PromQL](https://www.youtube.com/watch?v=7uy_yovtyqw)
+
 ## 1. The Basics: Selecting Data
 PromQL expressions result in one of four types of data, but in Grafana, you almost always work with
 **Instant vectors** (a single value per series at a point in time) or **Range vectors** (a set of values over time).

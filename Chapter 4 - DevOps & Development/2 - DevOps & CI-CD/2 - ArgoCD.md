@@ -1,5 +1,9 @@
 # ArgoCD
 
+## Overview
+
+ArgoCD is a declarative, GitOps continuous delivery tool for Kubernetes: it continuously reconciles what's running in a cluster against what's declared in Git, and pulls changes in rather than having an external system push them out. This part goes deep on how it's built and how to operate it, since it's the pull-based half of the CI/CD picture from the previous part.
+
 ## Goals
 
 Subjects we will cover:
