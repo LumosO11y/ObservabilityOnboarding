@@ -25,7 +25,7 @@ Note that we use Flink with Java, because it's Flink's native programming langua
     - [Savepoints](https://nightlies.apache.org/flink/flink-docs-release-1.14/docs/ops/state/savepoints)
 5. Do the following exercise inside:
     - Create a Flink-based stream application that reads OTEL spans from a Kafka topic, and every 10 seconds, prints how many spans were in each trace in the last 10 seconds.
-    - Ask your HairWasher for the Kafka topic details.
+    - Ask your mentor for the Kafka topic details.
 
 ### Study Questions
 

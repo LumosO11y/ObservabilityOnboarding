@@ -20,16 +20,15 @@ Study questions:
 10. Can I create two beans of the same type? If so, how does Spring know which one to inject?
 11. What is @Component?
 12. What are the differences between Component and Bean? Why do we need them?
-13. What is the difference between Component and Bean?
-14. What is @ComponentScan?
-15. What is @Configuration? And what is the purpose of classes with this annotation?
-16. Where does Spring perform injection in our configuration? What formats are allowed for writing the configuration?
-17. What is Spring Boot?
-18. What is @EnableAutoConfiguration?
-19. What is @SpringBootApplication?
-20. What are Spring Boot Starters? Which one should I use if I want to write a REST application?
-21. What is RestController?
-22. How can we process a request with a JSON body to our API? And how can we perform validations automatically?
+13. What is @ComponentScan?
+14. What is @Configuration? And what is the purpose of classes with this annotation?
+15. Where does Spring perform injection in our configuration? What formats are allowed for writing the configuration?
+16. What is Spring Boot?
+17. What is @EnableAutoConfiguration?
+18. What is @SpringBootApplication?
+19. What are Spring Boot Starters? Which one should I use if I want to write a REST application?
+20. What is RestController?
+21. How can we process a request with a JSON body to our API? And how can we perform validations automatically?
 
 ### Links
 

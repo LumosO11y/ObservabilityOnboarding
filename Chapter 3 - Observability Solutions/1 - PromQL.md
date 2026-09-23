@@ -38,11 +38,11 @@ In Grafana, range vectors are used inside functions like ``rate()``. You define 
 
 ## 2. Intermediate: Functions and Aggregations
 Raw counters are rarely useful on their own. We use functions to see trends.
-### Rate vs. Irrate
+### Rate vs. Irate
 These are fundamental functions of PromQL:
 - ``rate()``: Calculates the per-second average rate of increase over the time range. Best for alerting and long-term trends.
 
-- ``irrate()``: "Instant rate." Looks at the last two data points. Best for high-resolution dashboards showing "spiky" behavior.
+- ``irate()``: "Instant rate." Looks at the last two data points. Best for high-resolution dashboards showing "spiky" behavior.
 
 *Note*: Only use ``rate()`` on **Counters** (metrics that only go up, like total requests).
 

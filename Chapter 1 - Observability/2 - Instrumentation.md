@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this part you will learn about yet another concept of Observability called Instrumentation, you will learn how to make your system observable and about the different ways you can implement this concept.
+In this part you will learn about yet another concept of Observability called Instrumentation. You will learn how to make your system observable and about the different ways you can implement this concept.
 
 ## Goals
 
@@ -17,7 +17,7 @@ In your markdown make sure there is an answer to the following questions:
 
 1. What is Instrumentation? Explain the concept and why it is important in making your application "observable".
 2. What are the different ways of "instrumenting" your application? Can you use these methods at all times? Explain.
-Explain how each of them work in general and specifically in OpenTelemetry.
+Explain how each of them works in general and specifically in OpenTelemetry.
 3. What doesn't Zero-Code instrumentation allow that Code-Based does?
 4. Explain the different use-cases of Zero-Code instrumentation and Code-based instrumentation.
    

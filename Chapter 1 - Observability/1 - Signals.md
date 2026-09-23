@@ -44,7 +44,7 @@ The outcome of this part should be a PowerPoint presentation explaining in-depth
 
 ### Links
 
-Here are some useful links to start from, Yet again, you are encouraged to search more and update this list of links if you think they are good:
+Here are some useful links to start from, yet again, you are encouraged to search more and update this list of links if you think they are good:
 
 * <https://opentelemetry.io/docs/concepts/signals>
 * <https://sematext.com/glossary/three-pillars-of-observability/>

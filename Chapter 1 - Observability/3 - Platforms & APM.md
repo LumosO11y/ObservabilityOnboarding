@@ -23,11 +23,11 @@ In your markdown make sure there is an answer to the following questions:
 3. What are golden signals? Explain each one of them.
 4. Explain the differences between Synthetic monitoring & RUM, where they differ and where they are alike.
 5. Explain the concept of Session Replay. How does it help us achieve monitoring?
-5. Choose 4 features that RUM has, and explain their usage. How do they take place in the real-world?
-6. What is MTTD and MTTR?
-7. What are alerts? Why are they important? What is an alert manager?
-8. List 2 more insights Observability gives your system and explain them.
-9. Provide a list of at least 3 on-prem observability solutions and 3 cloud observability solutions that exist today with comparison. (Read about the grafana stack)
+6. Choose 4 features that RUM has, and explain their usage. How do they take place in the real-world?
+7. What is MTTD and MTTR?
+8. What are alerts? Why are they important? What is an alert manager?
+9. List 2 more insights Observability gives your system and explain them.
+10. Provide a list of at least 3 on-prem observability solutions and 3 cloud observability solutions that exist today with comparison. (Read about the Grafana stack)
 
 ### Links
 
