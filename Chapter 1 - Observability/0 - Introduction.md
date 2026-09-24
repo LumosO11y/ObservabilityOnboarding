@@ -10,9 +10,8 @@ You should start getting familiar with Observability Concepts, Observability Glo
 ## Goals
 
 - Understand the true meaning behind Observability (how it differs from concepts like monitoring and visibility).
-- Learn about how Observability takes practice in the real world.
+- Learn how Observability is practiced in the real world.
 - Learn about the different types of observability.
-
 
 ## Outcome
 

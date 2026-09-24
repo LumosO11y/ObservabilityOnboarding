@@ -7,9 +7,10 @@ At the end of this part you should feel that you understand the necessity of Ope
 and how it helps us to collect telemetry data on our system.
 
 ## Goals
-  - Understand the need for OpenTelemetry in the world of Observability.
-  - Get a grasp of OpenTelemetry's abilities.
-  - Understand the difference between OTel and other solutions.
+
+- Understand the need for OpenTelemetry in the world of Observability.
+- Get a grasp of OpenTelemetry's abilities.
+- Understand the difference between OTel and other solutions.
 
 ## Outcome
 
@@ -25,14 +26,15 @@ In your markdown make sure there is an answer to the following questions:
 6. Pick 3 OpenTelemetry concepts and explain them.
 7. Write 3 pros and 3 cons of OpenTelemetry.
 8. Are there any other projects that are similar to OTel? Write in detail about them.
+9. OpenTelemetry's work is organized into SIGs, and not every SIG is a language SDK. Explain what are SIGs and Give examples of 5 different non-language OpenTelemetry SIGs (don't count separate language SDKs, e.g. Python vs. JS, as different answers) and briefly explain what each one is responsible for.
 
 ### Links
 
  Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suited:
 
-* <https://opentelemetry.io/docs/concepts/observability-primer/>
-* <https://opentelemetry.io/docs/what-is-opentelemetry/>
-* <https://opentelemetry.io/docs/concepts/signals/>
-* <https://signoz.io/blog/opentelemetry-vs-jaeger/>
-* <https://medium.com/jaegertracing/jaeger-and-opentelemetry-1846f701d9f2>
-* [Chapter 1](../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
+- <https://opentelemetry.io/docs/concepts/observability-primer/>
+- <https://opentelemetry.io/docs/what-is-opentelemetry/>
+- <https://opentelemetry.io/docs/concepts/signals/>
+- <https://signoz.io/blog/opentelemetry-vs-jaeger/>
+- <https://medium.com/jaegertracing/jaeger-and-opentelemetry-1846f701d9f2>
+- [Chapter 1](../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
