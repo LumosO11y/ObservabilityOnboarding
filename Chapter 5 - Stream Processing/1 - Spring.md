@@ -4,6 +4,13 @@
 
 In this chapter, you'll learn Spring Framework fundamentals and Spring Boot.
 
+## Goals
+
+- Understand Inversion of Control and Dependency Injection, and how Spring implements them.
+- Understand beans, the Spring container, and the ways to configure and inject them.
+- Understand what Spring Boot adds on top of Spring.
+- Know how to build a simple REST API with Spring Boot.
+
 ## Outcome
 
 Study questions:

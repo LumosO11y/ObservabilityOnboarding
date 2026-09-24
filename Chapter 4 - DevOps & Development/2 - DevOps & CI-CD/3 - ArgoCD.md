@@ -2,23 +2,25 @@
 
 ## Overview
 
-ArgoCD is a declarative, GitOps continuous delivery tool for Kubernetes: it continuously reconciles what's running in a cluster against what's declared in Git, and pulls changes in rather than having an external system push them out. This part goes deep on how it's built and how to operate it, since it's the pull-based half of the CI/CD picture from the previous part.
+ArgoCD is a declarative, GitOps continuous delivery tool for Kubernetes: it continuously reconciles what's running in a cluster against what's declared in Git, and pulls changes in rather than having an external system push them out. This part goes deep on how it's built and how to operate it, since it's the pull-based half of the CI/CD picture, alongside the push-based GitlabCI from the previous part.
 
 ## Goals
 
 Subjects we will cover:
 
 **Core Architectural Components**
+
 - API Server
 - Repository Server
 - Application Controller
 - Redis
-- DEX
+- Dex
 - Application
 - appProject
 - ApplicationSet
 
 **General Lifecycle**
+
 - Reconciliation Loop
 - Refresh
 - Hard Refresh
@@ -27,12 +29,14 @@ Subjects we will cover:
 - Drifting
 
 **Orchestration**
+
 - Sync Waves
 - Resource Hooks
 - Sync Options
 - RBAC Policies
 
 **Observability Tools**
+
 - Notifications
 - Metrics
 - Health Checks
@@ -43,7 +47,8 @@ Subjects we will cover:
 <summary>Questions to test your comprehension of ArgoCD</summary>
 
 ### Core Architecture & Philosophy
-1. **The Pull Model**: Explain why ArgoCD is considered more secure than a traditional Jenkins pipeline that uses ``kubectl apply`` from an external runner.
+
+1. **The Pull Model**: In the CI/CD part you saw the security argument for pull-based deployment. Concretely, where do the cluster credentials live when you deploy with ArgoCD, compared to a GitlabCI job that runs ``kubectl apply`` from a runner?
 
 2. **Controller Responsibilities**: What is the specific role of the ``repo-server`` versus the ``application-controller``? Which one is responsible for rendering Helm charts?
 
@@ -54,6 +59,7 @@ Subjects we will cover:
 5. **Caching**: Why does ArgoCD use Redis, and what kind of data is stored there?
 
 ### Application Management & Syncing
+
 1. **Sync Policies**: Compare and contrast the ``Prune``, ``SelfHeal``, and ``AllowEmpty`` sync options. What are the risks of enabling ``Prune`` on a production database?
 
 2. **The Application CRD**: What are the three mandatory pieces of information required in an Application manifest to link Git to a cluster?
@@ -65,9 +71,10 @@ Subjects we will cover:
 5. **Sync Options**: Explain the ``ServerSideApply=true`` sync option. When is this necessary (e.g., dealing with large CRDs or Field Managers)?
 
 ### Orchestration and Orchestration Tools
+
 1. **Sync Waves**: If Resource A has a sync-wave of ``-1`` and Resource B has a sync-wave of ``5``, which one is applied first? What happens if Resource A fails to reach a ``Healthy`` state?
 
-2. **Sync Hooks**: How would you use a ``PostSync`` hook to notify an external API only after a deployment is successful?
+2. **Sync Hooks**: How would you use a ``PostSync`` hook to notify an external API only after a deployment is successful? How do ArgoCD's Sync Hooks (``PreSync``, ``Sync``, ``PostSync``) compare to the Helm hooks you learned about in the Kubernetes part - are they the same mechanism, or does ArgoCD implement its own?
 
 3. **Helm Integration**: How do you pass multiple value files to a single ArgoCD Application? How does ArgoCD handle Helm "Secrets" or sensitive values?
 
@@ -76,6 +83,7 @@ Subjects we will cover:
 5. **The App-of-Apps Pattern**: Explain the logic of a "Root" application. How do you prevent a deletion of the Root app from accidentally deleting every child application in the cluster?
 
 ### Scaling and Multi-Tenancy
+
 1. **ApplicationSets**: What are "Generators"? Explain how a ``Git Generator`` differs from a ``Cluster Generator``.
 
 2. **AppProjects**: How do you restrict a specific team so they can only deploy ``Service`` and ``Deployment`` resources, but not ``Namespaces`` or ``ClusterRoles``?
@@ -85,11 +93,12 @@ Subjects we will cover:
 4. **RBAC**: How do you map an OIDC group (like a GitHub Team) to a specific "Admin" or "ReadOnly" role within an ArgoCD Project?
 
 ### Troubleshooting and Observability
+
 1. **Log Analysis**: If an application is stuck in a ``Progressing`` state indefinitely, which ArgoCD component's logs should you check first?
 
 2. **Custom Health Checks**: By default, ArgoCD might not know if a custom CRD is "Healthy." How do you write a Lua script to define health for a custom resource?
 
-3. **The "Regex" Paradox**: If you are using Prometheus to monitor ArgoCD, which metric would you alert on to find applications that have been ``OutOfSync`` for more than 2 hours?
+3. **Alerting on Sync Status**: If you are using Prometheus to monitor ArgoCD, which metric would you alert on to find applications that have been ``OutOfSync`` for more than 2 hours?
 
 4. **Diffing Logic**: How does ArgoCD handle "IgnoreDifferences"? Give a real-world example where you would want ArgoCD to ignore a specific field in a Live object (e.g., HPA replica counts).
 

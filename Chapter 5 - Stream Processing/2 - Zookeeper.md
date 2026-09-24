@@ -2,10 +2,7 @@
 
 ## Overview
 
-ZooKeeper is a distributed coordination service. Instead of building coordination mechanisms (leader election, config distribution, distributed locks) from scratch, systems lean on ZooKeeper to provide them.
-
-### Schedule
-Estimated Duration: 0.5 day.
+ZooKeeper is a distributed coordination service. Instead of building coordination mechanisms (leader election, config distribution, distributed locks) from scratch, systems lean on ZooKeeper to provide them. Both the Kafka and the ClickHouse deployments we run depend on it.
 
 ## Goals
 
@@ -20,13 +17,13 @@ Write a short markdown answering the following:
 1. What is ZooKeeper, and how is its architecture organized?
 2. How does ZooKeeper handle consistency and notifications? Explain:
    - Sequential consistency
-   - Watches, and how they're one-time triggers
+   - Watches, and how long a watch stays registered after it fires
    - How clients use watches in practice
 3. What are Znodes, and what types of Znodes exist?
 4. What are sessions, and how does ZooKeeper handle failures and node lifecycle? Explain:
    - Session lifecycle and heartbeats
    - Session expiration
-   - Persistent vs. ephemeral (sequential) nodes
+   - What happens to a client's ephemeral Znodes when its session expires, and why that's useful
    - Failover and leader elections
    - ZXID
 5. What are the basic operational concerns in ZooKeeper? At a high level, describe:

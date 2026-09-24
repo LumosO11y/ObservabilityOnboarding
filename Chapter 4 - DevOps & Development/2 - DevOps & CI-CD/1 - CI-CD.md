@@ -2,7 +2,7 @@
 
 ## Overview
 
-Before diving into ArgoCD and GitlabCI, you should understand CI/CD as a concept, so you know what problem each tool is actually solving.
+Before diving into GitlabCI and ArgoCD, you should understand CI/CD as a concept, so you know what problem each tool is actually solving.
 
 ## Goals
 
@@ -11,7 +11,7 @@ Before diving into ArgoCD and GitlabCI, you should understand CI/CD as a concept
 - Why CI/CD matters: shipping software safely, quickly, and repeatably
 - The building blocks of a pipeline: stages, jobs, artifacts, triggers
 - Push-based vs Pull-based (GitOps) deployment models
-- Where GitlabCI (push-based pipeline) and ArgoCD (pull-based, GitOps) each fit into a real deployment flow
+- Where GitlabCI and ArgoCD each fit into a real deployment flow
 
 ## Outcome
 
