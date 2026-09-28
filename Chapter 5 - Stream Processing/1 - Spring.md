@@ -2,7 +2,15 @@
 
 ## Overview
 
-In this chapter, you'll learn Spring Framework fundamentals and Spring Boot.
+In this part, you'll learn Spring Framework fundamentals and Spring Boot - and, since this is an observability team, how a Spring Boot app exposes its own metrics and traces.
+
+## Goals
+
+- Understand Inversion of Control and Dependency Injection, and how Spring implements them.
+- Understand beans, the Spring container, and the ways to configure and inject them.
+- Understand what Spring Boot adds on top of Spring.
+- Know how to build a simple REST API with Spring Boot.
+- Understand how Spring Boot apps are made observable: Actuator, Micrometer, and OpenTelemetry.
 
 ## Outcome
 
@@ -30,11 +38,30 @@ Study questions:
 20. What is RestController?
 21. How can we process a request with a JSON body to our API? And how can we perform validations automatically?
 
+### Observability in Spring Boot
+
+1. What is Spring Boot Actuator? What endpoints does it provide, and should all of them be exposed publicly?
+2. What is Micrometer, and how does it relate to Spring Boot metrics? How would you get them into Prometheus?
+3. What are the different ways a Spring Boot app can produce OpenTelemetry traces? Compare them. When would you pick each?
+
 ### Links
 
 - [Spring Framework Guide by Marco Behler](https://www.marcobehler.com/guides/spring-framework) - What is Spring Framework: Dependency Injection in Java
 - [Introduction to Spring Framework (GeeksforGeeks)](https://www.geeksforgeeks.org/advance-java/introduction-to-spring-framework/) - Introduction to Spring Framework
-- [Spring vs Spring Boot (DZone)](https://www.dzone.com/articles/understanding-the-basics-of-spring-vs-spring-boot) - The basics of Spring vs Spring Boot
+- [Spring vs Spring Boot (DZone)](https://dzone.com/articles/understanding-the-basics-of-spring-vs-spring-boot) - The basics of Spring vs Spring Boot
 - [Spring vs Spring Boot Comparison (Baeldung)](https://www.baeldung.com/spring-vs-spring-boot) - A comparison between Spring and Spring Boot
 - [Spring Core Annotations (Baeldung)](https://www.baeldung.com/spring-core-annotations) - Spring core annotations
 - [Spring Tutorial (Baeldung)](https://www.baeldung.com/spring-tutorial) - Extra tutorials for deeper learning
+- [Building a RESTful Web Service (Spring guide)](https://spring.io/guides/gs/rest-service)
+- [Validation in Spring Boot](https://docs.spring.io/spring-boot/reference/io/validation.html)
+- [Spring Boot Actuator](https://docs.spring.io/spring-boot/reference/actuator/index.html)
+- [Actuator Metrics (Micrometer)](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)
+
+<details>
+<summary>Spoiler: open once you've answered "Observability in Spring Boot" question 3</summary>
+
+- [Actuator Tracing](https://docs.spring.io/spring-boot/reference/actuator/tracing.html)
+- [OpenTelemetry Java agent](https://opentelemetry.io/docs/zero-code/java/agent/)
+- [OpenTelemetry Spring Boot starter](https://opentelemetry.io/docs/zero-code/java/spring-boot-starter/)
+
+</details>

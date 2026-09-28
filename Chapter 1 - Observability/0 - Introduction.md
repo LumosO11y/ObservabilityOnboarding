@@ -2,17 +2,13 @@
 
 ## Overview
 
-In this part you'll learn the Observability basics and its concepts.
-Observability is a buzz word used a lot in the context of monitoring and knowledge of what is going on in our system.
-The main goal of today is to unveil the true meaning of Observability.
-You should start getting familiar with Observability Concepts, Observability Glossary and more.
+Observability is a term you'll hear constantly on this team, and it's often used loosely. This part is about what it actually means, how it relates to ideas like monitoring, and how it applies to data pipelines as well as to applications.
 
 ## Goals
 
 - Understand the true meaning behind Observability (how it differs from concepts like monitoring and visibility).
-- Learn about how Observability takes practice in the real world.
+- Learn how Observability is practiced in the real world.
 - Learn about the different types of observability.
-
 
 ## Outcome
 
@@ -36,7 +32,7 @@ In your markdown make sure there is an answer to the following questions:
 
 Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suitable:
 
-- <https://newrelic.com/blog/best-practices/what-is-observability>
+- <https://newrelic.com/blog/observability/what-is-observability>
 - <https://www.splunk.com/en_us/blog/learn/observability.html>
 - <https://opentelemetry.io/docs/concepts/observability-primer>
 - <https://www.dynatrace.com/news/blog/what-is-observability-2/>

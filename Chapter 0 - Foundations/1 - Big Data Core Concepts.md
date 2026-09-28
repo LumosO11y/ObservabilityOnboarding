@@ -1,13 +1,10 @@
-# Introduction to Core Data Concepts
+# Big Data Core Concepts
 
 ## Overview
 
 This part lays the foundation for your journey into data and observability. You'll go over the core concepts that underpin the modern data landscape, and get comfortable with the vocabulary you'll see everywhere else in this repo.
 
 > **Note:** This is your first real day in the world of data. Don't worry about diving deep into every topic - focus on understanding the big picture. You'll revisit most of these concepts in depth in later chapters.
-
-### Schedule
-Estimated Duration: 1 day.
 
 ## Goals
 
@@ -41,8 +38,11 @@ Research the following topics and look for real-world examples. Discuss your fin
 20. Data compression
 21. Scale-out vs. scale-up
 22. High availability
-23. Master-slave vs. masterless architectures
+23. Leader-follower (a.k.a. master-slave) vs. leaderless architectures
 24. CAP theorem
+25. Row-oriented vs. column-oriented storage
+26. Partitioning and sharding
+27. Replication, and strong vs. eventual consistency
 
 These topics are meant to guide your research - don't hesitate to look up other relevant concepts you come across.
 
