@@ -36,34 +36,34 @@ In this part, you'll learn Apache Kafka fundamentals: producers, consumers, brok
 
 **Official Documentation (Architecture, APIs, Concepts)**
 
-- <https://kafka.apache.org/documentation/>
-- <https://docs.confluent.io/kafka/introduction.html>
-- <https://kafka.apache.org/documentation/#design_compactionbasics>
+- [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
+- [Confluent: Introduction to Kafka](https://docs.confluent.io/kafka/introduction.html)
+- [Log Compaction Basics](https://kafka.apache.org/documentation/#design_compactionbasics)
 
 **ZooKeeper and KRaft**
 
-- <https://kafka.apache.org/27/documentation.html#zk> (ZooKeeper in the Kafka 2.7 docs)
-- <https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum> (KIP-500: the proposal to replace ZooKeeper)
-- <https://cwiki.apache.org/confluence/display/KAFKA/KIP-833%3A+Mark+KRaft+as+Production+Ready> (KIP-833: marking KRaft production-ready)
-- <https://kafka.apache.org/documentation/#kraft> (KRaft in the current Kafka docs)
-- <https://developer.confluent.io/learn/kraft/> (Confluent's KRaft overview)
-- <https://kafka.apache.org/blog/2025/03/18/apache-kafka-4.0.0-release-announcement/> (Kafka 4.0 release announcement)
+- [ZooKeeper in the Kafka 2.7 docs](https://kafka.apache.org/27/documentation.html#zk)
+- [KIP-500: the proposal to replace ZooKeeper](https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum)
+- [KIP-833: marking KRaft production-ready](https://cwiki.apache.org/confluence/display/KAFKA/KIP-833%3A+Mark+KRaft+as+Production+Ready)
+- [KRaft in the current Kafka docs](https://kafka.apache.org/documentation/#kraft)
+- [Confluent's KRaft overview](https://developer.confluent.io/learn/kraft/)
+- [Kafka 4.0 release announcement](https://kafka.apache.org/blog/2025/03/18/apache-kafka-4.0.0-release-announcement/)
 
-**Videos — Fundamentals & Architecture**
+**Videos: Fundamentals & Architecture**
 
-- <https://www.youtube.com/watch?v=tpUj_f4_pWc> (Kafka intro – core components: producers/consumers/brokers/topics/partitions)
-- <https://www.youtube.com/playlist?list=PLt1SIbA8guusxiHz9bveV-UHs_biWFegU> (Apache Kafka full beginner playlist)
-- <https://www.youtube.com/watch?v=cNFAP9OnJjo> (Apache Kafka Crash Course – brokers/topics/partitions basics)
-- <https://www.youtube.com/watch?v=J-xfe3zAtwY> (Full Kafka course for beginners)
+- [Kafka Intro: Core Components](https://www.youtube.com/watch?v=tpUj_f4_pWc)
+- [Apache Kafka full beginner playlist](https://www.youtube.com/playlist?list=PLt1SIbA8guusxiHz9bveV-UHs_biWFegU)
+- [Apache Kafka Crash Course](https://www.youtube.com/watch?v=cNFAP9OnJjo)
+- [Full Kafka course for beginners](https://www.youtube.com/watch?v=J-xfe3zAtwY)
 
-**Videos — Deeper Concepts**
+**Videos: Deeper Concepts**
 
-- <https://www.youtube.com/watch?v=r4c0whAOCGI> (Kafka Topics and Partitions deep dive)
-- <https://www.youtube.com/watch?v=bsADIO5fdJ0> (Kafka architecture explained: partitions, producers, consumers, offsets)
-- <https://www.youtube.com/watch?v=lh_tjm0yPz4> (Kafka Producers explained – how data gets written)
-- <https://www.youtube.com/watch?v=V6l-oQeDdcI> (Topics, partitions & consumer groups explained)
+- [Kafka Topics and Partitions deep dive](https://www.youtube.com/watch?v=r4c0whAOCGI)
+- [Kafka architecture explained: partitions, producers, consumers, offsets](https://www.youtube.com/watch?v=bsADIO5fdJ0)
+- [Kafka Producers Explained](https://www.youtube.com/watch?v=lh_tjm0yPz4)
+- [Topics, partitions & consumer groups explained](https://www.youtube.com/watch?v=V6l-oQeDdcI)
 
 **Tutorials & Practical Guides**
 
-- <https://notes.kodekloud.com/docs/Event-Streaming-with-Kafka/Building-Blocks-of-Kafka/Demo-Topics-Partitions-and-Brokers> (Create topics, partitions, brokers CLI steps)
-- <https://www.linkedin.com/learning/complete-guide-to-apache-kafka-for-beginners/topics-partitions-and-offsets> (video course – topics/partitions/offsets)
+- [Create topics, partitions, brokers CLI steps](https://notes.kodekloud.com/docs/Event-Streaming-with-Kafka/Building-Blocks-of-Kafka/Demo-Topics-Partitions-and-Brokers)
+- [Complete Guide to Apache Kafka for Beginners (LinkedIn Learning)](https://www.linkedin.com/learning/complete-guide-to-apache-kafka-for-beginners/topics-partitions-and-offsets)

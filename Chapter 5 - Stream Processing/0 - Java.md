@@ -4,7 +4,7 @@
 
 In this part, you'll learn **Java** fundamentals and deep core concepts. Since you already know how to program, the focus is on Java-specific behavior.
 
-> **Which Java?** The questions below target Java 17. Ask your mentor which version the services you'll work on use - if it's 21, also go over virtual threads in question 30.
+> **Which Java?** The questions below target Java 17. Ask your mentor which version the services you'll work on use - if it's 21, also go over virtual threads in question 32.
 
 ## Goals
 
@@ -90,7 +90,9 @@ Java 17 study questions:
 27. What is a `CompletableFuture`, and how does it help you compose asynchronous work?
 28. What is a JAR file and how do you create one in Java?
 29. What is Maven and how does it help in Java project management?
-30. What are records? How do they compare to what Lombok gives you? *(Java 21)* What are virtual threads, and how do they change the way you'd write the `ExecutorService` code from question 25?
+30. What are records? How do they compare to what Lombok gives you?
+31. What do `var`, text blocks, and switch expressions each add to the language? Give a short example of each.
+32. *(Java 21)* What are virtual threads, and how do they change the way you'd write the `ExecutorService` code from question 25?
 
 ### Links
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Grafana is the visualization and dashboarding layer of our observability stack - it's where metrics, logs, and traces from our other tools actually get looked at side by side. Together with Grafana Labs' own backends it forms the **LGTM stack**: **L**oki for logs, **G**rafana, **T**empo for traces, and **M**imir for metrics. This part covers what Grafana is and how it's built, a high-level look at the LGTM stack, and two backends in more depth - Tempo for distributed tracing and Pyroscope for continuous profiling.
+Grafana is the visualization and dashboarding layer of our observability stack - it's where metrics, logs, and traces from our other tools actually get looked at side by side. Together with Grafana Labs' own backends it forms the **LGTM stack**. This part covers what Grafana is and how it's built, a high-level look at the LGTM stack, and two of its backends in more depth: Tempo and Pyroscope.
 
 ## Goals
 
@@ -49,109 +49,63 @@ Grafana is the visualization and dashboarding layer of our observability stack -
 
 ### Links
 
-#### Grafana
+<details>
+<summary>Curated reading</summary>
 
-**Documentation & Getting Started**
+**Grafana: Documentation & Getting Started**
 
-- **Grafana Official Website** — Main page with downloads, docs, and product info:
-  [https://grafana.com/](https://grafana.com/)
-- **Grafana Tutorials & Guides** — Step‑by‑step tutorials for basic and intermediate skills:
-  [https://grafana.com/tutorials/](https://grafana.com/tutorials/)
-- **Grafana Fundamentals** — Official fundamentals tutorial covering dashboards, logs, metrics, etc.:
-  [https://grafana.com/tutorials/grafana-fundamentals/](https://grafana.com/tutorials/grafana-fundamentals/)
-- **Grafana GitHub Repository** — Source code, issues, and contribution guide:
-  [https://github.com/grafana/grafana](https://github.com/grafana/grafana)
-- **Query and Transform Data** — Query options (legend format, min step, instant queries) and transformations:
-  [https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/](https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/)
+- [Grafana Official Website](https://grafana.com/)
+- [Grafana Tutorials & Guides](https://grafana.com/tutorials/)
+- [Grafana Fundamentals](https://grafana.com/tutorials/grafana-fundamentals/)
+- [Grafana GitHub Repository](https://github.com/grafana/grafana)
+- [Query and Transform Data](https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/)
 
-**Architecture (How Grafana Works)**
+**Grafana: Architecture**
 
-- **Grafana Overview & Architecture (Wiki)** — Basic description of Grafana’s purpose, frontend/backend languages, and ecosystem integration:
-  [https://en.wikipedia.org/wiki/Grafana](https://en.wikipedia.org/wiki/Grafana)
-- **Architecture Explained Article** — Detailed explanation of how Grafana’s frontend, backend, data sources, and plugins interact:
-  [https://dev.to/favxlaw/grafana-architecture-explained-how-the-backend-and-data-flow-work-49d0](https://dev.to/favxlaw/grafana-architecture-explained-how-the-backend-and-data-flow-work-49d0)
-- **High‑Level Architecture Video** — Video about Grafana architecture components and data flow:
-  [https://www.youtube.com/watch?v=SRZlYjKBkPw](https://www.youtube.com/watch?v=SRZlYjKBkPw)
+- [Grafana (Wikipedia)](https://en.wikipedia.org/wiki/Grafana)
+- [Grafana Architecture Explained](https://dev.to/favxlaw/grafana-architecture-explained-how-the-backend-and-data-flow-work-49d0)
+- [High-Level Architecture (video)](https://www.youtube.com/watch?v=SRZlYjKBkPw)
 
-**Beginner Videos**
+**Grafana: Beginner Videos**
 
-- **Grafana Introduction in 10 Minutes (Beginner Tutorial)** — General intro to Grafana and core features:
-  [https://www.youtube.com/watch?v=ow-eCngnfBQ](https://www.youtube.com/watch?v=ow-eCngnfBQ)
-- **What is Grafana & Architecture Explained** — Covers what Grafana is and basic architecture concepts:
-  [https://www.youtube.com/watch?v=clPEhemPy2g](https://www.youtube.com/watch?v=clPEhemPy2g)
-- **Creating Visualizations with Grafana (Beginners Episode)** — Learn how to build visualizations step by step:
-  [https://www.youtube.com/watch?v=051wmmDNJnc](https://www.youtube.com/watch?v=051wmmDNJnc)
-- **Visualizing Logs in Grafana** — How to view and use logs panels:
-  [https://opsmatters.com/videos/beginners-guide-visualizing-logs-grafana](https://opsmatters.com/videos/beginners-guide-visualizing-logs-grafana)
+- [Grafana Introduction in 10 Minutes](https://www.youtube.com/watch?v=ow-eCngnfBQ)
+- [What is Grafana & Architecture Explained](https://www.youtube.com/watch?v=clPEhemPy2g)
+- [Creating Visualizations with Grafana](https://www.youtube.com/watch?v=051wmmDNJnc)
+- [Visualizing Logs in Grafana](https://opsmatters.com/videos/beginners-guide-visualizing-logs-grafana)
 
-**Community & Learning Paths**
+**Grafana: Community & Learning Paths**
 
-- **Grafana Learning Journeys** — Guided step‑by‑step learning paths from Grafana Labs:
-  [https://grafana.com/docs/learning-journeys/](https://grafana.com/docs/learning-journeys/)
-- **Community Forums** — Ask questions and get help:
-  [https://community.grafana.com/](https://community.grafana.com/)
-- **Webinars & Videos by Grafana Labs** — Official webinars on dashboards, alerting, observability, and integrations:
-  [https://grafana.com/videos/](https://grafana.com/videos/)
+- [Grafana Learning Journeys](https://grafana.com/docs/learning-journeys/)
+- [Community Forums](https://community.grafana.com/)
+- [Webinars & Videos by Grafana Labs](https://grafana.com/videos/)
 
-#### The LGTM Stack
+**The LGTM Stack**
 
-- **Grafana Labs open-source stack** — Overview of Loki, Grafana, Tempo, Mimir, and the rest:
-  [https://grafana.com/oss/](https://grafana.com/oss/)
-- **Loki Overview**:
-  [https://grafana.com/docs/loki/latest/get-started/overview/](https://grafana.com/docs/loki/latest/get-started/overview/)
-- **Mimir Documentation**:
-  [https://grafana.com/docs/mimir/latest/](https://grafana.com/docs/mimir/latest/)
+- [Grafana Labs Open-Source Stack](https://grafana.com/oss/)
+- [Loki Overview](https://grafana.com/docs/loki/latest/get-started/overview/)
+- [Mimir Documentation](https://grafana.com/docs/mimir/latest/)
 
-#### Tempo
+**Tempo**
 
-**Documentation & Getting Started**
+- [Grafana Tempo Overview](https://grafana.com/oss/tempo/)
+- [Tempo Docs: Set Up for Tracing](https://grafana.com/docs/tempo/latest/set-up-for-tracing/)
+- [Tempo GitHub Repository](https://github.com/grafana/tempo)
+- [Tempo Architecture](https://grafana.com/docs/tempo/latest/introduction/architecture/)
+- [Deployment Modes](https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/plan/deployment-modes/)
+- [Tempo Example Setups](https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/example-demo-app/)
+- [Beyond Tracing with Grafana Tempo (video)](https://www.youtube.com/watch?v=zVHHeO8tAWQ)
+- [How to Get Started with Tempo (video)](https://www.youtube.com/watch?v=pUAmL28uzos)
+- [How to Query Span Events with TraceQL (video)](https://www.youtube.com/watch?v=3_TID7WUcBY)
+- [New TraceQL Features, Tempo 2.10 (video)](https://www.youtube.com/watch?v=5aX3NxSVwMw)
+- [Grafana Tempo Community Forum](https://community.grafana.com/c/grafana-tempo/40)
 
-- **Official Grafana Tempo Overview** (overview + basic info):
-  [https://grafana.com/oss/tempo/](https://grafana.com/oss/tempo/)
-- **Tempo Docs — Setup & Tracing Guide** (installation, config, examples):
-  [https://grafana.com/docs/tempo/latest/set-up-for-tracing/](https://grafana.com/docs/tempo/latest/set-up-for-tracing/)
-- **Tempo GitHub Repository** (source code, examples, deployments):
-  [https://github.com/grafana/tempo](https://github.com/grafana/tempo)
+**Pyroscope**
 
-**Architecture (How Tempo Works)**
+- [Pyroscope Documentation](https://grafana.com/docs/pyroscope/latest/)
+- [Pyroscope GitHub Repository](https://github.com/grafana/pyroscope)
+- [Getting Started](https://grafana.com/docs/pyroscope/latest/get-started/)
+- [Pyroscope Architecture](https://grafana.com/docs/pyroscope/latest/reference-pyroscope-architecture/)
+- [Pyroscope Data Source in Grafana](https://grafana.com/docs/grafana/latest/datasources/pyroscope/)
+- [Continuous Profiling with Pyroscope (video)](https://www.youtube.com/watch?v=XL2yTCPy2e0)
 
-- **Tempo Architecture (official docs)** — describes Tempo components (distributor, ingester, query frontend, object storage, metrics generator) and how traces flow through the system:
-  [https://grafana.com/docs/tempo/latest/introduction/architecture/](https://grafana.com/docs/tempo/latest/introduction/architecture/)
-
-**Beginner Videos**
-
-- **Beyond Tracing with Grafana Tempo — What Do We Do With All This Data**
-  [https://www.youtube.com/watch?v=zVHHeO8tAWQ](https://www.youtube.com/watch?v=zVHHeO8tAWQ)
-- **How to Get Started with Tempo (Grafana Office Hours)** — tempo basics and TraceQL overview:
-  [https://www.youtube.com/watch?v=pUAmL28uzos](https://www.youtube.com/watch?v=pUAmL28uzos)
-- **How to Query Span Events with TraceQL (Tempo Tutorial)** — TraceQL basics:
-  [https://www.youtube.com/watch?v=3_TID7WUcBY](https://www.youtube.com/watch?v=3_TID7WUcBY)
-- **New TraceQL Features (Tempo 2.10 demo)** — extended query features:
-  [https://www.youtube.com/watch?v=5aX3NxSVwMw](https://www.youtube.com/watch?v=5aX3NxSVwMw)
-
-**Additional Topics**
-
-- **Tempo Example Setups** — example deployments (Docker Compose / Helm / Kubernetes):
-  [https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/example-demo-app/](https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/example-demo-app/)
-- **Monolithic & Microservices Modes** — single binary vs separate components:
-  [https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/plan/deployment-modes/](https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/plan/deployment-modes/)
-
-**Community & Support**
-
-- **Grafana Tempo Community Forum** (discussion, questions, tips):
-  [https://community.grafana.com/c/grafana-tempo/40](https://community.grafana.com/c/grafana-tempo/40)
-
-#### Pyroscope
-
-- **Official Website & Documentation** — Learn Pyroscope basics and setup:
-  [https://grafana.com/docs/pyroscope/latest/](https://grafana.com/docs/pyroscope/latest/)
-- **GitHub Repository** — Explore the source code and examples:
-  [https://github.com/grafana/pyroscope](https://github.com/grafana/pyroscope)
-- **Getting Started Guide** — How to install and run Pyroscope:
-  [https://grafana.com/docs/pyroscope/latest/get-started/](https://grafana.com/docs/pyroscope/latest/get-started/)
-- **Architecture Overview** — How Pyroscope collects and stores profiling data:
-  [https://grafana.com/docs/pyroscope/latest/reference-pyroscope-architecture/](https://grafana.com/docs/pyroscope/latest/reference-pyroscope-architecture/)
-- **Visualizing Profiling Data in Grafana** — Using Pyroscope with Grafana dashboards:
-  [https://grafana.com/docs/grafana/latest/datasources/pyroscope/](https://grafana.com/docs/grafana/latest/datasources/pyroscope/)
-- **Video: Continuous Profiling with Pyroscope** — Overview and demo:
-  [https://www.youtube.com/watch?v=XL2yTCPy2e0](https://www.youtube.com/watch?v=XL2yTCPy2e0)
+</details>

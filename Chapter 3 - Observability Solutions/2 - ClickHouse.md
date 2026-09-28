@@ -2,7 +2,9 @@
 
 ## Overview
 
-ClickHouse is a high‑performance, open‑source **column‑oriented database** optimized for online analytical processing (OLAP) workloads. It’s designed to run **very fast analytical queries** on large datasets using SQL, supports real‑time data ingestion, and scales across distributed clusters, making it ideal for analytics, dashboards, and data warehousing.
+ClickHouse is an open-source, column-oriented SQL database built for analytical queries over very large datasets, and one of the databases our team uses. It has become a popular backend for logs, traces, and metrics, both in self-built stacks and in commercial observability products.
+
+This part starts with how ClickHouse stores, merges, and replicates data, and the coordination service that replication depends on. It then covers the table engines and materialized views you'll use to shape data as it arrives, how to design tables for high-volume telemetry, and how ClickHouse fits in with the Collector and Grafana you've already met.
 
 ## Goals
 
@@ -58,7 +60,7 @@ Storage Fundamentals question 4 led you to the coordination service that replica
 2. How is it architected? How many servers make up a cluster, and what roles do they play?
 3. How is its data organized? What types of nodes can you create, and what makes each type useful?
 4. How do clients connect to it and stay connected? What happens to a client's data when its session expires, and why is that useful?
-5. How do the servers agree on the order of writes? What happens when the leader fails, and what is the ZXID?
+5. How do the servers agree on the order of writes, and how is each write's place in that order identified? What happens when the leader fails?
 6. What consistency guarantees does it give clients? What is a watch, how long does it stay registered after it fires, and what happens to it when the client's session expires? How do clients use watches in practice?
 7. What are the basic operational concerns: sizing the cluster, snapshots and transaction logs, and the common issues you'd run into?
 8. Which distributed-systems patterns is it commonly used to implement?
@@ -108,11 +110,10 @@ Storage Fundamentals question 4 led you to the coordination service that replica
 
 **The Coordination Service**
 
-- [ClickHouse Keeper](https://clickhouse.com/docs/guides/oss/deployment-and-scaling/keeper)
-
 <details>
 <summary>Spoiler: open once you've answered Storage Fundamentals question 4</summary>
 
+- [ClickHouse Keeper](https://clickhouse.com/docs/guides/oss/deployment-and-scaling/keeper)
 - [ZooKeeper Overview](https://zookeeper.apache.org/doc/current/zookeeperOver.html)
 - [ZooKeeper Programmer's Guide](https://zookeeper.apache.org/doc/current/zookeeperProgrammers.html)
 - [ZooKeeper Internals](https://zookeeper.apache.org/doc/current/zookeeperInternals.html)

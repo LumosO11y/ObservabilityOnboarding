@@ -33,6 +33,7 @@ Under the subject of Kubernetes, we will touch upon, and you will learn, the fol
 - NetworkPolicy
 - Volumes
 - PVC
+- Access modes
 - Storage classes
 - Requests, limits & QoS classes
 - Taints, tolerations & affinity
@@ -100,7 +101,7 @@ Under the subject of Kubernetes, we will touch upon, and you will learn, the fol
 5. What is the primary difference between a Deployment (for stateless apps like a web server) and a StatefulSet (for databases)?
 6. Describe how a Controller uses a "reconciliation loop" to move the cluster from its current state to the desired state.
 7. Deployments and StatefulSets are meant to keep Pods running forever. What is a Job for, and what does it mean for a Job's Pod to have "completed" rather than crashed?
-8. What is a CronJob, and what does it use under the hood to decide when to run? (Hint: you've just learned the syntax it borrows from, back in the Linux part.)
+8. What is a CronJob, and what does it use under the hood to decide when to run? (Hint: think back to the Linux part of Chapter 0.)
 9. What is an init container, and what is a sidecar container? Give a use case for each. How could you run a telemetry collector next to your app as a sidecar, and what would you gain or lose compared to running one per node as a DaemonSet?
 10. When you change the image of a Deployment, how does a rolling update replace the old Pods with new ones? What do `maxSurge` and `maxUnavailable` control, and how do you roll back a rollout that turned out to be bad?
 
@@ -124,6 +125,7 @@ Under the subject of Kubernetes, we will touch upon, and you will learn, the fol
 2. What is the relationship between a PersistentVolume (PV) and a PersistentVolumeClaim (PVC)? Who creates each one?
 3. Why is the Storage Class important for cloud portability? (e.g., switching from Amazon EBS to Google Persistent Disk).
 4. What is a volume's reclaim policy? What happens to the data behind a PVC when the PVC is deleted, and how can that bite you when you clean up a namespace?
+5. What are a PersistentVolume's access modes? Relate them to the storage types and architectures from the Storage part of Chapter 0: which kind of storage can back a volume that Pods on several nodes write to at the same time, and why?
 
 ### Scheduling & Resource Management
 
