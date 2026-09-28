@@ -2,8 +2,7 @@
 
 ## Overview
 
-In this part, you'll learn about insights Observability gives us.
-Observability platforms give us a lot of insight and capabilities about our system from the telemetry data.
+Once telemetry is collected, platforms turn it into something teams can act on. This part covers APM, the reliability concepts built on top of telemetry (such as SLOs), monitoring from the user's side, and how to compare observability platforms.
 
 ## Goals
 

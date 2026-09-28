@@ -1,4 +1,4 @@
-# Introduction to Core Data Concepts
+# Big Data Core Concepts
 
 ## Overview
 

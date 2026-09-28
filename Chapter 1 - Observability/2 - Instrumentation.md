@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this part you will learn about yet another concept of Observability called Instrumentation. You will learn how to make your system observable and about the different ways you can implement this concept.
+This part covers instrumentation: the different ways to make an application emit telemetry, and the trade-offs between them.
 
 ## Goals
 

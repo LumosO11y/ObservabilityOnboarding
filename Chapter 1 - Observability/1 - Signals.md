@@ -2,11 +2,7 @@
 
 ## Overview
 
-In this part, you'll dive into important concepts in Observability.
-More specifically, you'll learn in-depth about the different signals: Logs, Metrics, Traces and Profiling.
-
-You'll explore the need for each of them, their use case and the relation between them.
-You'll also learn about how they complete each other and grant us the bigger picture.
+This part covers the main signals - logs, metrics, traces, and profiles: what each one is, what it's good for, and how they relate to each other. It also covers how trace context travels between services, and how sampling keeps the volume of telemetry manageable.
 
 ## Goals
 
@@ -18,7 +14,7 @@ You'll also learn about how they complete each other and grant us the bigger pic
 
 ## Outcome
 
-The outcome of this part should be a PowerPoint presentation explaining in-depth the concepts of logs, traces, metrics and Profiling and their role when making your system Observable.
+The outcome of this part should be a presentation explaining in-depth the concepts of logs, traces, metrics and Profiling and their role when making your system Observable.
 
 In your presentation make sure there is an answer to the following questions:
 

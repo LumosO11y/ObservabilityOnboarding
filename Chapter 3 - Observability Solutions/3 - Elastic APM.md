@@ -170,7 +170,7 @@
 - [`_source` Field](https://www.elastic.co/docs/reference/elasticsearch/mapping-reference/mapping-source-field)
 - [Time Series Data Streams (TSDS)](https://www.elastic.co/docs/manage-data/data-store/data-streams/time-series-data-stream-tsds)
 - [Logs Data Streams (LogsDB)](https://www.elastic.co/docs/manage-data/data-store/data-streams/logs-data-stream)
-- [Evolving Elasticsearch's Columnar Store to a Columnar Database](https://www.elastic.co/search-labs/blog/elasticsearch-doc-values-columnar-database)
+- [Elasticsearch's Columnar Storage](https://www.elastic.co/search-labs/blog/elasticsearch-doc-values-columnar-database)
 - [Elasticsearch Columnar Database: One Platform for Search and Analytics](https://www.elastic.co/search-labs/blog/elasticsearch-columnar-storage)
 - [Elasticsearch Release Notes](https://www.elastic.co/docs/release-notes/elasticsearch)
 
