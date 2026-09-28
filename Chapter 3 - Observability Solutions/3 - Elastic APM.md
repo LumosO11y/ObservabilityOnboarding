@@ -87,7 +87,7 @@
 3. What is an index mode in Elasticsearch? What is a time series data stream (TSDS), what does it change about how metrics are stored, and what does it require from your mappings?
 4. What is LogsDB, and what does it change about how logs are stored? What is synthetic `_source`, and what do you give up for it? Which signals end up in LogsDB and which in TSDS in the OTel-native setup, and what did classic APM data streams use instead?
 5. Elasticsearch has had doc values, a form of columnar storage, for most of its life. Why doesn't that make it a columnar database?
-6. What are the columnar index modes introduced in Elasticsearch 9.5? How do they differ from LogsDB and TSDS in what gets indexed, how `_source` is handled, and how mappings behave? How mature are they today?
+6. Elasticsearch recently added columnar index modes. Research them: what are they, how do they compare to LogsDB and TSDS, and how mature are they today?
 7. Compare Elasticsearch's columnar mode with ClickHouse from the previous part. How does each handle arbitrary, ever-changing attributes, and where would you still pick one over the other for telemetry?
 
 **Data Management**
@@ -172,7 +172,7 @@
 - [Logs Data Streams (LogsDB)](https://www.elastic.co/docs/manage-data/data-store/data-streams/logs-data-stream)
 - [Evolving Elasticsearch's Columnar Store to a Columnar Database](https://www.elastic.co/search-labs/blog/elasticsearch-doc-values-columnar-database)
 - [Elasticsearch Columnar Database: One Platform for Search and Analytics](https://www.elastic.co/search-labs/blog/elasticsearch-columnar-storage)
-- [Elasticsearch Release Notes (see 9.5.0, columnar index mode)](https://www.elastic.co/docs/release-notes/elasticsearch)
+- [Elasticsearch Release Notes](https://www.elastic.co/docs/release-notes/elasticsearch)
 
 **Data Management**
 

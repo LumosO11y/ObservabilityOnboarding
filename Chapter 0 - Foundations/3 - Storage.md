@@ -87,7 +87,13 @@ Every database and data system you'll meet later ends up writing its data somewh
 **Durability**
 
 - <https://en.wikipedia.org/wiki/Erasure_code>
+
+<details>
+<summary>Spoiler: open once you've answered Durability question 4</summary>
+
 - <https://docs.ceph.com/en/latest/start/>
 - <https://docs.ceph.com/en/latest/architecture/>
+
+</details>
 
 </details>
