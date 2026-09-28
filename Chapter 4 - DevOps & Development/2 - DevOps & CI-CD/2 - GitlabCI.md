@@ -14,6 +14,7 @@ Subjects we will cover:
 - Stages and Jobs
 - `script`, `before_script`, `after_script`
 - Pipeline triggers: push, merge request, schedule, manual, API
+- `workflow:rules`
 
 **Runners**
 
@@ -34,7 +35,8 @@ Subjects we will cover:
 - CI/CD Variables and protected/masked variables
 - `include` (local, project, remote, template)
 - `extends` and YAML anchors
-- Templates
+- Templates, and CI/CD components (the CI/CD Catalog)
+- Parent-child and multi-project pipelines
 
 **Security & Access Control**
 
@@ -67,7 +69,7 @@ Subjects we will cover:
 
 ### Jobs & Workflow Control
 
-1. Why was `rules` introduced to replace `only`/`except`? Give an example `rules` block that only runs a job on merge requests.
+1. Why was `rules` introduced to replace `only`/`except`? Give an example `rules` block that only runs a job on merge requests. How is `workflow:rules` different from job-level `rules`?
 2. What does `needs` let you do that stage-based ordering alone doesn't?
 3. What's the difference between an artifact and the cache? When does each get cleared?
 4. What is a manual job, and how does it interact with approvals in a deployment pipeline?
@@ -76,6 +78,8 @@ Subjects we will cover:
 
 1. At what levels can CI/CD variables be defined, and what does marking one "protected" or "masked" actually do?
 2. What's the difference between `include` and `extends`? When would you reach for a YAML anchor instead of either?
+3. What is a CI/CD component, and how is it different from including a template? What does versioning a component give you?
+4. What are parent-child pipelines, and when would you split one big pipeline into them?
 
 ### Security & Access Control
 
@@ -91,5 +95,7 @@ Subjects we will cover:
 
 ### Links
 
-- <https://docs.gitlab.com/ee/ci/>
-- <https://docs.gitlab.com/ee/ci/yaml/>
+- <https://docs.gitlab.com/ci/>
+- <https://docs.gitlab.com/ci/yaml/>
+- <https://docs.gitlab.com/ci/components/>
+- <https://docs.gitlab.com/ci/pipelines/downstream_pipelines/>

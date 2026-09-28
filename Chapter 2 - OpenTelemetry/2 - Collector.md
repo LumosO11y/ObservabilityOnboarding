@@ -15,7 +15,7 @@ At the end of this part, you'll know in detail about the OpenTelemetry collector
 
 ## Outcome
 
-You should have a markdown answering the questions below and in addition 2 containers running.
+You should have a markdown answering the questions below, and a Collector running in a container that receives telemetry you generated with telemetrygen (questions 20-22).
 Make sure you go in-detail and assure you have deep understanding of this part as it will meet you regularly on the day-to-day job.
 
 1. What is the OpenTelemetry Collector?
@@ -23,9 +23,10 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 3. Explain in detail the flow of a pipeline in a collector. How does it relate to ETL?
 4. How does the OpenTelemetry collector relate to OTLP?
 5. When would you send OTLP to a collector over gRPC, and when over HTTP? What are the trade-offs?
-6. List the architecture paradigms of the collector. What are the pros and cons of each? Make a table that compares them to each other. (There should be 5 in total)
+6. List the deployment patterns of the collector described in the OpenTelemetry documentation. What are the pros and cons of each? Make a table that compares them to each other.
 7. List and elaborate in detail on every component that makes up the collector. Give 2 examples of each, and explain their use. (including Extensions and Connectors). Make sure to choose useful ones.
 8. Pick 2 processors that almost every collector should have (different from the ones you used as examples in the previous question) and elaborate more on them. Explain why you picked these in particular.
+    - Where does batching fit in? Check the current Collector documentation: what is the recommended way to batch telemetry today, and why?
 9. What are the different scopes of the transformation processor?
 10. What is OTTL (OpenTelemetry Transformation Language), and what problem does it solve for the transformation processor? Give 2 examples of when you'd need to use it.
 11. How many pipelines can we have in one collector and how can this be? If multiple are possible, when and why shouldn't you put them together?
@@ -37,17 +38,21 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 16. When should the collector be stateful? What state will it keep? Why won't we keep stateful collectors most of the time? What are the pros and cons between the two? Explain in detail.
 17. The collector can make sampling decisions itself instead of leaving that entirely to the SDK. Compare the `probabilistic_sampler` processor to the `tail_sampling` processor: what does each one need to see in order to make its decision, and what does that require from how you deploy and scale your collectors?
     - Both of those processors apply rules you fix up front. The newer `adaptive_tail_sampling` processor (still in development at the time of writing) takes a different approach. What does it adjust on its own, based on what, and what problem with fixed sampling rates does that solve? How do backends still know how much real traffic each kept trace represents?
-18. What are the 2 main distributions of the collector? What are the differences between them and when should I use each of them? Explain in detail.
+18. Which collector distributions does the OpenTelemetry project itself publish? What are the differences between them, and when should I use each of them? Explain in detail, with a focus on the two most commonly used ones.
 19. List 3 custom distributions of the otel collector. What do they add? Why are there many different distributions? What are the pros and cons of that?
 20. Deploy a collector on docker. You should be able to configure it.
 21. Write a short OTTL statement that converts HTTP status codes from string to int, and add it to the collector you deployed.
-22. There are many useful tools that you should get familiar with. One of them is telemetrygen. Give a short explanation of what it is and generate telemetry (preferably traces) that outputs to the collector you deployed. The output in your collector should be to the console (verbose). The images are in our artifactory.
+22. There are many useful tools that you should get familiar with. One of them is telemetrygen. Give a short explanation of what it is and generate telemetry (preferably traces) that outputs to the collector you deployed. The output in your collector should be printed to the console, with full detail. The Collector and telemetrygen images are in our artifactory - ask your mentor for the path.
 
 ### Links
 
 Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suited:
 
 - <https://opentelemetry.io/docs/collector/>
+- <https://opentelemetry.io/docs/collector/deploy/>
+- <https://opentelemetry.io/docs/collector/distributions/>
+- <https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/exporterhelper/README.md>
+- <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/cmd/telemetrygen>
 - <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/ottl/README.md>
 - <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/adaptivetailsamplingprocessor>
 - <https://opentelemetry.io/blog/2025/sampling-milestones/>

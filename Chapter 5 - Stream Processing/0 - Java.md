@@ -2,7 +2,9 @@
 
 ## Overview
 
-In this chapter, you'll learn **Java** fundamentals and deep core concepts. Since you already know how to program, the focus is on Java-specific behavior.
+In this part, you'll learn **Java** fundamentals and deep core concepts. Since you already know how to program, the focus is on Java-specific behavior.
+
+> **Which Java?** The questions below target Java 17. Ask your mentor which version the services you'll work on use - if it's 21, also go over virtual threads in question 30.
 
 ## Goals
 
@@ -50,6 +52,11 @@ In this chapter, you'll learn **Java** fundamentals and deep core concepts. Sinc
 - Maven
 - Creating JAR files
 
+**Modern Java**
+
+- Records, `var`, text blocks, and switch expressions (Java 17)
+- Virtual threads (Java 21)
+
 ## Outcome
 
 Java 17 study questions:
@@ -83,6 +90,7 @@ Java 17 study questions:
 27. What is a `CompletableFuture`, and how does it help you compose asynchronous work?
 28. What is a JAR file and how do you create one in Java?
 29. What is Maven and how does it help in Java project management?
+30. What are records? How do they compare to what Lombok gives you? *(Java 21)* What are virtual threads, and how do they change the way you'd write the `ExecutorService` code from question 25?
 
 ### Links
 
@@ -113,14 +121,13 @@ Java 17 study questions:
 
 - [Java Annotations Tutorial](https://docs.oracle.com/javase/tutorial/java/annotations/)
 - [Java SE 17 API – `java.lang.annotation`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/package-summary.html)
-- [Common Built-in Annotations](https://www.baeldung.com/java-custom-annotations)
+- [Common Built-in Annotations](https://www.baeldung.com/java-default-annotations)
 
 **Lombok**
 
 - [Project Lombok Official Site](https://projectlombok.org/)
-- [Lombok Features Overview](https://projectlombok.org/features/all)
+- [Lombok Features Overview](https://projectlombok.org/features/)
 - [Using Lombok in Java Projects](https://www.baeldung.com/intro-to-project-lombok)
-- [Lombok Annotations Reference](https://projectlombok.org/features/index)
 
 **Collections & Streams**
 
@@ -135,3 +142,8 @@ Java 17 study questions:
 
 - [Maven Guides](https://maven.apache.org/guides/)
 - [Creating JAR Files](https://docs.oracle.com/javase/tutorial/deployment/jar/)
+
+**Modern Java**
+
+- [Records](https://dev.java/learn/records/)
+- [Virtual Threads](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html)

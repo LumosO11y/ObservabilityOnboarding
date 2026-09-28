@@ -24,3 +24,7 @@ Before diving into GitlabCI and ArgoCD, you should understand CI/CD as a concept
 ### Links
 
 - Intro to CI-CD: <https://www.youtube.com/watch?v=AknbizcLq4w>
+- <https://martinfowler.com/articles/continuousIntegration.html>
+- <https://about.gitlab.com/topics/ci-cd/>
+- <https://www.redhat.com/en/topics/devops/what-is-ci-cd>
+- <https://opengitops.dev/>

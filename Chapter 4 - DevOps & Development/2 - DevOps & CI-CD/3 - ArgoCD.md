@@ -70,7 +70,7 @@ Subjects we will cover:
 
 5. **Sync Options**: Explain the ``ServerSideApply=true`` sync option. When is this necessary (e.g., dealing with large CRDs or Field Managers)?
 
-### Orchestration and Orchestration Tools
+### Orchestration & Tooling
 
 1. **Sync Waves**: If Resource A has a sync-wave of ``-1`` and Resource B has a sync-wave of ``5``, which one is applied first? What happens if Resource A fails to reach a ``Healthy`` state?
 

@@ -9,7 +9,7 @@ In this part you will learn about yet another concept of Observability called In
 - Understand the concept of Instrumentation.
 - Learn about different implementations of Instrumentation (manual vs. automatic).
 - Understand the difference between SDK-based (in-process) instrumentation and system-level (out-of-process) instrumentation.
-- Learn about different Instrumentation technologies
+- Learn about different Instrumentation technologies.
 
 ## Outcome
 
@@ -29,10 +29,9 @@ In your markdown make sure there is an answer to the following questions:
 ### Links
 
 - <https://opentelemetry.io/docs/concepts/instrumentation/>
-- <https://cloud.google.com/stackdriver/docs/instrumentation/overview>
-- <https://baselime.io/glossary/instrumentation>
+- <https://opentelemetry.io/docs/concepts/instrumentation/zero-code/>
+- <https://opentelemetry.io/docs/concepts/instrumentation/code-based/>
+- <https://docs.cloud.google.com/stackdriver/docs/instrumentation/overview>
 - <https://clairettran.medium.com/observability-and-instrumentation-99258f61f7a7>
-- <https://logz.io/learn/opentracing-jaeger-guide-to-instrumentation/>
-- <https://opencensus.io/introduction/>
 - [Chapter 5](../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
 - [Chapter 7](../assets/observability-engineering-achieving-production.pdf)

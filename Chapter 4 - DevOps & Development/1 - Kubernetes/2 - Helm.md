@@ -26,10 +26,10 @@ Helm is the de-facto package manager for Kubernetes: it packages a set of manife
     - What are named templates? How do `define` and `include` work together, and why is `include` usually preferred over `template`?
     - What does the `tpl` function do? When would you want a value in `values.yaml` to contain template syntax itself?
 5. What is a chart dependency (subchart)? Give a realistic example of when you'd pull one in instead of writing everything yourself.
-6. What is a Helm repository, and how do `helm repo add` / `helm search repo` fit into finding and installing a third-party chart (e.g. the official OpenTelemetry Collector chart)?
+6. What is a Helm repository, and how do `helm repo add` / `helm search repo` fit into finding and installing a third-party chart (e.g. the official OpenTelemetry Collector chart)? Where else can charts be stored besides a classic Helm repository? How does installing a chart from an OCI registry differ?
 7. What are Helm hooks (e.g. `pre-install`, `post-upgrade`)? What kind of problem would you use one to solve?
 8. What's the difference between Helm and Kustomize as ways to manage Kubernetes configuration? When would you reach for one over the other?
-9. Write a minimal Helm chart for a simple app of your choice. Install it, change a value, `helm upgrade`, then `helm rollback` back to the previous release.
+9. Write a minimal Helm chart for your Dockerfile Exercise app (Deployment, Service, and ConfigMap from the Kubernetes exercise, with the image tag and replica count in `values.yaml`). Install it, change a value, `helm upgrade`, then `helm rollback` back to the previous release.
 
 ### Links
 
@@ -42,4 +42,5 @@ Helm is the de-facto package manager for Kubernetes: it packages a set of manife
 - <https://helm.sh/docs/topics/charts/>
 - <https://helm.sh/docs/topics/charts_hooks/>
 - <https://helm.sh/docs/chart_best_practices/>
+- <https://helm.sh/docs/topics/registries/>
 - <https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/>

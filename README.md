@@ -2,7 +2,7 @@
 
 Welcome to Lumos! This repository is your gateway to a structured onboarding program designed to bring you up to speed on everything you need to know to work on our team - from core concepts to actual things you might need and use. The program is organized into chapters, each with goals, questions to answer, curated reading, and hands-on exercises.
 
-The full onboarding takes roughly 9 weeks (~45 working days).
+The full onboarding takes roughly 9.5 weeks (~47 working days).
 
 Start here: [Chapter 0 - Foundations/0 - Welcome](./Chapter%200%20-%20Foundations/0%20-%20Welcome.md)
 
@@ -27,26 +27,26 @@ What Observability actually means, the different signals (logs, metrics, traces,
 
 ### Chapter 2: OpenTelemetry
 
-From the concept of OpenTelemetry to its specification, the Collector, hands-on instrumentation, and eBPF-based instrumentation. Estimated duration: ~5.5 days.
+From the concept of OpenTelemetry to its specification, the Collector, hands-on instrumentation, and eBPF-based instrumentation. Estimated duration: ~6 days.
 
 - **[Introduction](./Chapter%202%20-%20OpenTelemetry/0%20-%20Introduction.md)** (~0.5 day) - where OpenTelemetry came from, what it is, and how the project is organized.
 - **[Specification & OTLP](./Chapter%202%20-%20OpenTelemetry/1%20-%20Specification%20&%20OTLP.md)** (~1 day) - Protobuf, gRPC, OTLP, semantic conventions, and OpAMP.
 - **[The OpenTelemetry Collector](./Chapter%202%20-%20OpenTelemetry/2%20-%20Collector.md)** (~2.5 days) - pipelines, components, scaling, OTTL, and a hands-on collector deployment.
 - **[Instrumentation](./Chapter%202%20-%20OpenTelemetry/3%20-%20Instrumentation.md)** (~1 day) - the API vs. the SDK, Resources and Instrumentation Scope, and instrumenting a real component.
-- **[eBPF](./Chapter%202%20-%20OpenTelemetry/4%20-%20eBPF.md)** (~0.5 day) - running sandboxed programs in the kernel, and how OBI uses it to instrument apps without code changes.
+- **[eBPF](./Chapter%202%20-%20OpenTelemetry/4%20-%20eBPF.md)** (~1 day) - running sandboxed programs in the kernel, and how OBI uses it to instrument apps without code changes.
 
 ### Chapter 3: Observability Solutions
 
-The concrete platforms we (and the wider ecosystem) use to query and visualize telemetry - the Grafana stack, ClickHouse, and Elastic APM today, with room to grow into other observability solutions. Estimated duration: ~8 days.
+The concrete platforms we (and the wider ecosystem) use to query and visualize telemetry - the Grafana stack, ClickHouse, and Elastic APM today, with room to grow into other observability solutions. Estimated duration: ~8.5 days.
 
-- **[Prometheus](./Chapter%203%20-%20Observability%20Solutions/0%20-%20Prometheus.md)** (~1.5 days) - what Prometheus is, alternatives, scraping vs. remote-write, and querying with PromQL.
-- **[Grafana](./Chapter%203%20-%20Observability%20Solutions/1%20-%20Grafana.md)** (~1.5 days) - the dashboarding layer (including PromQL in Grafana), plus its Tempo (tracing) and Pyroscope (profiling) backends.
+- **[Prometheus](./Chapter%203%20-%20Observability%20Solutions/0%20-%20Prometheus.md)** (~2 days) - what Prometheus is, alternatives, scraping vs. remote-write, querying with PromQL, histograms, recording rules, and how OpenTelemetry metrics get in.
+- **[Grafana](./Chapter%203%20-%20Observability%20Solutions/1%20-%20Grafana.md)** (~1.5 days) - the dashboarding layer (including PromQL in Grafana), a high-level look at the LGTM stack (Loki, Grafana, Tempo, Mimir), plus the Tempo (tracing) and Pyroscope (profiling) backends.
 - **[ClickHouse](./Chapter%203%20-%20Observability%20Solutions/2%20-%20ClickHouse.md)** (~2 days) - the column-oriented OLAP database: the coordination service its replication depends on, engines and MergeTree variants, materialized views, schema design for telemetry, and its integrations with the observability ecosystem.
 - **[Elastic APM](./Chapter%203%20-%20Observability%20Solutions/3%20-%20Elastic%20APM.md)** (~3 days) - how Elastic's APM evolved from APM Server to Elastic Agent to EDOT, its instrumentation libraries and where each stands today, its features, how its data is stored then and now (from plain Lucene through TSDS and LogsDB to the columnar engine), and managing that data with ILM.
 
 ### Chapter 4: DevOps & Development
 
-The practitioner's toolbox: containerizing and orchestrating workloads, the CI/CD tools that ship them, Go, and finding your way around our code. Estimated duration: ~13.5 days (Docker ~2, Kubernetes ~5, DevOps & CI-CD ~3, Development ~3.5).
+The practitioner's toolbox: containerizing and orchestrating workloads, the CI/CD tools that ship them, Go, and finding your way around our code. Estimated duration: ~14.5 days (Docker ~2, Kubernetes ~5, DevOps & CI-CD ~3, Development ~4.5).
 
 **Docker**
 
@@ -56,8 +56,8 @@ The practitioner's toolbox: containerizing and orchestrating workloads, the CI/C
 **Kubernetes**
 
 - **[Orchestration](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/0%20-%20Orchestration.md)** (~3 days) - why containers alone aren't enough in the cloud, how Kubernetes solves it, and its distributions (OpenShift, Rancher, and more).
-- **[Exercise](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/1%20-%20Exercise.md)** (~1 day) - hands-on lab: deploy your Dockerfile Exercise image to a shared test cluster.
-- **[Helm](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/2%20-%20Helm.md)** (~1 day) - packaging, templating, and releasing Kubernetes manifests.
+- **[Exercise](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/1%20-%20Exercise.md)** (~1 day) - hands-on lab: push your Dockerfile Exercise image and deploy it to a shared test cluster.
+- **[Helm](./Chapter%204%20-%20DevOps%20&%20Development/1%20-%20Kubernetes/2%20-%20Helm.md)** (~1 day) - packaging, templating, and releasing Kubernetes manifests, ending with a chart for your own app.
 
 **DevOps & CI-CD**
 
@@ -68,17 +68,17 @@ The practitioner's toolbox: containerizing and orchestrating workloads, the CI/C
 
 **Development**
 
-- **[Go](./Chapter%204%20-%20DevOps%20&%20Development/3%20-%20Development/0%20-%20Go.md)** (~1.5 days) - the language most cloud-native and observability tooling is written in: interfaces, errors as values, goroutines & channels, and testing.
+- **[Go](./Chapter%204%20-%20DevOps%20&%20Development/3%20-%20Development/0%20-%20Go.md)** (~2 days) - the language most cloud-native and observability tooling is written in: interfaces, errors as values, goroutines & channels, and testing.
 - **[Go Exercise](./Chapter%204%20-%20DevOps%20&%20Development/3%20-%20Development/1%20-%20Go%20Exercise.md)** (~1.5 days) - implement, test, and benchmark a consistent hash ring, and measure how it behaves.
-- **[Getting Into a Large Codebase](./Chapter%204%20-%20DevOps%20&%20Development/3%20-%20Development/2%20-%20Getting%20Into%20a%20Large%20Codebase.md)** (~0.5 day) - tips for navigating our codebase once you start contributing.
+- **[Getting Into a Large Codebase](./Chapter%204%20-%20DevOps%20&%20Development/3%20-%20Development/2%20-%20Getting%20Into%20a%20Large%20Codebase.md)** (~1 day) - tips for navigating our codebase, and mapping the data flow of one of our real repositories.
 
 ### Chapter 5: Stream Processing
 
 The engineering stack behind our pipelines. Estimated duration: ~9.5 days.
 
 - **[Java](./Chapter%205%20-%20Stream%20Processing/0%20-%20Java.md)** (~2.5 days) - the language, the JVM, collections & streams, concurrency, and Maven.
-- **[Spring](./Chapter%205%20-%20Stream%20Processing/1%20-%20Spring.md)** (~1.5 days) - dependency injection, beans, and building REST APIs with Spring Boot.
-- **[Kafka](./Chapter%205%20-%20Stream%20Processing/2%20-%20Kafka.md)** (~1.5 days) - topics, partitions, consumer groups, delivery guarantees, and its use of ZooKeeper.
+- **[Spring](./Chapter%205%20-%20Stream%20Processing/1%20-%20Spring.md)** (~1.5 days) - dependency injection, beans, building REST APIs with Spring Boot, and making a Spring Boot app observable with Actuator, Micrometer, and OpenTelemetry.
+- **[Kafka](./Chapter%205%20-%20Stream%20Processing/2%20-%20Kafka.md)** (~1.5 days) - topics, partitions, consumer groups, delivery guarantees, and its use of ZooKeeper (and its replacement, KRaft).
 - **[Flink](./Chapter%205%20-%20Stream%20Processing/3%20-%20Flink.md)** (~4 days) - state, checkpoints, time and windowing, ending with a hands-on Flink + Kafka + OTEL exercise.
 
 ## Feedback :speech_balloon:

@@ -24,9 +24,9 @@ By the end of this part you should answer the following questions:
 5. Pick 2 OpenTelemetry language SDKs. How does each one implement zero-code instrumentation, and what does that tell you about the language's runtime?
 6. OpenTelemetry offers ready-made instrumentation libraries for common frameworks (e.g. Flask). When there's no such library for the code you need to instrument, what are your options? Explain each in detail.
     1. Why won't we always have access to a ready-made instrumentation library?
-    2. Give an example of a team from our branch that uses "custom instrumentation". Why did they choose this method?
+    2. Give an example of a team from our unit that uses "custom instrumentation". Why did they choose this method?
 7. Some would say that manual instrumentation is sort of an art. In what cases should we avoid instrumenting our library/code? What would be considered over-instrumenting?
-8. Add instrumentation to an existing code (you can use our docs to see how).
+8. Add instrumentation to an existing code (ask your mentor for our internal instrumentation docs and which component to use).
     1. See it in the console (use a console exporter)
     2. Send the instrumentation through to a platform the mentor will tell you. Talk with your mentor for more info.
 

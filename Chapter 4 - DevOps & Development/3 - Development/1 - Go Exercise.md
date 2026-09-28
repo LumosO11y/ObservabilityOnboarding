@@ -73,4 +73,4 @@ Your working module (tests and benchmark passing) and a markdown file answering 
 - [Go: `sync` package](https://pkg.go.dev/sync)
 - [Go Wiki: Table-driven tests](https://go.dev/wiki/TableDrivenTests)
 - [Load Balancing Exporter](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/loadbalancingexporter)
-- [ClickHouse: Distributed table engine](https://clickhouse.com/docs/engines/table-engines/special/distributed)
+- [ClickHouse: Distributed table engine](https://clickhouse.com/docs/reference/engines/table-engines/special/distributed)

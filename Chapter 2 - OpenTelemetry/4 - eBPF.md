@@ -15,6 +15,7 @@
 1. What is eBPF? How can it run custom code inside the kernel without risking a kernel crash? What role does the verifier play?
 2. What kinds of kernel and user-space events can an eBPF program attach to?
 3. What are eBPF maps, and how does an eBPF program get its data back to a user-space program?
+    - What does an eBPF program need from the host in order to run? What does that mean for running eBPF tools in containers and on Kubernetes?
 4. Chapter 1 asked about system-level instrumentation. How does eBPF make it possible, and what can an eBPF-based tool see - and not see - compared to SDK-based instrumentation?
 5. What is OBI? How does it produce OpenTelemetry telemetry for an app without touching its code or runtime, and how is that different from the language-specific zero-code instrumentation from the previous part?
 6. Which signals can OBI produce today, and what would you still need an SDK for?

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Grafana is the visualization and dashboarding layer of our observability stack - it's where metrics, logs, and traces from our other tools (Prometheus, Tempo, Pyroscope, and more) actually get looked at side by side. This part covers what Grafana is and how it's built, along with two of Grafana's own backends - Tempo for distributed tracing and Pyroscope for continuous profiling - then points you at official resources and videos to get hands-on with all three.
+Grafana is the visualization and dashboarding layer of our observability stack - it's where metrics, logs, and traces from our other tools actually get looked at side by side. Together with Grafana Labs' own backends it forms the **LGTM stack**: **L**oki for logs, **G**rafana, **T**empo for traces, and **M**imir for metrics. This part covers what Grafana is and how it's built, a high-level look at the LGTM stack, and two backends in more depth - Tempo for distributed tracing and Pyroscope for continuous profiling.
 
 ## Goals
 
@@ -10,6 +10,7 @@ Grafana is the visualization and dashboarding layer of our observability stack -
 - Understand Grafana's high-level architecture (frontend, backend, data sources, plugins).
 - Get comfortable building a basic dashboard and panel.
 - Get comfortable with the Grafana-specific features that make PromQL queries dynamic and performant (variables, legend format, min step, instant queries).
+- Know what the LGTM stack is, and what Loki and Mimir each do at a high level.
 - Understand how Tempo stores traces and why.
 - Understand Tempo's high-level architecture (distributor, ingester, query frontend, object storage).
 - Get comfortable writing a basic TraceQL query.
@@ -27,6 +28,11 @@ Grafana is the visualization and dashboarding layer of our observability stack -
 4. What does `[$__rate_interval]` do, and why is it preferred over a hardcoded range like `[5m]` in a PromQL query on a Grafana dashboard?
 5. In Grafana, what do the "Legend Format" and "Min Step" query options control, and when would you enable "Instant Query" on a panel?
 6. Build a simple dashboard with at least one panel. What did you visualize, and why did you pick that panel type?
+
+### The LGTM Stack
+
+1. At a high level, what are Loki and Mimir, and what problem does each one solve? How does Mimir relate to the Prometheus you learned about in the previous part?
+2. How do the pieces of the LGTM stack fit together? Which component receives which signal, and where does Grafana come in?
 
 ### Tempo
 
@@ -56,7 +62,7 @@ Grafana is the visualization and dashboarding layer of our observability stack -
 - **Grafana GitHub Repository** — Source code, issues, and contribution guide:
   [https://github.com/grafana/grafana](https://github.com/grafana/grafana)
 - **Query and Transform Data** — Query options (legend format, min step, instant queries) and transformations:
-  [https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/](https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/)
+  [https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/](https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/)
 
 **Architecture (How Grafana Works)**
 
@@ -87,6 +93,15 @@ Grafana is the visualization and dashboarding layer of our observability stack -
 - **Webinars & Videos by Grafana Labs** — Official webinars on dashboards, alerting, observability, and integrations:
   [https://grafana.com/videos/](https://grafana.com/videos/)
 
+#### The LGTM Stack
+
+- **Grafana Labs open-source stack** — Overview of Loki, Grafana, Tempo, Mimir, and the rest:
+  [https://grafana.com/oss/](https://grafana.com/oss/)
+- **Loki Overview**:
+  [https://grafana.com/docs/loki/latest/get-started/overview/](https://grafana.com/docs/loki/latest/get-started/overview/)
+- **Mimir Documentation**:
+  [https://grafana.com/docs/mimir/latest/](https://grafana.com/docs/mimir/latest/)
+
 #### Tempo
 
 **Documentation & Getting Started**
@@ -101,7 +116,7 @@ Grafana is the visualization and dashboarding layer of our observability stack -
 **Architecture (How Tempo Works)**
 
 - **Tempo Architecture (official docs)** — describes Tempo components (distributor, ingester, query frontend, object storage, metrics generator) and how traces flow through the system:
-  [https://grafana.com/docs/tempo/latest/operations/architecture/](https://grafana.com/docs/tempo/latest/operations/architecture/)
+  [https://grafana.com/docs/tempo/latest/introduction/architecture/](https://grafana.com/docs/tempo/latest/introduction/architecture/)
 
 **Beginner Videos**
 
@@ -117,7 +132,7 @@ Grafana is the visualization and dashboarding layer of our observability stack -
 **Additional Topics**
 
 - **Tempo Example Setups** — example deployments (Docker Compose / Helm / Kubernetes):
-  [https://grafana.com/docs/tempo/latest/getting-started/example-demo-app/](https://grafana.com/docs/tempo/latest/getting-started/example-demo-app/)
+  [https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/example-demo-app/](https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/example-demo-app/)
 - **Monolithic & Microservices Modes** — single binary vs separate components:
   [https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/plan/deployment-modes/](https://grafana.com/docs/tempo/latest/set-up-for-tracing/setup-tempo/plan/deployment-modes/)
 

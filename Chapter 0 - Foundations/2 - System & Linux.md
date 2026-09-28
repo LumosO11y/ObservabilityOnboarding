@@ -2,17 +2,17 @@
 
 ## Overview
 
-A large part of our work relies on and uses existing infrastructures of data and DevOps. At the base of all the architecture components we use, lie Virtual Machines.
+Everything you'll work with in this onboarding - containers, Kubernetes, collectors, databases, stream processors - ultimately runs as processes on a Linux machine, usually a virtual one. This part gives you the operating-system, virtualization, and Linux fundamentals that the rest of the chapters build on, so that when later parts talk about containers, processes, or ports, you know what's going on underneath.
 
 ## Goals
 
-- Operating systems, the Kernel, and System calls
-- Virtualization, hypervisors, and the components of a virtual machine
-- Common Linux commands and permissions
-- Processes, signals, cgroups, and namespaces
-- Networking basics: ports, TCP/UDP, and DNS
-- cron and the crontab syntax
-- Linux, the Linux Foundation, and CNCF
+- Understand what an operating system and its kernel do, and how applications talk to the kernel through system calls.
+- Understand virtualization: hypervisors, the components of a virtual machine, and the problems they solved.
+- Get comfortable in a Linux terminal: common commands, the file system, and permissions.
+- Understand processes, signals, cgroups, and namespaces.
+- Understand networking basics: ports, TCP/UDP, and DNS.
+- Be able to schedule a job with cron.
+- Know what the Linux Foundation and the CNCF are, and why they matter to the tools we use.
 
 ## Exercise: The Linux Manipulation Exercise
 
@@ -25,7 +25,7 @@ A large part of our work relies on and uses existing infrastructures of data and
 1. **The Version Check**: Find out exactly which version of the Linux Kernel is running.
 2. **The Heartbeat**: View the CPU information. Is it an Intel, AMD, or ARM chip?
 3. **The Long Way Home**: Navigate to the `/var/log` directory. List all files, but show the "long" version so you can see who owns the files.
-4. **The Content Hunt**: Find the file named `syslog` or `messages`. Use a command to read only the last 20 lines of that file to see what the system is doing right now.
+4. **The Content Hunt**: Find the file named `syslog` or `messages`. Use a command to read only the last 20 lines of that file to see what the system is doing right now. Neither file there? Find out why, and where this system keeps its logs instead - then show the last 20 entries from there.
 5. **Create a Secret**: Create a new folder in your home directory called `SecretProject`.
 6. **Lock the Door**: Change the permissions so that only you (the owner) can read, write, and enter it, and no one else in the "world" can list or open what's inside.
    - **Verify**: Run `ls -ld` to prove the permissions changed.

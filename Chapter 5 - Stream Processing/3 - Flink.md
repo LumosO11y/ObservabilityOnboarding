@@ -2,9 +2,11 @@
 
 ## Overview
 
-In this chapter, you'll learn and try Flink, a powerful distributed stream processing platform.
+In this part, you'll learn and try Flink, a powerful distributed stream processing platform.
 
 Note that we use Flink with Java, because it's Flink's native programming language.
+
+> **Which Flink?** Flink 2.0 (March 2025) removed several older APIs, such as the DataSet API and the legacy `SourceFunction`/`SinkFunction`. The book below and parts of the training material predate it, and the `flink-docs-stable` links point at the latest release. Ask your mentor which Flink version we run, read the docs for that version, and make sure the APIs you use in the exercise aren't deprecated or removed in it.
 
 ## Goals
 
@@ -34,6 +36,8 @@ Note that we use Flink with Java, because it's Flink's native programming langua
     - [Savepoints](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/savepoints/)
     - [Timely Stream Processing](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/)
     - [Windows](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/operators/windows/)
+    - [Kafka Connector](https://nightlies.apache.org/flink/flink-docs-stable/docs/connectors/datastream/kafka/)
+    - [Flink 2.0 release announcement](https://flink.apache.org/2025/03/24/apache-flink-2.0.0-a-new-era-of-real-time-data-processing/) - what changed from 1.x
 5. Do the following exercise:
     - Create a Flink-based stream application that reads OTEL spans from a Kafka topic, and every 10 seconds, prints how many spans were in each trace in the last 10 seconds.
     - Ask your mentor for the Kafka topic details.

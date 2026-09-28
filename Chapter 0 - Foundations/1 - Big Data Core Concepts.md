@@ -40,6 +40,9 @@ Research the following topics and look for real-world examples. Discuss your fin
 22. High availability
 23. Leader-follower (a.k.a. master-slave) vs. leaderless architectures
 24. CAP theorem
+25. Row-oriented vs. column-oriented storage
+26. Partitioning and sharding
+27. Replication, and strong vs. eventual consistency
 
 These topics are meant to guide your research - don't hesitate to look up other relevant concepts you come across.
 

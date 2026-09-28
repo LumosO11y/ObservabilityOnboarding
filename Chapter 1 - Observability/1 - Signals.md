@@ -34,6 +34,7 @@ In your presentation make sure there is an answer to the following questions:
 7. How are logs usually stored? (especially in our unit)
 8. Many say logs and traces are very similar. How do they differ and what do they have in common? When will we use each of them?
 9. What is log correlation?
+    - Metrics can be correlated with traces too. What are exemplars, and what do they let you do?
 10. What is a metric? What does it consist of?
 11. How are metrics usually stored (especially in our unit)?
 12. What is cardinality?
@@ -56,7 +57,7 @@ Here are some useful links to start from, yet again, you are encouraged to searc
 - [Chapter 4](../assets/Distributed-Systems-Observability-eBook.pdf)
 - <https://iamondemand.com/blog/the-3-pillars-of-system-observability-logs-metrics-and-tracing/>
 - <https://www.splunk.com/en_us/blog/learn/melt-metrics-events-logs-traces.html>
-- <https://grafana.com/docs/tempo/latest/operations/best-practices/>
+- <https://grafana.com/docs/tempo/latest/set-up-for-tracing/instrument-send/best-practices/>
 - <https://codersociety.com/blog/articles/metrics-tracing-logging>
 - <https://logz.io/blog/logs-or-metrics/>
 - <https://opentelemetry.io/blog/2024/profiling/>

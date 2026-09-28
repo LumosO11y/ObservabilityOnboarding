@@ -33,7 +33,19 @@ Using everything you've learned so far and researched about the composition of D
 
 ## More Questions for You, My Friend
 
-- Stop the container with ctrl + c, then try to run it again without the port mapping.
+- Stop the container, then run it again without the port mapping.
 
-1. Is the container still running?
+1. Is the container still running? How can you tell?
 2. Can you still see the website at localhost:8080? Why or why not?
+3. Is there any way to still reach the app without a port mapping? How?
+
+## Stretch: Make It Production-Ready
+
+If you have time left, improve your Dockerfile. For each change, explain what it protects against:
+
+1. Add a `.dockerignore` file. What would end up in your image without it?
+2. Run the app as a non-root user (`USER`). Relate this to the "Principle of Least Privilege" question from the previous part.
+3. Flask warns you not to use its built-in server in production. Why? Replace it with something production-ready.
+4. Compare the image size and layers of your image when built on the full `python:<version>` base image vs. its `-slim` variant.
+
+You'll keep using this image: in the Kubernetes exercise you'll push it to a registry and run it on a cluster.

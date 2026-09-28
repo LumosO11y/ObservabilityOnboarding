@@ -15,8 +15,8 @@ Under the subject of Kubernetes, we will touch upon, and you will learn, the fol
 - Control plane components: API server, etcd, Scheduler, Controller Manager
 - Orchestration
 - Nodes
+- Control plane nodes (historically "master" nodes)
 - Infra nodes
-- Master nodes
 - Worker Nodes
 - Pods
 - Labels, selectors & annotations
@@ -26,8 +26,8 @@ Under the subject of Kubernetes, we will touch upon, and you will learn, the fol
 - CRD
 - Operators
 - Admission Webhooks (Mutating & Validating)
-- Ingress
 - Services and Service types
+- Ingress and the Gateway API
 - Cluster DNS
 - CNI & kube-proxy
 - NetworkPolicy
@@ -82,11 +82,11 @@ Under the subject of Kubernetes, we will touch upon, and you will learn, the fol
 
 ### Cluster Architecture & Nodes
 
-1. If the Control Plane (Master Nodes) is the "brain" of the cluster, what happens to the currently running applications if that brain temporarily loses power?
+1. If the Control Plane is the "brain" of the cluster, what happens to the currently running applications if that brain temporarily loses power?
 2. What is the role of the Kubelet on a worker node?
 3. In a large-scale environment, why might an organization choose to have dedicated Infra Nodes for logging and monitoring instead of putting everything on Worker Nodes?
 4. Explain the relationship between a Cluster and a Node. How does Kubernetes make multiple physical servers look like one giant pool of resources?
-5. Define, in one sentence each, what a Master Node, an Infra Node, and a Worker Node are each responsible for. Why is it a Worker Node and not an Infra Node that would typically run a team's actual application?
+5. Define, in one sentence each, what a Control Plane node (historically called a "master" node), an Infra Node, and a Worker Node are each responsible for. Why is it a Worker Node and not an Infra Node that would typically run a team's actual application?
 6. What are the API server, etcd, the Scheduler, and the Controller Manager each responsible for? Which of them is the only one that reads and writes etcd directly, and why does that matter?
 7. Walk through what happens between running `kubectl apply -f deployment.yaml` and a container actually starting on a node. Which components touch the request, and in what order?
 8. etcd holds the entire state of the cluster. What would you lose if etcd's data were lost, and why is backing up etcd a different thing from backing up your applications' volumes?
@@ -116,6 +116,7 @@ Under the subject of Kubernetes, we will touch upon, and you will learn, the fol
 8. By default, can any Pod in the cluster talk to any other Pod, even across namespaces? What is a NetworkPolicy, and why does creating one have no effect unless the cluster's CNI plugin supports it?
 9. How would a gRPC connection be made between code running outside a k8s cluster and a Pod inside that cluster? Walk through the entire flow.
 10. What are the disadvantages of gRPC in internal cluster communication?
+11. What is the Gateway API, and what limitations of Ingress does it address? What is the current status of the ingress-nginx controller, and what does that mean for clusters that rely on it?
 
 ### Storage & Persistence (Volumes)
 
@@ -232,12 +233,13 @@ Here is a list of recommended reading materials to help you understand K8S. Also
 - <https://kubernetes.io/docs/concepts/services-networking/>
 - <https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/>
 - <https://kubernetes.io/docs/concepts/services-networking/network-policies/>
+- <https://kubernetes.io/docs/concepts/services-networking/gateway/>
 - <https://kubernetes.io/docs/concepts/storage/>
 - <https://kubernetes.io/docs/concepts/configuration/>
 - <https://kubernetes.io/docs/concepts/scheduling-eviction/>
 - <https://kubernetes.io/docs/concepts/workloads/pods/downward-api/>
 - <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>
-- <https://opentelemetry.io/docs/kubernetes/operator/>
+- <https://opentelemetry.io/docs/platforms/kubernetes/operator/>
 - <https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/>
 - <https://kubernetes.io/docs/concepts/policy/resource-quotas/>
 - <https://kubernetes.io/docs/concepts/policy/limit-range/>
@@ -291,7 +293,7 @@ Here is a list of recommended reading materials to help you understand K8S. Also
 
 **Kubernetes Distributions**
 
-- <https://www.redhat.com/en/topics/containers/what-is-openshift>
+- <https://www.redhat.com/en/technologies/cloud-computing/openshift>
 - <https://docs.redhat.com/en/documentation/openshift_container_platform/4.20/html/authentication_and_authorization/managing-pod-security-policies>
 - <https://www.redhat.com/en/topics/containers/what-are-hosted-control-planes>
 - <https://ranchermanager.docs.rancher.com/>

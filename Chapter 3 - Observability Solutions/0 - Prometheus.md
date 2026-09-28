@@ -13,6 +13,9 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 - Understand instant vectors vs. range vectors, and how to select and filter series with label matchers.
 - Understand `rate()` vs. `irate()`, aggregation operators, and the `by` clause.
 - Understand binary operators (arithmetic, comparison) and the `offset` modifier.
+- Understand histograms and how to compute percentiles from them.
+- Understand recording rules.
+- Understand how OpenTelemetry metrics end up in Prometheus.
 
 ## Outcome
 
@@ -33,6 +36,13 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 5. Write a PromQL query that returns the percentage of HTTP requests returning a 5xx status, broken down `by (method)`.
 6. What's the difference between `sum(rate(metric[5m]))` and taking the rate of a series that has already been summed? Which one is correct, and what goes wrong with the other?
 7. What does the `offset` modifier let you do? Give an example.
+8. How is a Prometheus histogram stored? Write a query that returns the p95 request latency per service. How accurate is a percentile computed from a histogram, and why? What do native histograms change?
+
+### Recording Rules & OpenTelemetry
+
+1. What is a recording rule, and why would you use one?
+2. What are the different ways OpenTelemetry metrics can get into Prometheus? Compare them.
+3. What is metric temporality in OpenTelemetry, and which kinds exist? Which one does Prometheus work with, and what has to happen when they don't match? What happens to metric names and attributes on the way in?
 
 ### Links
 
@@ -50,3 +60,10 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 - [Understanding Prometheus Histograms](https://www.youtube.com/watch?v=yYbXak-1hew)
 - [Understanding Counter Rates and Increases in PromQL](https://www.youtube.com/watch?v=7uy_yovtyqw)
 - [Prometheus Querying Basics](https://prometheus.io/docs/prometheus/latest/querying/basics/)
+- [Histograms and Summaries](https://prometheus.io/docs/practices/histograms/)
+
+**Recording Rules & OpenTelemetry**
+
+- [Recording Rules](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)
+- [Using Prometheus as your OpenTelemetry backend](https://prometheus.io/docs/guides/opentelemetry/)
+- [OpenTelemetry metrics data model: temporality](https://opentelemetry.io/docs/specs/otel/metrics/data-model/#temporality)

@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this chapter, you'll learn Apache Kafka fundamentals: producers, consumers, brokers, topics, and partitions. We run Kafka 2.7, which still depends on ZooKeeper.
+In this part, you'll learn Apache Kafka fundamentals: producers, consumers, brokers, topics, and partitions. We run Kafka 2.7, which still depends on ZooKeeper.
 
 ## Goals
 

@@ -35,7 +35,7 @@ In your markdown make sure there is an answer to the following questions:
 
 Here are some useful links to start from. We highly encourage you to search more and update this list with more links if you think they are suitable:
 
-- <https://newrelic.com/blog/best-practices/what-is-observability>
+- <https://newrelic.com/blog/observability/what-is-observability>
 - <https://www.splunk.com/en_us/blog/learn/observability.html>
 - <https://opentelemetry.io/docs/concepts/observability-primer>
 - <https://www.dynatrace.com/news/blog/what-is-observability-2/>
