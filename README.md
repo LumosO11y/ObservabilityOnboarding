@@ -2,7 +2,7 @@
 
 Welcome to Lumos! This repository is your gateway to a structured onboarding program designed to bring you up to speed on everything you need to know to work on our team - from core concepts to actual things you might need and use. The program is organized into chapters, each with goals, questions to answer, curated reading, and hands-on exercises.
 
-The full onboarding takes roughly 9.5 weeks (~47 working days).
+The full onboarding takes roughly 9.5 weeks (~48 working days).
 
 Start here: [Chapter 0 - Foundations/0 - Welcome](./Chapter%200%20-%20Foundations/0%20-%20Welcome.md)
 
@@ -10,11 +10,12 @@ Start here: [Chapter 0 - Foundations/0 - Welcome](./Chapter%200%20-%20Foundation
 
 ### Chapter 0: Foundations
 
-The big-picture fundamentals: core data concepts and systems & Linux. This chapter is deliberately concept-first - no tooling yet. Estimated duration: ~3.5 days.
+The big-picture fundamentals: core data concepts, systems & Linux, and storage. This chapter is deliberately concept-first - no tooling yet. Estimated duration: ~4.5 days.
 
 - **[Welcome](./Chapter%200%20-%20Foundations/0%20-%20Welcome.md)** (~0.5 day) - introduction to the onboarding process and how it's organized.
 - **[Big Data Core Concepts](./Chapter%200%20-%20Foundations/1%20-%20Big%20Data%20Core%20Concepts.md)** (~1 day) - the data landscape: the five V's, ETL vs. ELT, OLAP vs. OLTP, data lakes, CAP theorem, and more.
 - **[System & Linux](./Chapter%200%20-%20Foundations/2%20-%20System%20&%20Linux.md)** (~2 days) - operating systems, virtualization, processes, networking basics, a hands-on Linux terminal exercise, and cron.
+- **[Storage](./Chapter%200%20-%20Foundations/3%20-%20Storage.md)** (~1 day) - block, file, and object storage, DAS vs. NAS vs. SAN, NFS, and how storage survives failed disks.
 
 ### Chapter 1: Observability
 

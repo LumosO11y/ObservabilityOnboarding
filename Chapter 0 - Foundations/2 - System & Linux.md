@@ -61,35 +61,33 @@ Everything you'll work with in this onboarding - containers, Kubernetes, collect
 17. In Linux, "everything is a file." Explain what this means in the context of hardware devices (like a mouse or a hard drive) located in the `/dev` directory.
 18. How is a directory different from a regular file?
 19. What is the difference between using `\` and `/` when specifying file paths?
-20. What is the difference between "Block Storage" and a "File System"?
-21. What is ephemeral storage?
-22. What is a cache? What is caching?
-23. What are command flags? What are the most common flags? What do they do?
-24. How would you find every line containing the word "ERROR" in a log file named `server.log`?
-25. What is the difference between `cp` and `mv`?
-26. Explain the difference between `chmod` and `chown`.
-27. Explain the different levels of permissions and how they come into play.
-28. If a file has permissions 755, what can the owner do that the "world" (others) cannot?
-29. What is the "root" in Linux? Why is it important?
-30. What is the danger in giving files or programs root permissions?
-31. How does the Kernel prevent a standard user from accidentally deleting critical system files?
-32. If I run `rm -rf /`, why is that the most famous "horror story" in Linux history? What safeguards exist today against running it by accident, and what difference does it make whether you run it as a regular user or as root?
-33. How do you check which processes are consuming the most CPU in real-time?
-34. A developer tells you their VM is running slow. Using Linux commands, walk us through how you would diagnose whether the bottleneck is CPU, Memory, or Disk I/O.
-35. What is a process signal? What is the difference between `SIGTERM` and `SIGKILL`, and why does it matter which one a process receives when it's asked to stop?
-36. What are CGroups? What are Linux namespaces? What does each one control, and how are they different?
-37. What is a port, and what does it mean for a process to "listen" on one? What is the difference between a server binding to `127.0.0.1` and binding to `0.0.0.0`?
-38. What is the difference between TCP and UDP? Give a use case for each.
-39. What is DNS? What happens between typing a hostname into a browser and the first HTTP request being sent?
-40. From the terminal, how would you find which process is listening on a given port, and how would you send an HTTP request to it?
-41. What is cron, and what is a crontab? Write a cron expression that runs a job every day at 3:30 AM, and explain what each of its 5 fields means.
-42. Compare and contrast Windows vs Linux. Give use cases for each.
-43. What are Distributions/Distros? What are the most common distros for Linux? What are they used for? How do they differ from each other?
-44. What is Open Source? Why is it important?
-45. What is the Linux Foundation?
-46. What is the CNCF (Cloud Native Computing Foundation), and what is its mission?
-47. What are famous projects of CNCF?
-48. How is the Linux Foundation related to CNCF?
+20. What is a cache? What is caching?
+21. What are command flags? What are the most common flags? What do they do?
+22. How would you find every line containing the word "ERROR" in a log file named `server.log`?
+23. What is the difference between `cp` and `mv`?
+24. Explain the difference between `chmod` and `chown`.
+25. Explain the different levels of permissions and how they come into play.
+26. If a file has permissions 755, what can the owner do that the "world" (others) cannot?
+27. What is the "root" in Linux? Why is it important?
+28. What is the danger in giving files or programs root permissions?
+29. How does the Kernel prevent a standard user from accidentally deleting critical system files?
+30. If I run `rm -rf /`, why is that the most famous "horror story" in Linux history? What safeguards exist today against running it by accident, and what difference does it make whether you run it as a regular user or as root?
+31. How do you check which processes are consuming the most CPU in real-time?
+32. A developer tells you their VM is running slow. Using Linux commands, walk us through how you would diagnose whether the bottleneck is CPU, Memory, or Disk I/O.
+33. What is a process signal? What is the difference between `SIGTERM` and `SIGKILL`, and why does it matter which one a process receives when it's asked to stop?
+34. What are CGroups? What are Linux namespaces? What does each one control, and how are they different?
+35. What is a port, and what does it mean for a process to "listen" on one? What is the difference between a server binding to `127.0.0.1` and binding to `0.0.0.0`?
+36. What is the difference between TCP and UDP? Give a use case for each.
+37. What is DNS? What happens between typing a hostname into a browser and the first HTTP request being sent?
+38. From the terminal, how would you find which process is listening on a given port, and how would you send an HTTP request to it?
+39. What is cron, and what is a crontab? Write a cron expression that runs a job every day at 3:30 AM, and explain what each of its 5 fields means.
+40. Compare and contrast Windows vs Linux. Give use cases for each.
+41. What are Distributions/Distros? What are the most common distros for Linux? What are they used for? How do they differ from each other?
+42. What is Open Source? Why is it important?
+43. What is the Linux Foundation?
+44. What is the CNCF (Cloud Native Computing Foundation), and what is its mission?
+45. What are famous projects of CNCF?
+46. How is the Linux Foundation related to CNCF?
 
 </details>
 
@@ -113,7 +111,6 @@ Everything you'll work with in this onboarding - containers, Kubernetes, collect
 
 **File Systems**
 
-- <https://www.digitalocean.com/community/tutorials/an-introduction-to-storage-terminology-and-concepts-in-linux>
 - <https://www.geeksforgeeks.org/operating-systems/file-systems-in-operating-system/>
 
 **Operating Systems and Virtual Machines' Components**
