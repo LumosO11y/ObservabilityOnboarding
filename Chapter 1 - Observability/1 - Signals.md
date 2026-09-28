@@ -43,8 +43,6 @@ In your presentation make sure there is an answer to the following questions:
 16. What issue does profiling come to solve that the other signals don't?
 17. What is continuous profiling? Explain the concept behind it.
 
-**❗ Don't forget to talk with your mentor to schedule a time for you to present to the whole team :)**
-
 ### Links
 
 Here are some useful links to start from, yet again, you are encouraged to search more and update this list of links if you think they are good:

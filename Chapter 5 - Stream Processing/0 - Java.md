@@ -25,7 +25,7 @@ In this chapter, you'll learn **Java** fundamentals and deep core concepts. Sinc
 - Bytecode
 - JIT Compilation
 - Stop-the-world pauses
-- G1 GC (default in Java 11)
+- G1 GC (default since Java 9)
 
 **Annotations & Lombok**
 
@@ -52,7 +52,7 @@ In this chapter, you'll learn **Java** fundamentals and deep core concepts. Sinc
 
 ## Outcome
 
-Java 11 study questions:
+Java 17 study questions:
 
 1. What is the difference between a class and an object in Java?
 2. How do constructors differ from regular methods in Java?
@@ -88,9 +88,9 @@ Java 11 study questions:
 
 **Official Documentation**
 
-- [Java 11 API Documentation](https://docs.oracle.com/en/java/javase/11/docs/api/)
-- [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se11/html/)
-- [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se11/html/)
+- [Java 17 API Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/)
+- [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se17/html/)
+- [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se17/html/)
 
 **Core Syntax**
 
@@ -100,19 +100,19 @@ Java 11 study questions:
 - [Interfaces vs Abstract Classes](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
 - [Generics](https://docs.oracle.com/javase/tutorial/java/generics/)
 - [Enums](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
-- [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)
-- [Functional Interfaces](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
+- [Optional](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html)
+- [Functional Interfaces](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/package-summary.html)
 
 **Core JVM Concepts**
 
-- [JVM Specification (SE 11)](https://docs.oracle.com/javase/specs/jvms/se11/html/)
-- [Garbage Collection Tuning](https://docs.oracle.com/en/java/javase/11/gctuning/)
-- [Java Memory Model](https://docs.oracle.com/javase/specs/jls/se11/html/jls-17.html)
+- [JVM Specification (SE 17)](https://docs.oracle.com/javase/specs/jvms/se17/html/)
+- [Garbage Collection Tuning](https://docs.oracle.com/en/java/javase/17/gctuning/)
+- [Java Memory Model](https://docs.oracle.com/javase/specs/jls/se17/html/jls-17.html)
 
 **Annotations**
 
 - [Java Annotations Tutorial](https://docs.oracle.com/javase/tutorial/java/annotations/)
-- [Java SE 11 API – `java.lang.annotation`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/package-summary.html)
+- [Java SE 17 API – `java.lang.annotation`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/package-summary.html)
 - [Common Built-in Annotations](https://www.baeldung.com/java-custom-annotations)
 
 **Lombok**

@@ -12,7 +12,7 @@ Here is a collection of tips, tricks and advice for navigating and getting to kn
 
 ## Taking your first step
 
-- Start by finding the ``main`` and the ``projectRunner()``.  
+- Start by finding the entry point (the ``main`` method) and whatever it hands off to to start the application.  
 Go over the initialized variables, the method names, and see if you can recognize where the core logic of the application occurs.
 - Before writing any code or changing any logic, ensure you can actually run the thing.
 Try to run the project locally and see what you can gather.
@@ -21,7 +21,7 @@ Try to run the project locally and see what you can gather.
 
 - Try to recognize the main flow of the application. Which method calls what? In what order?  
 Why? What variables do these functions use? How do the objects interact and relate to each other?
-- Go through the ``pom.xml`` and take a look at the dependencies used in the project.  
+- Go through the project's build file (e.g. ``pom.xml`` in a Java project) and take a look at the dependencies used in the project.  
 Which do you recognize? How are they used? What are they used for?  
 What can they tell you about the build of the project?
 What can they tell you about the way it handles data or processing?

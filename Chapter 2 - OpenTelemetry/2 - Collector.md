@@ -36,6 +36,7 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 15. Say we have an error in our collector, what are the steps that we should follow in order to debug it? Explain in detail.
 16. When should the collector be stateful? What state will it keep? Why won't we keep stateful collectors most of the time? What are the pros and cons between the two? Explain in detail.
 17. The collector can make sampling decisions itself instead of leaving that entirely to the SDK. Compare the `probabilistic_sampler` processor to the `tail_sampling` processor: what does each one need to see in order to make its decision, and what does that require from how you deploy and scale your collectors?
+    - Both of those processors apply rules you fix up front. The newer `adaptive_tail_sampling` processor (still in development at the time of writing) takes a different approach. What does it adjust on its own, based on what, and what problem with fixed sampling rates does that solve? How do backends still know how much real traffic each kept trace represents?
 18. What are the 2 main distributions of the collector? What are the differences between them and when should I use each of them? Explain in detail.
 19. List 3 custom distributions of the otel collector. What do they add? Why are there many different distributions? What are the pros and cons of that?
 20. Deploy a collector on docker. You should be able to configure it.
@@ -48,6 +49,8 @@ Here are some useful links to start from. We highly encourage you to search more
 
 - <https://opentelemetry.io/docs/collector/>
 - <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/ottl/README.md>
+- <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/adaptivetailsamplingprocessor>
+- <https://opentelemetry.io/blog/2025/sampling-milestones/>
 - [Chapter 8](../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)
 - [Chapter 18](../assets/observability-engineering-achieving-production.pdf)
 

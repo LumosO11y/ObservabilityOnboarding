@@ -27,6 +27,7 @@ In your markdown make sure there is an answer to the following questions:
 7. Write 3 pros and 3 cons of OpenTelemetry.
 8. Are there any other projects that are similar to OTel? Write in detail about them.
 9. OpenTelemetry's work is organized into SIGs, and not every SIG is a language SDK. Explain what are SIGs and Give examples of 5 different non-language OpenTelemetry SIGs (don't count separate language SDKs, e.g. Python vs. JS, as different answers) and briefly explain what each one is responsible for.
+10. What is an OTEP, what does its lifecycle look like, and how does it relate to the specification? Pick one OTEP that interests you and summarize what it proposed and where it stands today.
 
 ### Links
 
@@ -35,6 +36,7 @@ In your markdown make sure there is an answer to the following questions:
 - <https://opentelemetry.io/docs/concepts/observability-primer/>
 - <https://opentelemetry.io/docs/what-is-opentelemetry/>
 - <https://opentelemetry.io/docs/concepts/signals/>
+- <https://github.com/open-telemetry/opentelemetry-specification/tree/main/oteps>
 - <https://signoz.io/blog/opentelemetry-vs-jaeger/>
 - <https://medium.com/jaegertracing/jaeger-and-opentelemetry-1846f701d9f2>
 - [Chapter 1](../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)

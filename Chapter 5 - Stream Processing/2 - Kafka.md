@@ -25,8 +25,12 @@ In this chapter, you'll learn Apache Kafka fundamentals: producers, consumers, b
 10. What is retention, and how does Kafka decide when to delete old messages? What is log compaction, and how is it different?
 11. What does the producer's `acks` setting control, and what is the ISR (In-Sync Replicas)? Together, how do they decide whether an acknowledged write can still be lost?
 12. What is consumer lag, and why is it one of the most important Kafka metrics to watch? How could you use it to autoscale consumers (think back to KEDA from the Kubernetes part)?
-13. The Kafka version we run (2.7) depends on the ZooKeeper you learned about in the previous part. What does Kafka keep in ZooKeeper? What is KRaft, and why did newer Kafka versions move away from ZooKeeper?
-14. In our pipeline, Kafka carries OTEL spans between services. Why is a message broker like Kafka a good fit for connecting an instrumented app to a stream processor like Flink?
+13. The Kafka version we run (2.7) depends on ZooKeeper, the coordination service you learned about in the ClickHouse part of Chapter 3. What does Kafka keep in ZooKeeper, and what is the controller's role in that setup?
+14. What is KRaft? Where does cluster metadata live in a KRaft cluster, and how do brokers learn about changes to it?
+15. Why did the Kafka project decide to move away from ZooKeeper? What limitations of the ZooKeeper-based design was KRaft meant to fix?
+16. Trace the transition across versions: in which release did KRaft first appear, when was it declared production-ready, and when was ZooKeeper support removed entirely?
+17. What does staying on 2.7 mean for us? What would a move to a KRaft-based version involve, and why can't a ZooKeeper-based cluster jump straight to the newest release?
+18. In our pipeline, Kafka carries OTEL spans between services. Why is a message broker like Kafka a good fit for connecting an instrumented app to a stream processor like Flink?
 
 ### Links
 
@@ -35,7 +39,15 @@ In this chapter, you'll learn Apache Kafka fundamentals: producers, consumers, b
 - <https://kafka.apache.org/documentation/>
 - <https://docs.confluent.io/kafka/introduction.html>
 - <https://kafka.apache.org/documentation/#design_compactionbasics>
-- <https://developer.confluent.io/learn/kraft/>
+
+**ZooKeeper and KRaft**
+
+- <https://kafka.apache.org/27/documentation.html#zk> (ZooKeeper in the Kafka 2.7 docs)
+- <https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum> (KIP-500: the proposal to replace ZooKeeper)
+- <https://cwiki.apache.org/confluence/display/KAFKA/KIP-833%3A+Mark+KRaft+as+Production+Ready> (KIP-833: marking KRaft production-ready)
+- <https://kafka.apache.org/documentation/#kraft> (KRaft in the current Kafka docs)
+- <https://developer.confluent.io/learn/kraft/> (Confluent's KRaft overview)
+- <https://kafka.apache.org/blog/2025/03/18/apache-kafka-4.0.0-release-announcement/> (Kafka 4.0 release announcement)
 
 **Videos — Fundamentals & Architecture**
 
