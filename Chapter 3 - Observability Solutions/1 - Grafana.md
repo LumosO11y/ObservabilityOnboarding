@@ -40,6 +40,7 @@ Grafana is the visualization and dashboarding layer of our observability stack -
 2. At a high level, what happens to a trace between a service emitting it and you being able to query it in Tempo?
 3. What is TraceQL, and how does querying traces differ from querying metrics with PromQL?
 4. What's the difference between Tempo's monolithic and microservices deployment modes, and when would you choose one over the other?
+5. In the Collector part you found a way to get RED metrics out of traces. Tempo can do something similar on its own side. Which Tempo component does it, and what else can it generate from traces? When would you rather do it in Tempo, and when in the Collector?
 
 ### Pyroscope
 

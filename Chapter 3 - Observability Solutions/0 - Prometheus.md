@@ -16,6 +16,7 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 - Understand histograms and how to compute percentiles from them.
 - Understand recording rules.
 - Understand how OpenTelemetry metrics end up in Prometheus.
+- Understand what too high and too low cardinality do to Prometheus and Prometheus-compatible stores, and how to find and fix each.
 
 ## Outcome
 
@@ -44,6 +45,16 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 2. What are the different ways OpenTelemetry metrics can get into Prometheus? Compare them.
 3. What is metric temporality in OpenTelemetry, and which kinds exist? Which one does Prometheus work with, and what has to happen when they don't match? What happens to metric names and attributes on the way in?
 
+### Cardinality
+
+1. In Chapter 1 you learned what cardinality is. In Prometheus, what makes up the identity of a series? How would you estimate how many series a single metric produces?
+2. What happens to Prometheus when cardinality gets too high? Which kinds of labels usually cause it?
+3. In a running Prometheus, how would you find which metrics and labels contribute the most series?
+4. Where can you reduce cardinality: in the instrumented code, in the Collector, and in Prometheus itself? What are the options at each point, and what do you lose with each one?
+5. How does a Prometheus-compatible store such as Mimir protect itself from a tenant that suddenly sends far too many series? What does the sender see when that happens?
+6. Now the opposite problem: cardinality that is too low. What happens when two different sources write series with exactly the same name and labels? What errors, or silently wrong results, can you get?
+7. How can this happen with OpenTelemetry metrics? Think about the attribute translation from the previous section, and about running several replicas of a service or several Collectors. What is the single-writer principle in the OpenTelemetry metrics data model, and how do you keep it?
+
 ### Links
 
 **Prometheus**
@@ -67,3 +78,9 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 - [Recording Rules](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)
 - [Using Prometheus as your OpenTelemetry backend](https://prometheus.io/docs/guides/opentelemetry/)
 - [OpenTelemetry metrics data model: temporality](https://opentelemetry.io/docs/specs/otel/metrics/data-model/#temporality)
+
+**Cardinality**
+
+- [Prometheus: Metric and Label Naming](https://prometheus.io/docs/practices/naming/#labels)
+- [Prometheus: Instrumentation Best Practices](https://prometheus.io/docs/practices/instrumentation/#do-not-overuse-labels)
+- [OpenTelemetry metrics data model: single-writer](https://opentelemetry.io/docs/specs/otel/metrics/data-model/#single-writer)

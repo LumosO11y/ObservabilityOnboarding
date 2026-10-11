@@ -2,7 +2,7 @@
 
 Welcome to Lumos! This repository is your gateway to a structured onboarding program designed to bring you up to speed on everything you need to know to work on our team - from core concepts to actual things you might need and use. The program is organized into chapters, each with goals, questions to answer, curated reading, and hands-on exercises.
 
-The full onboarding takes roughly 10 weeks (~51.5 working days).
+The full onboarding takes roughly 10 weeks (~52 working days).
 
 Start here: [Chapter 0 - Foundations/0 - Welcome](./Chapter%200%20-%20Foundations/0%20-%20Welcome.md)
 
@@ -38,9 +38,9 @@ From the concept of OpenTelemetry to its specification, the Collector, hands-on 
 
 ### Chapter 3: Observability Solutions
 
-The concrete platforms we (and the wider ecosystem) use to query and visualize telemetry - the Grafana stack, ClickHouse, and Elastic APM today, with room to grow into other observability solutions. Estimated duration: ~9.5 days.
+The concrete platforms we (and the wider ecosystem) use to query and visualize telemetry - the Grafana stack, ClickHouse, and Elastic APM today, with room to grow into other observability solutions. Estimated duration: ~10 days.
 
-- **[Prometheus](./Chapter%203%20-%20Observability%20Solutions/0%20-%20Prometheus.md)** (~2 days) - what Prometheus is, alternatives, scraping vs. remote-write, querying with PromQL, histograms, recording rules, and how OpenTelemetry metrics get in.
+- **[Prometheus](./Chapter%203%20-%20Observability%20Solutions/0%20-%20Prometheus.md)** (~2.5 days) - what Prometheus is, alternatives, scraping vs. remote-write, querying with PromQL, histograms, recording rules, how OpenTelemetry metrics get in, and too-high vs. too-low cardinality.
 - **[Grafana](./Chapter%203%20-%20Observability%20Solutions/1%20-%20Grafana.md)** (~1.5 days) - the dashboarding layer (including PromQL in Grafana), a high-level look at the LGTM stack (Loki, Grafana, Tempo, Mimir), plus the Tempo (tracing) and Pyroscope (profiling) backends.
 - **[ClickHouse](./Chapter%203%20-%20Observability%20Solutions/2%20-%20ClickHouse.md)** (~3 days) - the column-oriented OLAP database: the coordination service its replication depends on, engines and MergeTree variants, materialized views, schema design for telemetry, and its integrations with the observability ecosystem.
 - **[Elastic APM](./Chapter%203%20-%20Observability%20Solutions/3%20-%20Elastic%20APM.md)** (~3 days) - how Elastic's APM evolved from APM Server to Elastic Agent to EDOT, its instrumentation libraries and where each stands today, its features, how its data is stored then and now (from plain Lucene through TSDS and LogsDB to the columnar engine), and managing that data with ILM.
