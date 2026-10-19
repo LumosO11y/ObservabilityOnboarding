@@ -10,6 +10,7 @@ This part covers the main signals - logs, metrics, traces, and profiles: what ea
 - Understand the usage for each type of signal, especially the difference between traces and logs.
 - Understand what baggage is and how you can use it.
 - Understand how you can utilize context to your advantage, and how that context propagates across service boundaries.
+- Understand how spans can relate to each other beyond parent-child, using span links.
 - Understand what sampling is and why it's needed.
 
 ## Outcome
@@ -22,6 +23,7 @@ In your presentation make sure there is an answer to the following questions:
 2. What is a span? What does it consist of?
     - Read about the context field. What does it consist of? Why does it contain those specific fields?
     - Read about span events. Why are they needed? How do they differ from regular logs?
+    - Read about span links. A span normally has a single parent, but some work doesn't fit that model. Think of a consumer that reads a batch of 50 messages, each produced by a different trace, or a scheduled job kicked off by a request that has long since finished. How do span links describe these relationships, and how is a link different from a parent? Why can't you just make each of the 50 producers the parent?
 3. What is context propagation? When a request crosses from one service to the next over the network, how does the receiving service know which trace and span it belongs to?
     - What is baggage? How is it different from the trace context, and what would be a good (and a bad) thing to put in it?
 4. How are traces stored in most Observability backends?
@@ -47,6 +49,8 @@ Here are some useful links to start from, yet again, you are encouraged to searc
 - <https://opentelemetry.io/docs/concepts/signals>
 - <https://opentelemetry.io/docs/concepts/context-propagation/>
 - <https://opentelemetry.io/docs/concepts/sampling/>
+- [Span Links](https://opentelemetry.io/docs/concepts/signals/traces/#span-links)
+- [The RED Method](https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/)
 - <https://www.w3.org/TR/baggage/>
 - <https://sematext.com/glossary/three-pillars-of-observability/>
 - <https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html>

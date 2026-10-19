@@ -39,11 +39,13 @@ Make sure you go in-detail and assure you have deep understanding of this part a
 17. The collector can make sampling decisions itself instead of leaving that entirely to the SDK. Compare the `probabilistic_sampler` processor to the `tail_sampling` processor: what does each one need to see in order to make its decision, and what does that require from how you deploy and scale your collectors?
     - Both of those processors apply rules you fix up front. The newer `adaptive_tail_sampling` processor (still in development at the time of writing) takes a different approach. What does it adjust on its own, based on what, and what problem with fixed sampling rates does that solve? How do backends still know how much real traffic each kept trace represents?
     - Your team wants the RED metrics from Chapter 1 for every service. All services send traces, but most don't emit any metrics, and you can't change their code. How could the Collector give you those metrics anyway? Where in the pipeline would that have to happen relative to sampling, and why?
+        - Which Collector component does this, and what metrics does it produce? Which attributes become dimensions by default, and what happens to cardinality when you add more (think `http.route` vs. the full URL)?
 18. Which collector distributions does the OpenTelemetry project itself publish? What are the differences between them, and when should I use each of them? Explain in detail, with a focus on the two most commonly used ones.
 19. List 3 custom distributions of the otel collector. What do they add? Why are there many different distributions? What are the pros and cons of that?
 20. Deploy a collector on docker. You should be able to configure it.
 21. Write a short OTTL statement that converts HTTP status codes from string to int, and add it to the collector you deployed.
 22. There are many useful tools that you should get familiar with. One of them is telemetrygen. Give a short explanation of what it is and generate telemetry (preferably traces) that outputs to the collector you deployed. The output in your collector should be printed to the console, with full detail. The Collector and telemetrygen images are in our artifactory - ask your mentor for the path.
+    - Extend your Collector so the traces you generate also produce RED metrics, and print those metrics to the console next to the traces. Generate some traces with an error status: can you see them in the error count?
 
 ### Links
 
