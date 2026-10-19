@@ -27,7 +27,10 @@ By the end of this part you should answer the following questions:
     2. Give an example of a team from our unit that uses "custom instrumentation". Why did they choose this method?
 7. Some would say that manual instrumentation is sort of an art. In what cases should we avoid instrumenting our library/code? What would be considered over-instrumenting?
 8. In Chapter 1's Signals part you read about span events. OpenTelemetry deprecated the Span Event API in 2026. What replaces it, and why did the project make this change? What happens to existing span events, and who has to change their code?
-9. Add instrumentation to an existing code (ask your mentor for our internal instrumentation docs and which component to use).
+9. Span links let a span point at spans other than its parent.
+    1. How do you add a link to a span in the OpenTelemetry API? Does it matter whether you add it when the span starts or later, and how does that relate to what a sampler can see?
+    2. Look at the OpenTelemetry messaging semantic conventions. When a consumer processes a batch of messages, which span gets the links, and where does each link point?
+10. Add instrumentation to an existing code (ask your mentor for our internal instrumentation docs and which component to use).
     1. See it in the console (use a console exporter)
     2. Send the instrumentation through to a platform the mentor will tell you. Talk with your mentor for more info.
 
@@ -44,6 +47,8 @@ By the end of this part you should answer the following questions:
 - <https://opentelemetry.io/docs/concepts/instrumentation/code-based/>
 - <https://opentelemetry.io/docs/concepts/instrumentation/zero-code/>
 - [Deprecating Span Events API](https://opentelemetry.io/blog/2026/deprecating-span-events/)
+- [Span Links](https://opentelemetry.io/docs/concepts/signals/traces/#span-links)
+- [Messaging Spans Semantic Conventions](https://opentelemetry.io/docs/specs/semconv/messaging/messaging-spans/)
 - <https://www.cncf.io/blog/2022/04/22/opentelemetry-and-python-a-complete-instrumentation-guide/>
 - <https://logz.io/blog/python-opentelemetry-auto-instrumentation/#export>
 - [Chapter 5](../assets/learning-opentelemetry-setting-up-and-operating-a-modern-observability-system.pdf)

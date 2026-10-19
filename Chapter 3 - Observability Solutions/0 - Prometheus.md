@@ -9,6 +9,7 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 - Understand what Prometheus is and the problem it solves.
 - Know a few alternatives to Prometheus, and a few Prometheus-compatible solutions.
 - Understand the Prometheus protocol: the pull-based scrape model and the push-based remote-write model.
+- Understand how metrics are collected from software that can't expose them itself, using exporters.
 - Understand the Prometheus metric types and which functions apply to each.
 - Understand instant vectors vs. range vectors, and how to select and filter series with label matchers.
 - Understand `rate()` vs. `irate()`, aggregation operators, and the `by` clause.
@@ -26,7 +27,10 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 2. Name 2-3 alternatives to Prometheus for metrics collection/storage. How do they differ from Prometheus at a high level?
 3. What does it mean for a solution to be "Prometheus-compatible"? Name 2-3 Prometheus-compatible solutions and what each one adds on top of vanilla Prometheus.
 4. Prometheus's default model for getting metrics is scraping. Explain how scraping works: what does Prometheus request, from where, and how often? What format do targets need to expose their metrics in?
-5. What is remote_write, and how does it differ from scraping? Why might a team run both at once?
+5. Not every piece of software can expose metrics in that format: a database, a Linux host, a network switch, or a third-party binary. What is an exporter, and how does it solve this? Give 3 examples of commonly used exporters and what each one exposes.
+    - Where does an exporter usually run relative to the thing it monitors? What does it mean when an exporter's target is `up` but the thing it monitors is down?
+    - In the Collector part, "exporter" meant something else. How do the two differ? How would a Collector get metrics from a node_exporter, and what could it use instead if you wanted to drop node_exporter altogether? What do you gain and lose by switching?
+6. What is remote_write, and how does it differ from scraping? Why might a team run both at once?
 
 ### PromQL
 
@@ -63,6 +67,8 @@ Prometheus is the de-facto standard for metrics collection in cloud-native syste
 - [Prometheus: Pull vs. Push](https://prometheus.io/docs/introduction/faq/#why-do-you-pull-rather-than-push)
 - [Prometheus Remote Write Specification](https://prometheus.io/docs/specs/prw/remote_write_spec/)
 - [Prometheus Exposition Formats](https://prometheus.io/docs/instrumenting/exposition_formats/)
+- [Prometheus: Exporters and Integrations](https://prometheus.io/docs/instrumenting/exporters/)
+- [Prometheus: Writing Exporters](https://prometheus.io/docs/instrumenting/writing_exporters/)
 - [Grafana Mimir - a Prometheus-compatible, horizontally scalable metrics store](https://grafana.com/oss/mimir/)
 
 **PromQL**
