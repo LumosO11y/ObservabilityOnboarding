@@ -4,7 +4,7 @@
 
 In this part, you'll learn **Java** fundamentals and deep core concepts. Since you already know how to program, the focus is on Java-specific behavior.
 
-> **Which Java?** The questions below target Java 17. Ask your mentor which version the services you'll work on use - if it's 21, also go over virtual threads in question 32.
+> **Which Java?** The questions below target Java 17. Ask your mentor which version the services you'll work on use - if it's 21, also look into virtual threads.
 
 ## Goals
 
@@ -22,10 +22,6 @@ In this part, you'll learn **Java** fundamentals and deep core concepts. Since y
 **Core JVM Concepts**
 
 - Stack vs Heap
-- Metaspace
-- ClassLoader mechanism
-- Bytecode
-- JIT Compilation
 - Stop-the-world pauses
 - G1 GC (default since Java 9)
 
@@ -37,62 +33,44 @@ In this part, you'll learn **Java** fundamentals and deep core concepts. Since y
 **Collections & Streams**
 
 - Collections Framework
-- Streams API: `map`, `filter`, `reduce`, `collect`, `flatMap`, `groupingBy`, `partitioningBy`, `parallelStream()`
+- Streams API: `map`, `filter`, `reduce`, `collect`, `groupingBy`
 - Method references
 - Optional best practices
 
 **Concurrency**
 
-- Threads and the `ExecutorService`
-- `synchronized` and `volatile`
 - `CompletableFuture`
 
 **Build Tools & Packaging**
 
 - Maven
-- Creating JAR files
 
 **Modern Java**
 
 - Records, `var`, text blocks, and switch expressions (Java 17)
-- Virtual threads (Java 21)
 
 ## Outcome
 
 Java 17 study questions:
 
 1. What is the difference between a class and an object in Java?
-2. How do constructors differ from regular methods in Java?
-3. Explain the difference between public, protected, private, and default access modifiers.
-4. Can a subclass access the private fields of its parent class? Why or why not?
-5. What is the difference between checked and unchecked exceptions? Give examples.
-6. How would you implement a custom checked exception?
-7. When should you use an interface instead of an abstract class?
-8. Can an abstract class have implemented methods? Can an interface? Explain.
-9. Why are generics useful in Java collections? Give an example.
-10. How do enums improve type safety compared to constant variables?
-11. What problem does Optional solve? How do you avoid NullPointerException with it?
-12. Give an example of a functional interface and a lambda expression that implements it.
-13. What is the difference between the Stack and the Heap in Java memory management?
-14. Explain the ClassLoader mechanism and why parent delegation is important.
-15. What are stop-the-world pauses, and how does the G1 Garbage Collector reduce them? Why is tuning garbage collection important in the JVM?
-16. What is bytecode, and how does the JIT compiler turn it into fast native code at runtime?
-17. What is Metaspace, and what lives there as opposed to on the Heap?
-18. What are annotations in Java and how are they used?
-19. How does Lombok reduce boilerplate code in Java projects?
-20. Give an example of a Lombok annotation and explain what it does.
-21. What is the difference between `map`, `filter`, and `reduce` in the Streams API?
-22. How would you use `flatMap` in a stream of lists?
-23. What is the purpose of `collect` and `Collectors.groupingBy` in streams?
-24. How can you create and run a parallel stream, and what are its benefits?
-25. What is the difference between creating a `Thread` yourself and submitting work to an `ExecutorService`?
-26. What problems do `synchronized` and `volatile` solve, and how do they differ?
-27. What is a `CompletableFuture`, and how does it help you compose asynchronous work?
-28. What is a JAR file and how do you create one in Java?
-29. What is Maven and how does it help in Java project management?
-30. What are records? How do they compare to what Lombok gives you?
-31. What do `var`, text blocks, and switch expressions each add to the language? Give a short example of each.
-32. *(Java 21)* What are virtual threads, and how do they change the way you'd write the `ExecutorService` code from question 25?
+2. Explain the difference between public, protected, private, and default access modifiers.
+3. What is the difference between checked and unchecked exceptions? Give examples.
+4. When should you use an interface instead of an abstract class? Can each of them have implemented methods?
+5. Why are generics useful in Java collections? Give an example.
+6. How do enums improve type safety compared to constant variables?
+7. What problem does Optional solve? How do you avoid NullPointerException with it?
+8. Give an example of a functional interface and a lambda expression that implements it.
+9. What is the difference between the Stack and the Heap in Java memory management?
+10. What are stop-the-world pauses, and how does the G1 Garbage Collector reduce them? Why is tuning garbage collection important in the JVM?
+11. What are annotations in Java and how are they used?
+12. How does Lombok reduce boilerplate code in Java projects? Give an example of one of its annotations and explain what it does.
+13. What is the difference between `map`, `filter`, and `reduce` in the Streams API?
+14. What is the purpose of `collect` and `Collectors.groupingBy` in streams?
+15. What is a `CompletableFuture`, and how does it help you compose asynchronous work?
+16. What is Maven and how does it help in Java project management?
+17. What are records? How do they compare to what Lombok gives you?
+18. What do `var`, text blocks, and switch expressions each add to the language? Give a short example of each.
 
 ### Links
 
