@@ -4,7 +4,7 @@
 
 Welcome to Lumos! We're thrilled to have you as a part of the team.
 
-This repository is your guide through onboarding for our team - not just observability, but everything you need to know to work here, from core concepts to actual things you might need and use. You'll start with the big-picture foundations (core data concepts, systems & Linux, storage), then move into Observability as a concept, OpenTelemetry, and Observability Solutions (Prometheus, the Grafana stack, ClickHouse, Elastic APM, and beyond). From there you'll pick up DevOps & Development (Docker, Kubernetes, CI/CD, Go, and getting into our codebase) and finish with the Stream Processing tools we use day to day.
+This repository is your guide through onboarding for our team - not just observability, but everything you need to know to work here, from core concepts to actual things you might need and use. You'll start with the big-picture foundations (core data concepts, systems & Linux, storage), then move into Observability as a concept, OpenTelemetry, and Observability Solutions (Prometheus, the Grafana stack, ClickHouse, Elastic APM, and beyond). From there you'll pick up DevOps (Docker, Kubernetes, and CI/CD) and finish with Development: the languages and frameworks we use (Go, Java, Spring) and the stream processing tools we run day to day (Kafka, Flink).
 
 To get started, clone this repository to your local machine:
 

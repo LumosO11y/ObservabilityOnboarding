@@ -6,7 +6,7 @@ In this part, you'll learn and try Flink, a powerful distributed stream processi
 
 Note that we use Flink with Java, because it's Flink's native programming language.
 
-> **Which Flink?** Flink 2.0 (March 2025) removed several older APIs, such as the DataSet API and the legacy `SourceFunction`/`SinkFunction`. The book below and parts of the training material predate it, and the `flink-docs-stable` links point at the latest release. Ask your mentor which Flink version we run, read the docs for that version, and make sure the APIs you use in the exercise aren't deprecated or removed in it.
+> **Which Flink?** We run Flink 2.3, and the documentation links below point at the 2.3 docs. Flink 2.0 removed several older APIs, such as the DataSet API and the legacy `SourceFunction`/`SinkFunction`. The book below and parts of the training material predate that, so make sure the APIs you use in the exercise still exist in 2.3.
 
 ## Goals
 
@@ -19,27 +19,27 @@ Note that we use Flink with Java, because it's Flink's native programming langua
 
 ## Outcome
 
-1. Read Chapters 1 & 2 in the book [Stream Processing with Apache Flink](../assets/Stream%20Processing%20with%20Apache%20Flink.pdf).
+1. Read Chapters 1 & 2 in the book [Stream Processing with Apache Flink](../../assets/Stream%20Processing%20with%20Apache%20Flink.pdf).
 2. Watch the videos in the following playlist:
     - [Building Apache Flink Applications in Java](https://www.youtube.com/playlist?list=PLa7VYi0yPIH0QEIcyvZE5p4zMR0ln4aAe)
 3. Do the exercise [rides-and-fares](https://github.com/apache/flink-training/tree/master/rides-and-fares) from Apache's flink training repository (don't look at the solution).
 4. Read the following pages from Flink's documentation. We encourage you to read more subjects from the documentation that you find interesting!
-    - [Anatomy of a flink cluster](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/flink-architecture/#anatomy-of-a-flink-cluster)
-    - [Task slots and parallelism](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/flink-architecture/#tasks-and-operator-chains)
-    - [Operators - Data Transformations](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/operators/overview/)
-    - [Process Function](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/operators/process_function/)
-    - [State](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/stateful-stream-processing/)
-    - [Working With State](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/fault-tolerance/state/)
+    - [Anatomy of a flink cluster](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/concepts/flink-architecture/#anatomy-of-a-flink-cluster)
+    - [Task slots and parallelism](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/concepts/flink-architecture/#tasks-and-operator-chains)
+    - [Operators - Data Transformations](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/dev/datastream/operators/overview/)
+    - [Process Function](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/dev/datastream/operators/process_function/)
+    - [State](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/concepts/stateful-stream-processing/)
+    - [Working With State](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/dev/datastream/fault-tolerance/state/)
     - [State backend and RocksDB](https://flink.apache.org/2021/01/18/using-rocksdb-state-backend-in-apache-flink-when-and-how/)
-    - [Flink State Backends](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/state_backends/)
-    - [Checkpoints](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/checkpoints/)
-    - [Savepoints](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/savepoints/)
-    - [Timely Stream Processing](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/)
-    - [Windows](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/operators/windows/)
-    - [Kafka Connector](https://nightlies.apache.org/flink/flink-docs-stable/docs/connectors/datastream/kafka/)
+    - [Flink State Backends](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/ops/state/state_backends/)
+    - [Checkpoints](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/ops/state/checkpoints/)
+    - [Savepoints](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/ops/state/savepoints/)
+    - [Timely Stream Processing](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/concepts/time/)
+    - [Windows](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/dev/datastream/operators/windows/)
+    - [Kafka Connector](https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/connectors/datastream/kafka/)
     - [Flink 2.0 release announcement](https://flink.apache.org/2025/03/24/apache-flink-2.0.0-a-new-era-of-real-time-data-processing/) - what changed from 1.x
 5. Do the following exercise:
-    - Create a Flink-based stream application that reads OTEL spans from a Kafka topic, and every 10 seconds, prints how many spans were in each trace in the last 10 seconds.
+    - Create a Flink-based stream application that reads OTEL spans, encoded as OTLP JSON, from a Kafka topic, and every 10 seconds, prints how many spans were in each trace in the last 10 seconds.
     - Ask your mentor for the Kafka topic details.
 
 ### Study Questions
@@ -54,5 +54,4 @@ Note that we use Flink with Java, because it's Flink's native programming langua
 8. What is a Checkpoint, and how does Flink use it to recover from a failure without losing data?
 9. What is the difference between a Checkpoint and a Savepoint? When would you take a Savepoint instead of relying on automatic checkpoints?
 10. What is the difference between event time and processing time? What is a watermark, and why do you need one when working in event time?
-11. In the hands-on exercise above, you read OTEL spans from Kafka and count spans per trace every 10 seconds. Which Flink concept does this rely on, and how does it relate to state? Would you use event time or processing time for it, and why?
-12. The spans in the Kafka topic are serialized OTLP. How does your Flink job turn those bytes back into spans? (Think back to Protobuf from Chapter 2.)
+11. Look back at your solution to the hands-on exercise. How did you group the spans by trace and split the stream into 10-second intervals, and where does Flink keep the partial counts until each interval closes? Did you use event time or processing time, and what would change if you switched?

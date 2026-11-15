@@ -26,11 +26,9 @@ In this part, you'll learn Apache Kafka fundamentals: producers, consumers, brok
 11. What does the producer's `acks` setting control, and what is the ISR (In-Sync Replicas)? Together, how do they decide whether an acknowledged write can still be lost?
 12. What is consumer lag, and why is it one of the most important Kafka metrics to watch? How could you use it to autoscale consumers (think back to KEDA from the Kubernetes part)?
 13. The Kafka version we run (2.7) depends on ZooKeeper, the coordination service you learned about in the ClickHouse part of Chapter 3. What does Kafka keep in ZooKeeper, and what is the controller's role in that setup?
-14. What is KRaft? Where does cluster metadata live in a KRaft cluster, and how do brokers learn about changes to it?
-15. Why did the Kafka project decide to move away from ZooKeeper? What limitations of the ZooKeeper-based design was KRaft meant to fix?
-16. Trace the transition across versions: in which release did KRaft first appear, when was it declared production-ready, and when was ZooKeeper support removed entirely?
-17. What does staying on 2.7 mean for us? What would a move to a KRaft-based version involve, and why can't a ZooKeeper-based cluster jump straight to the newest release?
-18. In our pipeline, Kafka carries OTEL spans between services. Why is a message broker like Kafka a good fit for connecting an instrumented app to a stream processor like Flink?
+14. What is KRaft, and where does cluster metadata live in a KRaft cluster? What limitations of the ZooKeeper-based design was it meant to fix?
+15. What does staying on 2.7 mean for us? What would a move to a KRaft-based version involve, and why can't a ZooKeeper-based cluster jump straight to the newest release?
+16. In our pipeline, Kafka carries OTEL spans between services. Why is a message broker like Kafka a good fit for connecting an instrumented app to a stream processor like Flink?
 
 ### Links
 
