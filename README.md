@@ -34,7 +34,7 @@ From the concept of OpenTelemetry to its specification, the Collector, hands-on 
 - **[Specification & OTLP](./Chapter%202%20-%20OpenTelemetry/1%20-%20Specification%20&%20OTLP.md)** (~3.5 days) - Protobuf, gRPC, OTLP, semantic conventions, and OpAMP.
 - **[The OpenTelemetry Collector](./Chapter%202%20-%20OpenTelemetry/2%20-%20Collector.md)** (~7 days) - pipelines, components, scaling, OTTL, and a hands-on collector deployment.
 - **[Instrumentation](./Chapter%202%20-%20OpenTelemetry/3%20-%20Instrumentation.md)** (~1.5 days) - the API vs. the SDK, Resources and Instrumentation Scope, and instrumenting a real component.
-- **[eBPF](./Chapter%202%20-%20OpenTelemetry/4%20-%20eBPF.md)** (~2.5 days) - running sandboxed programs in the kernel, how OBI and language auto-instrumentation (e.g. Go) use it to instrument apps without code changes, and its uses (and risks) in security and networking.
+- **[eBPF](./Chapter%202%20-%20OpenTelemetry/4%20-%20eBPF.md)** (~2.5 days) - running sandboxed programs in the kernel, how OBI and language auto-instrumentation (e.g. Go) use it to instrument apps without code changes, and its uses (and risks) in security.
 
 ### Chapter 3: Observability Solutions
 
